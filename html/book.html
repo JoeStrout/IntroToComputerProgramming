@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Reader Demo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background: #fdf6e3;
+    }
+    #reader {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .nav-button {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 20%;
+      background: rgba(0, 0, 0, 0);
+      z-index: 2;
+    }
+    #prevBtn { left: 0; }
+    #nextBtn { right: 0; }
+    #tocBtn {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: #eee;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      z-index: 3;
+      cursor: pointer;
+    }
+    #toc {
+      position: absolute;
+      top: 3.5rem;
+      left: 1rem;
+      background: white;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      display: none;
+      z-index: 4;
+      max-height: 60vh;
+      overflow-y: auto;
+    }
+    #toc a {
+      display: block;
+      margin-bottom: 0.5rem;
+      text-decoration: none;
+      color: #333;
+    }
+    .fallback-nav {
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="reader">
+    <div id="tocBtn">☰ TOC</div>
+    <div id="toc"></div>
+    <div id="prevBtn" class="nav-button"></div>
+    <iframe id="pageFrame" src="testPage20.html"></iframe>
+    <div id="nextBtn" class="nav-button"></div>
+  </div>
+  <div class="fallback-nav">
+    <a href="testPage19.html">Previous</a> |
+    <a href="testPage21.html">Next</a>
+  </div>
+
+  <script>
+    const pageFrame = document.getElementById("pageFrame");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const tocBtn = document.getElementById("tocBtn");
+    const toc = document.getElementById("toc");
+
+    let currentPage = 20; // start page number
+
+    function loadPage(n) {
+      currentPage = n;
+      pageFrame.src = `testPage${n}.html`;
+    }
+
+    prevBtn.addEventListener("click", () => loadPage(currentPage - 2));
+    nextBtn.addEventListener("click", () => loadPage(currentPage + 2));
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") loadPage(currentPage + 2);
+      if (e.key === "ArrowLeft") loadPage(currentPage - 2);
+    });
+
+    let startX = null;
+    document.addEventListener("touchstart", e => {
+      if (e.touches.length === 1) startX = e.touches[0].clientX;
+    });
+    document.addEventListener("touchend", e => {
+      if (startX !== null) {
+        let endX = e.changedTouches[0].clientX;
+        if (endX - startX > 50) loadPage(currentPage - 2);
+        else if (startX - endX > 50) loadPage(currentPage + 2);
+        startX = null;
+      }
+    });
+
+    tocBtn.addEventListener("click", () => {
+      toc.style.display = toc.style.display === "block" ? "none" : "block";
+    });
+
+    // Populate TOC with links to all pages (update range as needed)
+    for (let i = 0; i <= 50; i += 2) {
+      let a = document.createElement("a");
+      a.href = "#";
+      a.textContent = `Pages ${i}-${i + 1}`;
+      a.addEventListener("click", e => {
+        e.preventDefault();
+        loadPage(i);
+        toc.style.display = "none";
+      });
+      toc.appendChild(a);
+    }
+  </script>
+</body>
+</html>
