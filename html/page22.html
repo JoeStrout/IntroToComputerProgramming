@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="book.css">
+</head>
+<body>
+<div class="section-centered">
+<h2>Pixel Graphics</h2>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 60%">
+<p>Look at a computer screen with a magnifying glass, and you'll see that it actually displays a bunch of tiny little squares called “pixels” (short for “picture elements”). By changing the colors of these pixels, a computer can display photographs, words, or anything else.</p>
+<p>You can draw pixels in Mini Micro by using commands that start with <code>gfx</code>.</p>
+</div>
+<div class="column-right">
+<img src="pics/p22-painting.png" alt="" style="aspect-ratio: 889 / 775"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 35%">
+<img src="pics/p22-grid.png" alt="" style="aspect-ratio: 354 / 266"/>
+</div>
+<div class="column-right">
+<img src="pics/p22-gridCode.png" alt="" style="aspect-ratio: 616 / 266"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Assign to <code>gfx.color</code> to set the drawing color. Use something like <code>color.aqua</code>, or a function like <code>rgb(0, 255, 100)</code>, where the numbers give the amount of red, green, and blue to go into the color.</p>
+<p>Then use the <code>gfx.line</code> command with four numbers: x1, y1, x2, and y2. These specify the end points of the line to draw.</p>
+</div>
+<div class="column-right">
+<img src="pics/p22-coordinates.png" alt="" style="aspect-ratio: 986 / 680"/>
+</div>
+</div>
+<div class="section-centered">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>What command would draw a line from the lower-left corner of the screen to the upper-right corner?</p>
+</div>
+<div class="small-gap"></div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 34%">
+<img src="pics/p22-moire.png" alt="" style="aspect-ratio: 746 / 558"/>
+</div>
+<div class="column-right">
+<img src="pics/p22-moireCode.png" alt="" style="aspect-ratio: 1228 / 504"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 75%">
+<p>You can also use <code>gfx.fillRect</code> to fill a rectangle with color. The four numbers it needs are: left side X position, bottom Y position, width, and height. (There’s also <code>gfx.drawRect</code>, which outlines the rectangle but does not fill it.)</p>
+<img src="pics/p22-tunnelCode.png" alt="" style="aspect-ratio: 1358 / 252"/>
+</div>
+<div class="column-right">
+<img src="pics/p22-tunnel.png" alt="" style="aspect-ratio: 696 / 522"/>
+</div>
+</div>
+<div class="section-centered">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>What do you think will happen if you change <code>gfx.fillRect</code> to <code>gfx.fillEllipse</code> in the program above? Try it and see!</p>
+</div>
+</div>
+<div class="section-centered">
+<img src="pics/p22-classroom.png" alt="" style="aspect-ratio: 1740 / 730"/>
+</div>
+</body></html>

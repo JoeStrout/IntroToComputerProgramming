@@ -5,41 +5,41 @@ Look at a computer screen with a magnifying glass, and you'll see that it actual
 
 You can draw pixels in Mini Micro by using commands that start with `gfx`.
 -- right
-[!](p24-painting.png)
+[!](p22-painting.png)
 
 -- left 35%
-[!](p24-grid.png)
+[!](p22-grid.png)
 -- right
-[!](p24-gridCode.png)
+[!](p22-gridCode.png)
 
 -- left
 Assign to `gfx.color` to set the drawing color. Use something like `color.aqua`, or a function like `rgb(0, 255, 100)`, where the numbers give the amount of red, green, and blue to go into the color.
 
 Then use the `gfx.line` command with four numbers: x1, y1, x2, and y2. These specify the end points of the line to draw.
 -- right
-[!](p24-coordinates.png)
+[!](p22-coordinates.png)
 
 -- full
 -- puzzle
 What command would draw a line from the lower-left corner of the screen to the upper-right corner?
--- gap
 
+-- gap
 -- left 34%
-[!](p24-moire.png)
+[!](p22-moire.png)
 -- right
-[!](p24-moireCode.png)
+[!](p22-moireCode.png)
 
 -- left 75%
 You can also use `gfx.fillRect` to fill a rectangle with color. The four numbers it needs are: left side X position, bottom Y position, width, and height. (There’s also `gfx.drawRect`, which outlines the rectangle but does not fill it.)
 
-[!](p24-tunnelCode.png)
+[!](p22-tunnelCode.png)
 
 -- right
-[!](p24-tunnel.png)
+[!](p22-tunnel.png)
 
 -- full
 -- puzzle
 What do you think will happen if you change `gfx.fillRect` to `gfx.fillEllipse` in the program above? Try it and see!
 
 -- full
-[!](p24-classroom.png)
+[!](p22-classroom.png)

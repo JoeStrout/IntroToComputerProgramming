@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="book.css">
+</head>
+<body>
+<div class="section two-column">
+<div class="column-left">
+<h2>Looping</h2>
+<p>When a computer is programmed to do something multiple times, it is called <i>looping</i>.  The computer is like a robot running around a racetrack, doing the same thing over and over.</p>
+<p>One way to do this is with a <i>while loop</i>.  A while loop repeats everything between <code>while</code> and <code>end while</code>, as long as the condition after <code>while</code> is true.</p>
+</div>
+<div class="column-right">
+<img src="pics/p18-racetrack.png" alt="" style="aspect-ratio: 913 / 725"/>
+</div>
+</div>
+<div class="section three-column">
+<div class="column-left" style="flex: 0 0 34%">
+<p>Try this while loop, which repeats lines 3-4 as long as num is less than 20:</p>
+<img src="pics/p18-loopCode.png" alt="" style="aspect-ratio: 630 / 312"/>
+</div>
+<div class="column-mid" style="flex: 0 0 32%">
+<img src="pics/p18-loop.png" alt="" style="aspect-ratio: 712 / 542"/>
+</div>
+<div class="column-right">
+<p>The condition can be anything.  It can even be <code>true</code>, which makes an <i>infinite loop</i>.</p>
+<p>Break out of an infinite loop with the <code>break</code> command, or by pressing Control-C.</p>
+</div>
+</div>
+<div class="section-centered">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>Change the loop above so that it prints numbers up to 1000.</p>
+</div>
+<div class="small-gap"></div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 26%">
+<p>Here’s a fun little guessing game.  Change the number in line 1, and have somebody else play; then switch roles.  (Come back to this program after you’ve read page 32, and make the computer pick a number by itself!)</p>
+</div>
+<div class="column-right">
+<img src="pics/p18-listing1.png" alt="" style="aspect-ratio: 1406 / 776"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Another way to loop is the <i>for loop</i>.  It repeats the lines of code between <code>for</code> and <code>end for</code>, but also assigns values to a variable (called the <i>loop variable</i>) as it goes.  The loop exits when it has gone through all the values in the range.</p>
+</div>
+<div class="column-right">
+<img src="pics/p18-forSyntax.png" alt="" style="aspect-ratio: 1016 / 364"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<img src="pics/p18-forLoopCode.png" alt="" style="aspect-ratio: 754 / 334"/>
+<p>The <code>for</code> loop here counts from 10 down to 1.  The <code>wait</code> command pauses for 1 second.</p>
+</div>
+<div class="column-right">
+<img src="pics/p18-forLoopScreen.png" alt="" style="aspect-ratio: 716 / 540"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>If you need to exit a for or while loop early, just use the break command.  break jumps immediately to the next line after end while or end for.</p>
+</div>
+<div class="column-right">
+<img src="pics/p18-breakCode.png" alt="" style="aspect-ratio: 908 / 334"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 72%">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>Change the guessing game on the previous page so it uses a for loop that allows only 5 guesses.  Break out of the loop if the user guesses correctly.</p>
+</div>
+<div class="small-gap"></div>
+<img src="pics/p18-listing2.png" alt="" style="aspect-ratio: 1494 / 656"/>
+</div>
+<div class="column-right">
+<img src="pics/p18-rocket.png" alt="" style="aspect-ratio: 325 / 824"/>
+</div>
+</div>
+</body></html>

@@ -6,6 +6,7 @@ body {
 	margin: 0;
 	padding: 20px;
 	max-width: 900px;
+	height: 100vh;
 	margin: auto;
 	font-size: 1.4rem;
 	text-align: justify;
@@ -21,6 +22,11 @@ body {
 	gap: 20px;
 	flex-wrap: wrap;
 }
+.three-column {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+}
 .column {
 	flex: 1;
 }
@@ -32,6 +38,10 @@ body {
 	flex: 0 0 50%;
 	max-width: 100%;
 }
+.column-mid {
+	flex: 0 0 32%;
+	max-width: 100%;
+}        
 .column-right {
 	flex: 1;	/* takes the remaining space */
 	max-width: 100%;
@@ -51,7 +61,7 @@ body {
 	background-color: #ffffcc;
 	border: 2px dotted #000080;
 	padding: 0px 15px;
-	width: 52vw;
+	width: 75%;
 	max-width: 90%;
 	margin: 0px auto;
 	text-align: justify;
