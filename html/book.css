@@ -66,6 +66,15 @@ body {
 	margin: 0px auto;
 	text-align: justify;
 }
+.callout {
+	background-color: #ccccff;
+	border: 2px dotted #000080;
+	padding: 0px 15px;
+	width: 75%;
+	max-width: 90%;
+	margin: 0px auto;
+	text-align: justify;
+}
 @media (max-width: 768px) {
 	.two-column {
 		flex-direction: column;
@@ -83,7 +92,23 @@ img {
 	max-width: 100%;
 	display: block;
 }
+.inline-img {
+	display: inline;
+	width: auto;
+	max-height: 1.5em;
+	width: auto;
+	height: auto;
+	object-fit: contain;
+	vertical-align: middle;
+}
+.link-line {
+	font-family: monospace;
+	text-align: center;
+}
 h2 {
+	text-align: left;
+}
+h4 {
 	text-align: left;
 }
 code {

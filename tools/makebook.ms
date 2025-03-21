@@ -3,10 +3,10 @@
 import "stringUtil"
 
 endSection = function(out, context)
-	if context.inPuzzle then
-//		print "Closing puzzle"
+	if context.inBox then
+//		print "Closing puzzle or callout box"
 		out.push "</div>"
-		context.inPuzzle = false
+		context.inBox = false
 	end if
 	if context.section == "none" then return
 	if context.section == "right" or context.section == "3of3" then out.push "</div>"
@@ -70,8 +70,6 @@ startSection3of3 = function(out, context, width=34)
 	context.section = "3of3"
 end function
 
-
-
 encodePairedMarkup = function(s, markupChar="_", tag="i")
 	pos = -1
 	tagOpen = false
@@ -85,6 +83,29 @@ encodePairedMarkup = function(s, markupChar="_", tag="i")
 	return s
 end function
 
+encodeImages = function(s)
+	while true
+		imgStart = s.indexOf("[!")
+		if imgStart == null then break
+		imgEnd = s.indexOf(")", imgStart)
+		imgMD = s[imgStart:imgEnd+1]
+		m = imgMD.match("[!{alt}]({filename})")
+		img = file.loadImage("/usr/html/pics/" + m.filename)
+		if not img then
+			print "Image not found: " + m.filename
+			m.width = 42
+			m.height = 42
+		else
+			m.width = img.width / 2
+			m.height = img.height / 2
+		end if
+		imgTag = ("<img class=""inline-img"" src=""pics/{filename}"" alt=""{alt}"" " + 
+		  "width=""{width}"" height=""{height}""/>").fill(m)
+		s = s[:imgStart] + imgTag + s[imgEnd+1:]
+	end while
+	return s
+end function
+
 encode = function(s)
 	s = s.replace("&", "&amp;")
 	s = s.replace("<", "&lt;")
@@ -93,15 +114,16 @@ encode = function(s)
 	s = encodePairedMarkup(s, "`", "code")
 	s = encodePairedMarkup(s, "_", "i")
 	s = encodePairedMarkup(s, "*", "b")
+	s = encodeImages(s)	
 	return s
 end function
 
 processLine = function(line, out, context)
 	if not line or line.trim == "" then
 		// The only special meaning for a blank line: end a puzzle, if in one!
-		if context.inPuzzle then
+		if context.inBox then
 			out.push "</div>"
-			context.inPuzzle = false
+			context.inBox = false
 		end if
 		return
 	end if
@@ -135,7 +157,10 @@ processLine = function(line, out, context)
 	else if line == "-- puzzle" then
 		out.push "<div class=""puzzle"">"
 		out.push "<h4>Programming Puzzle</h4>"
-		context.inPuzzle = true
+		context.inBox = true
+	else if line == "-- callout" then
+		out.push "<div class=""callout"">"
+		context.inBox = true
 	else if line == "-- gap" then
 //		endSection out, context
 		out.push "<div class=""small-gap""></div>"
@@ -153,6 +178,11 @@ processLine = function(line, out, context)
 			m.height = img.height
 		end if
 		out.push "<img src=""pics/{filename}"" alt=""{alt}"" style=""aspect-ratio: {width} / {height}""/>".fill(m)
+	else if line.startsWith("[]") then
+		m = line.match("[]({url})")
+		out.push "<p class=""link-line"">" +
+		   "<a  href=""{url}"" target=""_blank"">{url}</a>".fill(m) + 
+		   "</p>"
 	else
 		out.push "<p>" + encode(line) + "</p>"
 	end if
@@ -171,7 +201,7 @@ process = function(filename)
 		"	<link rel=""stylesheet"" href=""book.css"">",
 		"</head>",
 		"<body>"]
-	context = {"section":"none", "inPuzzle":false}
+	context = {"section":"none", "inBox":false}
 	for line in file.readLines(inputPath)
 		processLine line, out, context
 	end for
