@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="book.css">
+</head>
+<body>
+<div class="section-centered">
+<h2>Organizing Code with Functions</h2>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>The commands you've been using througout this book are properly called <b>functions</b>, and the values you specify after the function name are called <b>parameters</b> of that function.</p>
+</div>
+<div class="column-right">
+<p>For example, <code>print</code> is a function that takes one parameter (the string to print).  <code>clear</code> is a function that doesn't need any parameters.  <code>gfx.line</code> is a function that needs at least four parameters (x0, y0, x1, and y1), and can take one or two more.</p>
+</div>
+</div>
+<div class="section-centered">
+<img src="pics/p38-blueBar.png" alt="" style="aspect-ratio: 1676 / 40"/>
+<div class="small-gap"></div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 55%">
+<p>You can define your own functions, too!  To do this, use the <code>function keyword</code>, followed by variable names for the parameters (if any) within parentheses.  In the example at right, the function takes one parameter, and calls it <code>msg</code>.  Try it!  Every time you use the new <code>say3</code> command, the code between <code>function</code> and <code>end function</code> (lines 2-5) runs.</p>
+</div>
+<div class="column-right">
+<img src="pics/p38-listing1.png" alt="" style="aspect-ratio: 816 / 434"/>
+</div>
+</div>
+<div class="section">
+<p>Defining functions is a great tool when you want to do basically the same thing, but with different data.  The example below defines a <code>printMeal</code> function that prints out one menu option for a restaurant.  Then lines 6-9 call it four times, for four different meals.</p>
+<img src="pics/p38-listing2.png" alt="" style="aspect-ratio: 1694 / 540"/>
+<p>Remember, the code inside the function (like lines 2-3 in the example above) does not run when the function is being defined.  It only runs when the function is called, by using the name it was assigned to on the function line.</p>
+<div class="small-gap"></div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 55%">
+<p>Here's a program that goes at warp speed!  Each of the “warp” lines is represented by a list with five elements: the x0, y0, x1, and y1 coordinates of the line, plus the color.  We need to reset these lines when the program begins, and again whenever one goes off the top or bottom of the screen.  So, we define a <code>resetLine</code> function to make this easy!</p>
+</div>
+<div class="column-right">
+<img src="pics/p38-warpScreen.png" alt="" style="aspect-ratio: 760 / 528"/>
+</div>
+</div>
+<div class="section-centered">
+<img src="pics/p38-listing3.png" alt="" style="aspect-ratio: 1858 / 1656"/>
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>Make the warp lines twice as thick!  <b>Hint:</b> enter <code>@gfx.line</code> to see all the parameters that function can take, then make line 19 a bit longer.</p>
+</div>
+<div class="small-gap"></div>
+</div>
+</body></html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="book.css">
+</head>
+<body>
+<div class="section-centered">
+<h2>More File Commands</h2>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Mini Micro has two “virtual disks” of files.  One is called <code>/sys</code>, and contains all the built-in stuff that comes with Mini Micro.  The other is <code>/usr</code>, and is where you store your own stuff.</p>
+</div>
+<div class="column-right">
+<p>You can reference a file on any disk by using a <b>full path</b> to the file.  That’s a string that starts with "/sys" or "/usr", and then gives the name of each folder on the way to the file, and the file itself.</p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 52%">
+<h4>List files with <code>dir</code></h4>
+<p>The dir command lists all the files and folders (directories) under the path you specify.  For example:</p>
+<p><code>dir "/sys/demo"</code></p>
+<p>lists all files in the demo directory on the /sys disk.  (There are a lot of fun programs in here — give them a try!)</p>
+</div>
+<div class="column-right">
+<img src="pics/p26-sysDemoScreen.png" alt="" style="aspect-ratio: 894 / 678"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 52%">
+<img src="pics/p26-wumpusScreen.png" alt="" style="aspect-ratio: 892 / 672"/>
+</div>
+<div class="column-right">
+<h4>Preview files with <code>view</code></h4>
+<p>The <code>view</code> command displays an image, plays a sound, or lists a program file.</p>
+<p><code>view "/sys/pics/Wumpus.png"</code></p>
+<p>displays the fuzzy purple monster known as the Wumpus.  Or try:</p>
+<p><code>view "/sys/sounds/swoosh.wav"</code></p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 43%">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>How would you load and run the program on the <code>/sys</code> disk that draws a sunset?  <b>Hint:</b> use <code>dir</code> to find it!</p>
+</div>
+</div>
+<div class="column-right">
+<img src="pics/p26-folderTable.png" alt="" style="aspect-ratio: 1158 / 428"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 45%">
+<h2><i>Mini-Golf</i> Game</h2>
+<p>Try this fun golf game!  You specify how hard you want to hit in terms of speed in X (horizontal) and Y (vertical).   Try 5 and 25 for starters.  How many swings does it take you to get the ball into the hole?</p>
+</div>
+<div class="column-right">
+<img src="pics/p26-golfBot.png" alt="" style="aspect-ratio: 760 / 489"/>
+</div>
+</div>
+<div class="section-centered">
+<img src="pics/p26-listing1.png" alt="" style="aspect-ratio: 1942 / 1856"/>
+<div class="small-gap"></div>
+</div>
+</body></html>

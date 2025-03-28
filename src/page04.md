@@ -43,3 +43,5 @@ It’s helpful to think of a computer in terms of its _inputs_, _outputs_, and _
 -- right
 *Outputs* are things the computer can control, like drawing images on the screen and making sounds with the speakers.
 *Processing* is what the computer actually does, usually to produce outputs that depend in some way on the inputs.
+
+-- gap

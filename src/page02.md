@@ -16,3 +16,5 @@ I strongly recommend that you have Mini Micro running as you work your way throu
 To further help your understanding, you will find “Programming Puzzles” in yellow boxes throughout the book.  These are little challenges to write a bit of code, or change one of the programs in a small way.  Answers to these puzzles are given in the back of the book.
 You’re starting on a very exciting journey. Take your time, enjoy the trip, and above all, have fun!
 [!](p02-reader.png)
+
+-- gap

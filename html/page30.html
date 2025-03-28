@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="book.css">
+</head>
+<body>
+<div class="section two-column">
+<div class="column-left">
+<img src="pics/p30-spriteBot.png" alt="" style="aspect-ratio: 944 / 787"/>
+</div>
+<div class="column-right">
+<h2>Sprites</h2>
+<p>Mini Micro supports a special kind of drawing called <b>sprites</b>.  Sprites are little pictures that can move, rotate, and change their size or color, and do it very fast.</p>
+<p>You see sprites in computer games like Pac-Man, Super Mario Bros, and Angry Birds.  Any time a flat little image moves around on a screen, it is almost always a sprite.</p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 65%">
+<p>The steps needed to set up a sprite are shown in lines 2-5 of the program below.  First you create a sprite with <code>new Sprite</code>, and assign it to a variable.  Then you load an image for the sprite to show.  Next, add it to the display so we can see it with <code>display(4).sprites.push</code>.  Finally, set its <code>x</code> (horizontal) and <code>y</code> (vertical) position.</p>
+</div>
+<div class="column-right">
+<img src="pics/p30-ufoScreen.png" alt="" style="aspect-ratio: 702 / 530"/>
+</div>
+</div>
+<div class="section-centered">
+<img src="pics/p30-listing1.png" alt="" style="aspect-ratio: 1828 / 668"/>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>The <code>while</code> loop on lines 6-10 allows you to move the sprite around.  It also shows a new way to get input from the user: <code>key.axis</code>.  With this method, you can control the sprite with the arrow keys, or the WASD keys, or even a game pad!</p>
+</div>
+<div class="column-right">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>Make the UFO move twice as fast!  Hint: its current speed is 10 horizontally, and 6 vertically.</p>
+</div>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 30%">
+<p>Once a sprite is created, you can change its size, color, rotation, or position by assigning to the properties shown in the table at right.  See lines 7-8 in the listing above, or lines 11-12 below.</p>
+</div>
+<div class="column-right">
+<img src="pics/p30-spritePropsTable.png" alt="" style="aspect-ratio: 1308 / 578"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Usually you get the image for a sprite by using file.loadImage directly.  But sometimes the image file on disk is actually a bunch of smaller pictures called frames.  Each frame represents one step of an animation.</p>
+</div>
+<div class="column-right">
+<p>To use these, first load the larger image (called a <b>sprite sheet</b> in this case) into a variable, then call <code>getImage</code> on that to pull out the individual frames, as shown below.</p>
+</div>
+</div>
+<div class="section-centered">
+<img src="pics/p30-listing2.png" alt="" style="aspect-ratio: 1890 / 882"/>
+<img src="pics/p30-enemyFrames.png" alt="" style="aspect-ratio: 1022 / 538"/>
+<div class="small-gap"></div>
+</div>
+</body></html>

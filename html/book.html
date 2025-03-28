@@ -114,18 +114,36 @@
     let currentPage = 0;
 
     function loadPage(n) {
-      if (n < 0) n = 0;
+      if (n < -2) n = -2;
       if (n > 58) n = 56;
       if (n % 2) n--;
       currentPage = n;
-      pageFrame.src = `page${n}.html`;
-      pageNumber.textContent = `Pages ${n}—${n+1}`;
+      
+      // HACK During development: break caching by appending current timestamp
+      const cacheBuster = `v=${Date.now()}`;
+      pageFrame.src = `page${String(n).padStart(2, '0')}.html?${cacheBuster}`;
+      //  Remove the above for deployment, and instead do:
+      //pageFrame.src = `page${String(n).padStart(2, '0')}.html`;
+      if (n < 0) pageNumber.textContent = `Cover`;
+      else if (n < 56) pageNumber.textContent = `Pages ${n}—${n+1}`;
+      else pageNumber.textContent = `Back Cover`;
     }
 
     prevBtn.addEventListener("click", () => loadPage(currentPage - 2));
     nextBtn.addEventListener("click", () => loadPage(currentPage + 2));
     fallbackPrev.addEventListener("click", () => loadPage(currentPage - 2));
     fallbackNext.addEventListener("click", () => loadPage(currentPage + 2));
+
+	pageFrame.addEventListener("load", () => {
+	  const links = pageFrame.contentDocument.querySelectorAll('a[data-page]');
+	  links.forEach(link => {
+		link.addEventListener('click', e => {
+		  e.preventDefault();
+		  const page = parseInt(link.getAttribute('data-page'), 10);
+		  if (!isNaN(page)) loadPage(page);
+		});
+	  });
+	});
 
     document.addEventListener("keydown", (e) => {
       if (e.key === "ArrowRight") loadPage(currentPage + 2);
@@ -159,10 +177,10 @@
     });
 
     // Populate TOC with links to all pages (update range as needed)
-    for (let i = 0; i <= 56; i += 2) {
+    for (let i = -2; i <= 56; i += 2) {
       let a = document.createElement("a");
       a.href = "#";
-      a.textContent = `Pages ${i}-${i + 1}`;
+      a.textContent = (i >= 0 ? `Pages ${i}-${i + 1}` : `Cover`);
       a.addEventListener("click", e => {
         e.preventDefault();
         loadPage(i);
@@ -171,7 +189,7 @@
       toc.appendChild(a);
     }
     
-    loadPage(20);		// start here!
+    loadPage(-2);		// start here!
   </script>
 </body>
 </html>

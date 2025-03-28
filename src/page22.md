@@ -43,3 +43,5 @@ What do you think will happen if you change `gfx.fillRect` to `gfx.fillEllipse` 
 
 -- full
 [!](p22-classroom.png)
+
+-- gap

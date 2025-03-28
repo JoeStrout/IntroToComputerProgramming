@@ -41,3 +41,5 @@ Go ahead and type in the code shown above.  Then click the green [!X](p10-closeB
 [!](p10-listing1.png)
 -- right
 Try a longer one!  Enter `reset` at the prompt to clear the last program, then `edit` to start a new one.  Carefully type in the program at left.  Press [!X](p10-closeButton.png) to exit the code editor, then `run`.  What do you see?
+
+-- gap

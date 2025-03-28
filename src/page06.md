@@ -42,3 +42,5 @@ A sample of different programming languages is shown above.  Some use a lot of f
 -- right
 In this book you’ll be using a language called *MiniScript*.  It is a fairly new language, and designed to be especially simple and clear.  But once you’ve learned one programming language, it's easy to pick up others if you ever need them.
 
+-- gap
+

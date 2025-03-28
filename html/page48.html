@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="book.css">
+</head>
+<body bgcolor="fffdcf">
+<div class="section-centered">
+<h2><i>Programming Puzzle</i> Solutions</h2>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p><b>Page 9:</b> Type the following:</p>
+<p><code>print "Nice to meet you!"</code></p>
+<p>and press the Return or Enter key.</p>
+<hr/>
+<p><b>Page 12:</b></p>
+<p><code>favColor = input("What's your favorite color?")</code></p>
+<p>(Be sure to type that all on one line.)</p>
+<hr/>
+<p><b>Page 14:</b></p>
+<p><code>print 15750 / 375</code></p>
+<hr/>
+<p><b>Page 15:</b> edit the program, and add:</p>
+<code><pre>
+print "or " + age*365*24*60*60 + "&nbsp;seconds!"
+</pre></code>
+<p>(Be sure to type that all on one line.)</p>
+<hr/>
+<p><b>Page 17:</b> insert before line 8:</p>
+<code><pre>
+else if fav == "S" then
+    print "Stop hissing!"
+else if fav == "O" then
+    print "Are you a ghost?"
+</pre></code>
+<hr/>
+<p><b>Page 18:</b> change line 2 to read:</p>
+<p><code>while num &lt; 1000</code></p>
+<hr/>
+</div>
+<div class="column-right">
+<p><b>Page 19:</b> several changes are needed for this one.  First, change line 4 to read:</p>
+<p><code>for i in range(1, 5)</code></p>
+<p>(Or instead of i you could use any variable name not already in use.)  Then change the last line, line 13, to:</p>
+<p><code>end for</code></p>
+<p>Finally, insert one more line before the end if on line 12:</p>
+<p><code>		break</code></p>
+<hr/>
+<p><b>Page 21:</b> in line 1, change <code>elecGuitarC4</code> to <code>pianoLongC4</code>.  Keep the rest of the line the same.</p>
+<hr/>
+<p><b>Page 22:</b></p>
+<p><code>gfx.line 0,0, 960,640</code></p>
+<hr/>
+<img src="pics/p48-puzzleBots.png" alt="" style="aspect-ratio: 1154 / 914"/>
+<div class="small-gap"></div>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p><b>Page 23:</b> you should see a round tunnel instead of a rectangular one.</p>
+<hr/>
+<p><b>Page 26:</b></p>
+<code><pre>
+load "/sys/demo/sunset"
+run
+</pre></code>
+<hr/>
+<p><b>Page 29:</b></p>
+<code><pre>
+print arr[3]
+print arr[-2]
+</pre></code>
+<hr/>
+<p><b>Page 30:</b> on line 7, change the <code>10</code> to <code>20</code>; and on line 8, change the <code>6</code> to <code>12</code>.</p>
+<hr/>
+<p><b>Page 32:</b></p>
+<p>1.	<code>ceil(rnd * 100)</code></p>
+<p>2.	<code>ceil(rnd * 100) + 50</code></p>
+<hr/>
+<p><b>Page 33:</b> change line 1 of this game to:</p>
+<p><code>n = ceil(rnd * 100)</code></p>
+<hr/>
+<img src="pics/p48-puzzlePiece.png" alt="" style="aspect-ratio: 944 / 634"/>
+</div>
+<div class="column-right">
+<p><b>Page 35:</b> insert two new lines before the while loop on line 21:</p>
+<code><pre>
+caughtSnd = file.loadSound("/sys/sounds/pickup.wav")
+missSnd = file.loadSound("/sys/sounds/hit.wav")
+</pre></code>
+<p>(Be sure not to break the lines; they only appear broken above because of printing limitations.)  Then, right after what's now line 42 that prints “CAUGHT,” insert:</p>
+<p><code>    caughtSnd.play</code></p>
+<p>Finally, after the line (now 48) that prints “GAME OVER”, insert:</p>
+<p><code>    missSnd.play</code></p>
+<hr/>
+<p><b>Page 39:</b> to the end of line 19, add a comma followed by a number <code>2</code>.  (The sixth parameter to <code>gfx.line</code> specifies the line width.)</p>
+<hr/>
+<p><b>Page 41:</b> the function in the program on page 40 is called <code>plot</code>.  In the program on page 41, it’s <code>drawBarGraph</code>.  But these are just variable names; you could call them something else, as long as you use the same name where the function is called!</p>
+<hr/>
+<p><b>Page 43:</b> </p>
+<code><pre>
+pool = {}
+pool.width = 8
+pool.length = 12
+print pool.width * pool.length
+</pre></code>
+<div class="small-gap"></div>
+</div>
+</div>
+</body></html>

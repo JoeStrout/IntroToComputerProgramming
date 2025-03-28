@@ -40,3 +40,5 @@ _Typing these programs in is a great way to learn.  Take your time and enjoy eac
 
 -- full
 [!](p12-listing2.png)
+
+-- gap

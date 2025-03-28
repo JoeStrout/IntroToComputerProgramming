@@ -47,3 +47,5 @@ Your screen may be getting a little cluttered by now.  Let’s clean it up!  Ent
 [!](p08-clearCode.png)
 -- right
 This command will be very useful any time your screen is full of junk, covered with pictures, or otherwise a mess.  Just enter `clear` and you’ll be back to a nice clear screen, ready to type your next command.
+
+-- gap

@@ -40,3 +40,5 @@ Because we want to compare numbers, not messages, we convert the user's input in
 [!Movie poster: "Mutant Zombies IV"](p16-movie-poster.png)
 -- right
 [!](p16-listing2.png)
+
+-- gap

@@ -50,3 +50,5 @@ Change the guessing game on the previous page so it uses a for loop that allows 
 [!](p18-listing2.png)
 -- right
 [!](p18-rocket.png)
+
+-- gap

@@ -45,3 +45,5 @@ But there is no black key (note) between E and F, or between B and C.  So lines 
 -- full
 -- puzzle
 Change this program to play piano instead of guitar!  Here's a hint: use `dir "/sys/sounds"` to list all the built-in sounds.
+
+-- gap
