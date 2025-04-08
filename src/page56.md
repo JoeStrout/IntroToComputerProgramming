@@ -1,3 +1,0 @@
--- full
-[!](coverBack.jpg)
--- gap

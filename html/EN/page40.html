@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/book.css">
+</head>
+<body>
+<div class="section two-column">
+<div class="column-left">
+<h2>Graphing Data</h2>
+<p>Computers are great at making charts and graphs.  Usually you’ll use a pixel display like gfx for this (see <a href="#" data-page="22">page 22</a>).</p>
+<p>If your data is a long list of values (page 28), then make a <code>for</code> loop to iterate over that data, calculating the x and y coordinates on screen from the loop variable and the data value.  Use a couple of variables (<code>lastx</code> and <code>lasty</code> in this example) to keep track of the position of the last point. </p>
+</div>
+<div class="column-right">
+<img src="/pics/p40-graphScreen.png" alt="" style="aspect-ratio: 954 / 712"/>
+<p>Draw a line from the last point to the new one, and then continue until the loop is done.</p>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p40-listing1.png" alt="" style="aspect-ratio: 1974 / 876"/>
+<img src="/pics/p40-chartBot.png" alt="" style="aspect-ratio: 1787 / 561"/>
+<div class="small-gap"></div>
+<img src="/pics/p40-listing2.png" alt="" style="aspect-ratio: 1908 / 1570"/>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Another kind of chart is the bar chart, where you draw a rectangle (bar) sized to represent each data point.  You can tweak the colors too if you want to get fancy.</p>
+<p>When the bars represent counts of some event, like the result of rolling two dice, then the chart is called a histogram.</p>
+</div>
+<div class="column-right">
+<img src="/pics/p40-chartScreen.png" alt="" style="aspect-ratio: 958 / 808"/>
+</div>
+</div>
+<div class="section-centered">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>Each of the two programs in this section uses a function to organize the code.  What are their names?</p>
+</div>
+<div class="small-gap"></div>
+</div>
+</body></html>

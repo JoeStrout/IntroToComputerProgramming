@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/book.css">
+</head>
+<body>
+<div class="section-centered">
+<h2>Sounds and Music</h2>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Mini Micro can play sounds which are stored in sound files. You can load one using <code>file.loadSound</code>, and then play it by using the <code>play</code> command.</p>
+</div>
+<div class="column-right">
+<p>A number of built-in sounds can be found in the <code>/sys/sounds</code> folder.  A few of these are shown below; see how many you find when you try it yourself.</p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<img src="/pics/p20-band.png" alt="" style="aspect-ratio: 980 / 490"/>
+</div>
+<div class="column-right">
+<img src="/pics/p20-dir-sounds.png" alt="" style="aspect-ratio: 352 / 264"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>The <code>play</code> command takes up to three values: the loudness (1 is normal), the left/right pan (0 is centered), and the speed and pitch (normally 1).  Try it!</p>
+</div>
+<div class="column-right">
+<img src="/pics/p20-snd-play.png" alt="" style="aspect-ratio: 512 / 175"/>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p20-snd-examples.png" alt="" style="aspect-ratio: 948 / 256"/>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Changing the speed also changes the pitch, and this lets you make music.  A function called <code>noteFreq</code> is helpful here; it calculates the sound frequency for any musical note.  Note numbers are shown on the piano diagram below.</p>
+</div>
+<div class="column-right">
+<p>To calculate the right speed for any note, divide the <code>noteFreq</code> of that note by the <code>noteFreq</code> of the recorded note (which is usually 60, or middle C).</p>
+<p>(That's what's going on in line 10 of the program below.)</p>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p20-piano.png" alt="" style="aspect-ratio: 822 / 159"/>
+<div class="small-gap"></div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<h4>Keyboard Guitar</h4>
+<p>The program below lets you play guitar on your computer!  Use the number keys from 1 to 9 at the top of your keyboard.  1 plays note 60 (middle C), 2 plays note 62, and so on up to 9, which plays note 74.</p>
+</div>
+<div class="column-right">
+<p>To find the note number, we first convert the key pressed into a number from 0 to 8 (line 5).  Then since most of the white keys on a piano are two notes apart, we multiply this by 2 and add to 60, our base note.</p>
+<p>But there is no black key (note) between E and F, or between B and C.  So lines 7-8 check for those cases and subtract one for the missing note.</p>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p20-listing1.png" alt="" style="aspect-ratio: 1550 / 606"/>
+</div>
+<div class="section-centered">
+<img src="/pics/p20-song.png" alt="" style="aspect-ratio: 1878 / 246"/>
+<div class="small-gap"></div>
+</div>
+<div class="section-centered">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>Change this program to play piano instead of guitar!  Here's a hint: use <code>dir "/sys/sounds"</code> to list all the built-in sounds.</p>
+</div>
+<div class="small-gap"></div>
+</div>
+</body></html>

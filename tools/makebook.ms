@@ -103,7 +103,7 @@ encodeImages = function(s)
 			m.width = img.width / 2
 			m.height = img.height / 2
 		end if
-		imgTag = ("<img class=""inline-img"" src=""pics/{filename}"" alt=""{alt}"" " + 
+		imgTag = ("<img class=""inline-img"" src=""/pics/{filename}"" alt=""{alt}"" " + 
 		  "width=""{width}"" height=""{height}""/>").fill(m)
 		s = s[:imgStart] + imgTag + s[imgEnd+1:]
 	end while
@@ -147,6 +147,21 @@ encodePageLinks = function(s)
 	  s[p1:]
 end function
 
+addLink = function(s, text, url)
+	s = s.replace(text, "<a href=""" + url + """ target=""_blank"">" +
+		text + "</a>")
+	return s
+end function
+
+encodeSpecialLinks = function(s)
+	s = addLink(s, "Learn to Code in 30 Days", 
+	  "https://www.amazon.com/Learn-Code-Days-Joe-Strout/dp/173616760X")
+	s = addLink(s, "https://miniscript.org", "https://miniscript.org")
+	s = addLink(s, "Mini Micro Cheat Sheet", 
+	  "https://miniscript.org/files/MiniMicro-CheatSheet.pdf")
+	return s
+end function
+
 encode = function(s, withMarkup=true)
 	s = s.replace("&", "&amp;")
 	s = s.replace("<", "&lt;")
@@ -159,6 +174,7 @@ encode = function(s, withMarkup=true)
 		s = encodePairedMarkup(s, "*", "b")
 		s = encodeImages(s)	
 		s = encodePageLinks(s)
+		s = encodeSpecialLinks(s)
 	end if
 	return s
 end function
@@ -256,7 +272,7 @@ processLine = function(line, out, context)
 			m.width = img.width
 			m.height = img.height
 		end if
-		out.push "<img src=""pics/{filename}"" alt=""{alt}"" style=""aspect-ratio: {width} / {height}""/>".fill(m)
+		out.push "<img src=""/pics/{filename}"" alt=""{alt}"" style=""aspect-ratio: {width} / {height}""/>".fill(m)
 	else if line.startsWith("[]") then
 		m = line.match("[]({url})")
 		out.push "<p class=""link-line"">" +
@@ -286,9 +302,9 @@ processLine = function(line, out, context)
 	end if
 end function
 
-process = function(filename)
-	inputPath = "/usr/src/" + filename
-	outputPath = "/usr/html/" + (filename - ".md" + ".html")
+process = function(filename, lang="EN")
+	inputPath = "/usr/src/" + lang + "/" + filename
+	outputPath = "/usr/html/" + lang + "/" + (filename - ".md" + ".html")
 	out = [
 		"<!DOCTYPE html>",
 		"<html lang=""en"">",
@@ -296,7 +312,7 @@ process = function(filename)
 		"    <meta charset=""UTF-8"">",
 		"    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">",
 		"    <title>Introduction to Computer Programming</title>",
-		"	<link rel=""stylesheet"" href=""book.css"">",
+		"	<link rel=""stylesheet"" href=""/book.css"">",
 		"</head>",
 		"<body>"]
 	if filename == "page48.md" then
@@ -319,7 +335,7 @@ if locals == globals then
 	if filename then
 		process filename
 	else
-		for filename in file.children("/usr/src")
+		for filename in file.children("/usr/src/EN")
 			process filename
 		end for
 	end if

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/book.css">
+</head>
+<body>
+<div class="section-centered">
+<h2>Making Decisions</h2>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Many computer programs need to do different things depending on some value entered by the user.  This is done with an <b>if statement</b>.  Try out this program:</p>
+<img src="/pics/p16-ifExample.png" alt="" style="aspect-ratio: 1050 / 376"/>
+</div>
+<div class="column-right">
+<img src="/pics/p16-opTable.png" alt="" style="aspect-ratio: 826 / 684"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Line 1 asks the user to input an answer.  At line 2, the <code>if</code> statement checks whether the answer entered is equal to "4".  If it is, the computer goes on to line 3, and then jumps down to the <code>end if</code> on line 6.  But if the answer is <i>not</i> equal to "4", then it jumps from line 2 down to the <code>else</code> part on line 5.</p>
+</div>
+<div class="column-right">
+<p>You can do other kinds of comparisons, too.  See the table above for all the different <b>comparison operators</b> you can use to compare two values.</p>
+<p><i>Run the program several times, trying out different answers!</i></p>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p16-ifSyntax.png" alt="" style="aspect-ratio: 1842 / 694"/>
+</div>
+<div class="section">
+<p>An <code>if</code> statement can have many parts to deal with different conditions.  The first part, after the line with <code>if</code> and <code>then</code>, must always be there.  Then you can have any number of <code>else if</code> parts, checking for other conditions.  The first of these to match will run its code, skipping the rest.  Finally, an <code>else</code> part runs if <i>none</i> of the conditions were true.  Which parts do you see in the program above?</p>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 30%">
+<p>A condition can be a simple comparison, or it can be several comparisons joined with <code>and</code> or  <code>or</code>.</p>
+</div>
+<div class="column-right">
+<img src="/pics/p16-listing1.png" alt="" style="aspect-ratio: 1360 / 480"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>Add two more <code>else if</code> parts to the program above: if the user enters "S", tell them to stop hissing; and if they enter "O", ask them if they are a ghost!</p>
+</div>
+<div class="column-right">
+<img src="/pics/p16-scale.png" alt="Robot contemplating a scale weighing a variable called `answer` against the value 4." style="aspect-ratio: 855 / 499"/>
+</div>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Here's a fun program that decides if the user is old enough to see a scary movie.  (If you don't like its decision, change the conditions — it's your program!)</p>
+</div>
+<div class="column-right">
+<p>Because we want to compare numbers, not messages, we convert the user's input into a number using val (as on page 15).</p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 21%">
+<img src="/pics/p16-movie-poster.png" alt="Movie poster: "Mutant Zombies IV"" style="aspect-ratio: 512 / 803"/>
+</div>
+<div class="column-right">
+<img src="/pics/p16-listing2.png" alt="" style="aspect-ratio: 1512 / 658"/>
+<div class="small-gap"></div>
+</div>
+</div>
+</body></html>

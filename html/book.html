@@ -113,17 +113,29 @@
 
     let currentPage = 0;
 
+    function getUrlParameter(name) {
+      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      const results = regex.exec(location.search);
+      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+    
     function loadPage(n) {
       if (n < -2) n = -2;
       if (n > 58) n = 56;
       if (n % 2) n--;
       currentPage = n;
       
+      let langCode = getUrlParameter('lang');
+      if (!langCode) langCode = "EN";
+
       // HACK During development: break caching by appending current timestamp
+      pageURL = `${langCode}/page${String(n).padStart(2, '0')}.html`;
       const cacheBuster = `v=${Date.now()}`;
-      pageFrame.src = `page${String(n).padStart(2, '0')}.html?${cacheBuster}`;
-      //  Remove the above for deployment, and instead do:
-      //pageFrame.src = `page${String(n).padStart(2, '0')}.html`;
+      pageURL = `${pageURL}?${cacheBuster}`;
+      //  Comment out the above for deployment
+      console.log("Loading: " + pageURL);
+      pageFrame.src = pageURL;
       if (n < 0) pageNumber.textContent = `Cover`;
       else if (n < 56) pageNumber.textContent = `Pages ${n}—${n+1}`;
       else pageNumber.textContent = `Back Cover`;

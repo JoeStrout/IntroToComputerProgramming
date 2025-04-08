@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/book.css">
+</head>
+<body>
+<div class="section">
+<h2>Maps and Objects</h2>
+<p>When you assign values to variables in MiniScript, the computer stores them in a little table in memory.  This table maps each variable name to its value.  Use the <code>reset</code> command to clear memory, then enter the following three assignments. </p>
+<img src="/pics/p42-mapScreen1.png" alt="" style="aspect-ratio: 1898 / 704"/>
+<p>The computer's memory contains a table mapping <code>a</code> to <code>"Hi"</code>, <code>b</code> to <code>3.14</code>, and <code>c</code> to <code>42</code> as shown above.  Now, replace the value of <code>b</code> with the new stuff shown below.</p>
+<img src="/pics/p42-mapScreen2.png" alt="" style="aspect-ratio: 1874 / 706"/>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>The two curly braces, <code>{}</code>, define an empty <b>map</b> — a new table of names and values.  Our variable <code>b</code> now just points to this new table.  Using <b>dot syntax</b>, like <code>b.uno</code>, we can get to the variables inside that map.</p>
+</div>
+<div class="column-right">
+<p>After those assignments, the computer's memory looks like the above.  Variables <code>a</code> and <code>c</code> hold simple values, but <code>b</code> holds a pointer to another map containing <code>uno</code>, <code>dos</code>, and <code>hola</code>.</p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 40%">
+<p>You can use dot syntax to get the values back out, too.  Try <code>print b.hola</code> to print a greeting, right out of the map you just created.  It works exactly like normal variables, but with (in this case) a <code>b.</code> prefix.</p>
+</div>
+<div class="column-right">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>Make <code>pool</code> refer to a map that maps <code>width</code> to 8 and <code>length</code> to 12.  Then use this to print out the area (width times length) of the pool.</p>
+</div>
+</div>
+</div>
+<div class="section-centered">
+<p>You've seen this sort of dot syntax before.  Remember this code from page 20?</p>
+<img src="/pics/p42-listing1.png" alt="" style="aspect-ratio: 1506 / 138"/>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p><code>file</code> is actually a map that contains file-related functions like <code>loadSound</code>.  And, what it returns is another map representing the loaded sound, with functions on it like <code>play</code>.  Sometimes a map like that is called an <b>object</b>.</p>
+</div>
+<div class="column-right">
+<p>An object can also be created by using <code>new</code>, as in <code>new Sprite</code>.  The <code>new</code> command creates a special sort of map that is linked to the map it was created from.  In the program below, we create a <code>Friend</code> map from <code>Sprite</code>, then create <code>mochi</code> and <code>wumpus</code> from <code>Friend</code>.</p>
+</div>
+</div>
+<div class="section">
+<img src="/pics/p42-listing2.png" alt="" style="aspect-ratio: 1552 / 880"/>
+<p>Any values not defined on <code>mochi</code> and <code>wumpus</code> (like <code>scale</code> and <code>y</code>) are looked up in <code>Friend</code> instead.  And because <code>Friend</code> was created from <code>Sprite</code>, they all get <code>Sprite</code>'s functionality too.</p>
+<div class="small-gap"></div>
+</div>
+</body></html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/book.css">
+</head>
+<body>
+<div class="section two-column">
+<div class="column-left">
+<h2>Rolling the Dice</h2>
+<p>Many board games are based on rolling dice, which is a way of generating <i>random numbers</i>.  On each roll, you don’t know what you’re going to get.  Other examples of randomness include flipping a coin or drawing cards from a shuffled deck.</p>
+<p>Computers can generate random numbers, too.  In MiniScript, you do this with the word <code>rnd</code>.</p>
+<p>Try the following at the Mini Micro prompt:</p>
+</div>
+<div class="column-right">
+<img src="/pics/p32-diceBot.png" alt="" style="aspect-ratio: 943 / 888"/>
+</div>
+</div>
+<div class="section three-column">
+<div class="column-left" style="flex: 0 0 34%">
+<img src="/pics/p32-rndScreen1.png" alt="" style="aspect-ratio: 662 / 502"/>
+<p>Each time you use <code>rnd</code>, it returns a random number between 0 and 1.</p>
+</div>
+<div class="column-mid" style="flex: 0 0 32%">
+<img src="/pics/p32-rndScreen2.png" alt="" style="aspect-ratio: 664 / 496"/>
+<p>If you multiply <code>rnd</code> by 6, then you get a number between 0 and 6.</p>
+</div>
+<div class="column-right">
+<img src="/pics/p32-rndScreen3.png" alt="" style="aspect-ratio: 664 / 498"/>
+<p>Putting <code>ceil()</code> around that rounds up, producing a whole number from 1 to 6, like rolling a die.</p>
+</div>
+</div>
+<div class="section-centered">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>1. How would you generate a random whole number from 1 to 100?</p>
+<p>2. How about a whole number from 51 to 150?</p>
+</div>
+<div class="small-gap"></div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 80%">
+<img src="/pics/p32-listing1.png" alt="" style="aspect-ratio: 1450 / 766"/>
+</div>
+<div class="column-right">
+<img src="/pics/p32-coin.png" alt="" style="aspect-ratio: 335 / 832"/>
+</div>
+</div>
+<div class="section">
+<p>The program above flips a coin, using <code>rnd</code> on line 9, which will return a value bigger than 0.5 half the time.  Everything above that is just for style.</p>
+<p><code>text.row = text.row + 1</code> moves the cursor up to the previous line, allowing us to print those slashes, vertical bars, and dashes all in the same place, to look like a spinning coin.</p>
+<p>Then try the program below, which makes a worm crawl randomly around on your screen until you press Control-C!</p>
+<img src="/pics/p32-listing2.png" alt="" style="aspect-ratio: 1944 / 882"/>
+<div class="small-gap"></div>
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>Return to the guessing game on page 18.  Change the code so that the computer picks a random number from 1 to 100.</p>
+</div>
+<div class="small-gap"></div>
+</div>
+</body></html>
