@@ -2,9 +2,9 @@
 ## Über dieses Buch
 
 -- left
-Dieses Buch ist für zwei Arten von Lesern geschrieben. Die erste Art ist jemand, der noch nie zuvor Computerprogrammierung gemacht hat. Sicherlich haben Sie den Begriff schon gehört, und Sie wissen wahrscheinlich, dass damit Spiele und Apps erstellt werden – aber Sie wissen möglicherweise nicht, wie Programmierung tatsächlich _ist_. Aber am Ende dieses Buches werden Sie es wissen!
+Dieses Buch ist für zwei Arten von Leserinnen und Lesern geschrieben. Die erste Art ist jemand, der noch nie zuvor programmiert hat. Sicherlich hast du schon von Programmieren gehört, und wahrscheinlich, dass damit Spiele und Apps erstellt werden - aber du weißt möglicherweise nicht, wie es ist, selbst zu programmieren. Am Ende dieses Buches wirst du das wissen!
 -- right
-Die andere Art von Leser ist jemand, der bereits andere Programmiersprachen verwendet hat, aber besonders an MiniScript oder Mini Micro interessiert ist. Durch dieses Buch erhalten Sie eine sehr schnelle und angenehme Einführung in die Möglichkeiten dieser Werkzeuge und sind auf dem besten Weg, Ihre eigenen Mini Micro-Spiele zu erstellen.
+Die andere Art ist jemand, der bereits andere Programmiersprachen verwendet hat, aber besonders an MiniScript oder Mini Micro interessiert ist. Durch dieses Buch erhältst du eine sehr schnelle und angenehme Einführung in diese beiden Tools und bist auf dem besten Weg, deine eigenen Mini Micro Spiele zu erstellen.
 
 -- full
 [!](p02-computerUsers.png)
