@@ -331,12 +331,14 @@ end function
 
 
 if locals == globals then
+	language = input("Enter language code [EN]: ")
+	if not language then language = "EN"
 	filename = input("Enter .md filename, or blank for all: ")
 	if filename then
-		process filename
+		process filename, language
 	else
-		for filename in file.children("/usr/src/EN")
-			process filename
+		for filename in file.children("/usr/src/" + language)
+			process filename, language
 		end for
 	end if
 end if
