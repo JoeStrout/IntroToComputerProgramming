@@ -10,7 +10,7 @@ Die andere Art ist jemand, der bereits andere Programmiersprachen verwendet hat,
 [!](p02-computerUsers.png)
 
 -- left
-Wir beginnen mit einer Anleitung, um Mini Micro zu installieren.Mini Micro ist eine kostenlose App, mit der du alle Programme in diesem Buch ausführen kannst. Nach ein paar wenigen Seiten mit Hintergrundinformationen über Computer und Programmiersprachen wirst du deine ersten Computerbefehle verwenden und kurze Programme in Mini Micro eingeben. Am Ende des Buches wirst du sogar vollständige Computerspiele eingeben (und verstehen!).
+Wir beginnen mit einer Anleitung, um Mini Micro zu installieren. Mini Micro ist eine kostenlose App, mit der du alle Programme in diesem Buch ausführen kannst. Nach ein paar wenigen Seiten mit Hintergrundinformationen über Computer und Programmiersprachen wirst du deine ersten Computerbefehle verwenden und kurze Programme in Mini Micro eingeben. Am Ende des Buches wirst du sogar vollständige Computerspiele eingeben (und verstehen!).
 Ich empfehle dir, dass du, während du dieses Buch liest, Mini Micro laufen lässt, und *alle Beispiele selbst ausprobierst*. Gib sie ein und sieh dir an, was die Befehle tun. Falls du Fehler machen solltest, ist das in Ordnung! Auf diese Weise lernst du viel mehr, als wenn du das Buch nur liest.
 -- right
 Um dir zu helfen, alles gut zu verstehen, findest du im ganzen Buch “Programmier-Rätsel” in gelben Kästchen. Diese Rätsel sind kleine Aufgaben, um ein bisschen selbst zu coden oder Programme zu verändern. Antworten auf die Aufgaben findest du am Ende des Buches. Du beginnst eine sehr spannende Reise. Nimm dir Zeit, genieß den Weg und vor allem: Hab viel Spaß!
