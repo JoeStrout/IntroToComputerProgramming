@@ -10,11 +10,10 @@ Die andere Art ist jemand, der bereits andere Programmiersprachen verwendet hat,
 [!](p02-computerUsers.png)
 
 -- left
-Wir beginnen mit einigen Anweisungen zur Installation von Mini Micro, einer kostenlosen App, mit der Sie alle Programme in diesem Buch ausführen können. Nach einigen Seiten mit Hintergrundinformationen über Computer und Programmiersprachen werden Sie Ihre allerersten Computerbefehle eingeben, gefolgt von kurzen Programmen. Am Ende des Buches werden Sie vollständige Computerspiele eingeben (und verstehen!).
-Ich empfehle dringend, dass Sie Mini Micro laufen lassen, während Sie dieses Buch durcharbeiten, und *probieren Sie alle Beispiele selbst aus*. Geben Sie sie ein und sehen Sie, was sie bewirken. Wenn Sie einen Fehler machen, ist das in Ordnung! Sie werden auf diese Weise viel mehr lernen, als wenn Sie nur darüber lesen würden.
+Wir beginnen mit einer Anleitung, um Mini Micro zu installieren. Mini Micro ist eine kostenlose App, mit der du alle Programme in diesem Buch ausführen kannst. Nach ein paar wenigen Seiten mit Hintergrundinformationen über Computer und Programmiersprachen wirst du deine ersten Computerbefehle verwenden und kurze Programme in Mini Micro eingeben. Am Ende des Buches wirst du sogar vollständige Computerspiele eingeben (und verstehen!).
+Ich empfehle dir, dass du, während du dieses Buch liest, Mini Micro laufen lässt, und *alle Beispiele selbst ausprobierst*. Gib sie ein und sieh dir an, was die Befehle tun. Falls du Fehler machen solltest, ist das in Ordnung! Auf diese Weise lernst du viel mehr, als wenn du das Buch nur liest.
 -- right
-Um Ihr Verständnis weiter zu fördern, finden Sie im ganzen Buch "Programmier-Rätsel" in gelben Kästchen. Dies sind kleine Herausforderungen, um ein bisschen Code zu schreiben oder eines der Programme auf kleine Weise zu verändern. Antworten auf diese Rätsel finden Sie am Ende des Buches.
-Sie beginnen eine sehr spannende Reise. Nehmen Sie sich Zeit, genießen Sie die Fahrt und vor allem: Haben Sie Spaß!
+Um dir zu helfen, alles gut zu verstehen, findest du im ganzen Buch “Programmier-Rätsel” in gelben Kästchen. Diese Rätsel sind kleine Aufgaben, um ein bisschen selbst zu coden oder Programme zu verändern. Antworten auf die Aufgaben findest du am Ende des Buches. Du beginnst eine sehr spannende Reise. Nimm dir Zeit, genieß den Weg und vor allem: Hab viel Spaß!
 [!](p02-reader.png)
 
 -- gap
