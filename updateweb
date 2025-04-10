@@ -1,0 +1,2 @@
+#!/bin/sh
+rsync -az html/* strout.net:introtocomputerprogramming.online/
