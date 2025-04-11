@@ -1,7 +1,7 @@
 -- full
 ## Erste Befehle
 -- left
-Starte Mini Micro. (Wenn du Mini Micro noch nicht installiert hast, folge bitte den Anweisungen auf Seite 4.) Du solltest einen schwarzen Bildschirm mit einem beigen Rand sehen, der eine Willkommensnachricht anzeigt.
+Starte Mini Micro. (Falls du Mini Micro noch nicht installiert hast, folge bitte den Anweisungen auf Seite 4.) Du solltest einen schwarzen Bildschirm mit einem beigen Rand sehen, der eine Willkommensnachricht anzeigt.
 -- right
 Nach der Willkommensnachricht siehst du eine orangefarbene eckige Klammer und ein blinkendes orangefarbenes Kästchen, das *Cursor* genannt wird. Diese *Eingabeaufforderung* ist eine Einladung, einen Befehl einzugeben. Der Computer wartet nur darauf, dass du ihm sagst, was er tun soll!
 
@@ -11,7 +11,7 @@ Nach der Willkommensnachricht siehst du eine orangefarbene eckige Klammer und ei
 -- left
 Der erste Befehl, den wir ausprobieren, gibt eine Nachricht auf dem Bildschirm aus. Gib Folgendes genau wie gezeigt ein:
 [!](p08-printHello.png)
-Achte darauf, alles in Kleinbuchstaben zu schreiben und Anführungszeichen um "hello" zu setzen. Drücke dann die Return- oder Enter-Taste.
+Achte darauf, alles in Kleinbuchstaben zu schreiben und Anführungszeichen um "hello" zu setzen. Drücke dann die Enter-Taste.
 -- right
 [!](p08-helloBot.png)
 
@@ -43,7 +43,7 @@ Bringe den Computer dazu, die Nachricht "Schön, dich kennenzulernen!" auszugebe
 _Lösungen für Programmier-Rätsel beginnen auf Seite 48._
 
 -- left
-Dein Bildschirm ist inzwischen vielleicht etwas unübersichtlich geworden. Räumen wir ihn auf! Gib diesen Befehl genau wie gezeigt ein und drücke dann die Enter- oder Return-Taste:
+Dein Bildschirm ist inzwischen vielleicht etwas unübersichtlich geworden. Räumen wir ihn auf! Gib diesen Befehl genau wie gezeigt ein und drücke dann die Enter Taste:
 [!](p08-clearCode.png)
 -- right
 Dieser Befehl wird sehr nützlich sein, wenn dein Bildschirm voller Unsinn ist, mit Bildern bedeckt ist oder anderweitig durcheinander ist. Gib einfach `clear` ein, und du hast wieder einen schönen, leeren Bildschirm, bereit für die Eingabe deines nächsten Befehls.
