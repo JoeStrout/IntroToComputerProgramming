@@ -2,7 +2,7 @@
 ## Einem Computer sagen, was er tun soll
 
 -- left
-Computer können einfache Anweisungen, wie das Addieren von Zahlen, sehr schnell ausführen — viel schneller als Menschen. Aber sie haben keinen gesunden Menschenverstand. Wenn dich zum Beispiel jemand bittet, der Katze eine Dose Futter zu geben, weißt du wahrscheinlich, dass du sie zuerst öffnen musst! Aber ein Computer denkt nicht an solche Dinge. Ihm muss Schritt für Schritt gesagt werden, was zu tun ist.
+Computer können einfache Anweisungen, wie das Addieren von Zahlen, sehr schnell ausführen — viel schneller als Menschen. Aber sie haben keinen gesunden Menschenverstand. Wenn dich zum Beispiel jemand bittet, einer Katze eine Dose Futter zu geben, weißt du wahrscheinlich, dass du sie zuerst öffnen musst! Aber ein Computer denkt nicht an solche Dinge. Ihm muss Schritt für Schritt gesagt werden, was zu tun ist.
 Wenn du einen Roboter hättest, der Anweisungen verstehen kann, und du möchtest, dass er deine Katze füttert und ihr Wasser gibt, könntest du Anweisungen etwa so aufschreiben:
 
 1. Gehe zum Schrank.
