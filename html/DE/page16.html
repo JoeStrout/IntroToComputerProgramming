@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/book.css">
+</head>
+<body>
+<div class="section-centered">
+<h2>Entscheidungen treffen</h2>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Viele Computerprogramme müssen je nach einem vom Benutzer eingegebenen Wert unterschiedliche Dinge tun. Dies geschieht mit einer <b>if-Anweisung</b>. Probiere dieses Programm aus:</p>
+<img src="/pics/p16-ifExample.png" alt="" style="aspect-ratio: 1050 / 376"/>
+</div>
+<div class="column-right">
+<img src="/pics/p16-opTable.png" alt="" style="aspect-ratio: 826 / 684"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Zeile 1 fordert den Benutzer auf, eine Antwort einzugeben. In Zeile 2 prüft die <code>if</code>-Anweisung, ob die eingegebene Antwort gleich "4" ist. Wenn ja, fährt der Computer mit Zeile 3 fort und springt dann zum <code>end if</code> in Zeile 6. Wenn die Antwort aber <i>nicht</i> gleich "4" ist, springt er von Zeile 2 zum <code>else</code>-Teil in Zeile 5.</p>
+</div>
+<div class="column-right">
+<p>Du kannst auch andere Arten von Vergleichen durchführen. In der obigen Tabelle findest du alle verschiedenen <b>Vergleichsoperatoren</b>, die du zum Vergleichen zweier Werte verwenden kannst.</p>
+<p><i>Führe das Programm mehrmals aus und probiere verschiedene Antworten aus!</i></p>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p16-ifSyntax.png" alt="" style="aspect-ratio: 1842 / 694"/>
+</div>
+<div class="section">
+<p>Eine <code>if</code>-Anweisung kann viele Teile haben, um verschiedene Bedingungen zu behandeln. Der erste Teil, nach der Zeile mit <code>if</code> und <code>then</code>, muss immer vorhanden sein. Dann kannst du eine beliebige Anzahl von <code>else if</code>-Teilen haben, die andere Bedingungen prüfen. Der erste davon, der übereinstimmt, führt seinen Code aus und überspringt den Rest. Schließlich wird ein <code>else</code>-Teil ausgeführt, wenn <i>keine</i> der Bedingungen wahr war. Welche Teile siehst du im obigen Programm?</p>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 30%">
+<p>Eine Bedingung kann ein einfacher Vergleich sein, oder sie kann aus mehreren Vergleichen bestehen, die mit <code>and</code> oder <code>or</code> verbunden sind.</p>
+</div>
+<div class="column-right">
+<img src="/pics/p16-listing1.png" alt="" style="aspect-ratio: 1360 / 480"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>Füge dem obigen Programm zwei weitere <code>else if</code>-Teile hinzu: Wenn der Benutzer "S" eingibt, sage ihm, er soll aufhören zu zischen; und wenn er "O" eingibt, frage ihn, ob er ein Geist ist!</p>
+</div>
+<div class="column-right">
+<img src="/pics/p16-scale.png" alt="Roboter, der über eine Waage nachdenkt, die eine Variable namens `answer` gegen den Wert 4 abwiegt." style="aspect-ratio: 855 / 499"/>
+</div>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Hier ist ein lustiges Programm, das entscheidet, ob der Benutzer alt genug ist, um einen gruseligen Film zu sehen. (Wenn dir die Entscheidung nicht gefällt, ändere die Bedingungen — es ist dein Programm!)</p>
+</div>
+<div class="column-right">
+<p>Da wir Zahlen und nicht Nachrichten vergleichen wollen, wandeln wir die Eingabe des Benutzers mit val in eine Zahl um (wie auf Seite 15).</p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 21%">
+<img src="/pics/p16-movie-poster.png" alt="Filmplakat: "Mutant Zombies IV"" style="aspect-ratio: 512 / 803"/>
+</div>
+<div class="column-right">
+<img src="/pics/p16-listing2.png" alt="" style="aspect-ratio: 1512 / 658"/>
+<div class="small-gap"></div>
+</div>
+</div>
+</body></html>

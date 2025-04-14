@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/book.css">
+</head>
+<body>
+<div class="section-centered">
+<h2>Klänge und Musik</h2>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Mini Micro kann Klänge abspielen, die in Klangdateien gespeichert sind. Du kannst eine mit <code>file.loadSound</code> laden und dann mit dem Befehl <code>play</code> abspielen.</p>
+</div>
+<div class="column-right">
+<p>Eine Reihe von eingebauten Klängen findest du im Ordner <code>/sys/sounds</code>. Einige davon sind unten dargestellt; schau, wie viele du findest, wenn du es selbst ausprobierst.</p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<img src="/pics/p20-band.png" alt="" style="aspect-ratio: 980 / 490"/>
+</div>
+<div class="column-right">
+<img src="/pics/p20-dir-sounds.png" alt="" style="aspect-ratio: 352 / 264"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Der Befehl <code>play</code> nimmt bis zu drei Werte entgegen: die Lautstärke (1 ist normal), die Links/Rechts-Balance (0 ist zentriert) und die Geschwindigkeit und Tonhöhe (normalerweise 1). Probier es aus!</p>
+</div>
+<div class="column-right">
+<img src="/pics/p20-snd-play.png" alt="" style="aspect-ratio: 512 / 175"/>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p20-snd-examples.png" alt="" style="aspect-ratio: 948 / 256"/>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Das Ändern der Geschwindigkeit ändert auch die Tonhöhe, und das ermöglicht es dir, Musik zu machen. Eine Funktion namens <code>noteFreq</code> ist hier hilfreich; sie berechnet die Klangfrequenz für jede musikalische Note. Die Notennummern werden auf dem Klavierdiagramm unten angezeigt.</p>
+</div>
+<div class="column-right">
+<p>Um die richtige Geschwindigkeit für eine Note zu berechnen, teile die <code>noteFreq</code> dieser Note durch die <code>noteFreq</code> der aufgenommenen Note (was normalerweise 60 ist, oder das mittlere C).</p>
+<p>(Das ist es, was in Zeile 10 des Programms unten geschieht.)</p>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p20-piano.png" alt="" style="aspect-ratio: 822 / 159"/>
+<div class="small-gap"></div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<h4>Tastatur-Gitarre</h4>
+<p>Das Programm unten ermöglicht es dir, Gitarre auf deinem Computer zu spielen! Verwende die Zahlentasten von 1 bis 9 am oberen Rand deiner Tastatur. 1 spielt Note 60 (mittleres C), 2 spielt Note 62, und so weiter bis zu 9, was Note 74 spielt.</p>
+</div>
+<div class="column-right">
+<p>Um die Notennummer zu finden, wandeln wir zuerst die gedrückte Taste in eine Zahl von 0 bis 8 um (Zeile 5). Da die meisten weißen Tasten auf einem Klavier zwei Noten auseinander liegen, multiplizieren wir diese mit 2 und addieren 60, unsere Basisnote.</p>
+<p>Aber es gibt keine schwarze Taste (Note) zwischen E und F oder zwischen B und C. Deshalb prüfen die Zeilen 7-8 diese Fälle und subtrahieren eins für die fehlende Note.</p>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p20-listing1.png" alt="" style="aspect-ratio: 1550 / 606"/>
+</div>
+<div class="section-centered">
+<img src="/pics/p20-song.png" alt="" style="aspect-ratio: 1878 / 246"/>
+<div class="small-gap"></div>
+</div>
+<div class="section-centered">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>Ändere dieses Programm so, dass es Klavier statt Gitarre spielt! Hier ist ein Hinweis: Verwende <code>dir "/sys/sounds"</code>, um alle eingebauten Klänge aufzulisten.</p>
+</div>
+<div class="small-gap"></div>
+</div>
+</body></html>
