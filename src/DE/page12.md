@@ -1,17 +1,17 @@
 -- full
 ## Eingaben vom Benutzer erhalten
 -- left
-Bisher haben wir Werte, die wir in Variablen gespeichert haben, direkt in das Programm selbst eingetippt. Aber manchmal möchten wir den Benutzer nach einem Wert fragen, wenn das Programm läuft.
+Bisher haben wir Werte, die wir in Variablen gespeichert haben, direkt in das Programm selbst eingetippt. Aber manchmal möchten wir die Benutzerin oder den Benutzer nach einem Wert fragen, wenn das Programm läuft.
 -- right
-Das ermöglicht es dem Programm, jedes Mal etwas anderes zu tun, abhängig davon, was der Benutzer eingibt.
+Das ermöglicht es dem Programm, jedes Mal etwas anderes zu tun, abhängig davon, was die Benutzerin oder der Benutzer eingibt.
 
-Du kannst den Benutzer mit der Funktion `input` nach einem Wert fragen. Es sieht so aus:
+Du kannst die Benutzerin oder den den Benutzer mit der Funktion `input` nach einem Wert fragen. Es sieht so aus:
 
 -- full
 [!x = input("Was ist x? ")](p12-inputSyntax.png)
 
 -- left
-Der Variablenname links vom `=` Zeichen kann der Name jeder beliebigen Variable sein, in der du die Eingabe des Benutzers speichern möchtest. Die Frage kann jeder String (Nachricht) sein, den du dem Benutzer anzeigen möchtest. Das Wort `input` muss genau `input` lauten.
+Der Variablenname links vom `=` Zeichen kann der Name jeder beliebigen Variable sein, in der du die Eingabe der Benutzerin oder des Benutzers speichern möchtest. Die Frage kann jeder String (Nachricht) sein, den du anzeigen möchtest. Das Wort `input` muss genau `input` lauten.
 Probiere die Befehle rechts aus. Ändere die Frage oder deine Antwort, wenn du möchtest.
 -- right
 [!](p12-rainbowPonyScreen.png)
