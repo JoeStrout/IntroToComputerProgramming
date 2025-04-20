@@ -2,15 +2,15 @@
 ## Zahlen und Mathematik
 
 -- left
-Bisher haben wir hauptsächlich mit Strings wie "hello" und "Rezepte" gearbeitet. Aber Computer können auch mit Zahlen arbeiten, wie `42` und `-5.73`. Tatsächlich sind Computer richtig gut darin, mit Zahlen zu arbeiten!
+Bisher haben wir hauptsächlich mit Strings wie "hello" und "Recipes" gearbeitet. Aber Computer können auch mit Zahlen arbeiten, wie `42` und `-5.73`. Tatsächlich sind Computer richtig gut darin, mit Zahlen zu arbeiten!
 -- right
 Strings in einem Computerprogramm müssen immer in Anführungszeichen geschrieben werden. Zahlen verwenden _keine_ Anführungszeichen. So kann der Computer den Unterschied zwischen einem String und einer Zahl erkennen.
-(Wenn du deine Erinnerung an Begriffe wie *String* auffrischen möchtest, siehe Seiten 52-53.)
+(Wenn du deine Erinnerung an Begriffe wie *String* auffrischen möchtest, kanns du auf Seiten 52 und 53 nachsehen.)
 
 -- left 40%
 [!](p14-mathScreen.png)
 -- right
-Alles, was du mit einem Taschenrechner machen kannst, kannst du auch in einem Computerprogramm machen. Auf einem Computer werden diese Berechnungen mit *mathematischen Operatoren* geschrieben: *+*, *-*, *\**, */*, und *^*.
+Alles, was du mit einem Taschenrechner machen kannst, kannst du auch in einem Computerprogramm machen. Auf einem Computer werden diese Rechnungen mit *mathematischen Operatoren* geschrieben: *+*, *-*, *\**, */*, und *^*.
 Du kannst Leerzeichen um den Operator setzen oder sie weglassen. Das bleibt dir überlassen.
 
 -- left
@@ -20,7 +20,7 @@ Du kannst Leerzeichen um den Operator setzen oder sie weglassen. Das bleibt dir 
 
 -- full
 -- puzzle
-Benutze Mini Micro, um herauszufinden, was du bekommst, wenn du 15.750 durch 375 teilst. *Tipp:* Verwende beim Eingeben großer Zahlen auf einem Computer kein Komma. Tippe einfach `15750`.
+Benutze Mini Micro, um herauszufinden, was du bekommst, wenn du 15 750 durch 375 teilst. *Tipp:* Verwende beim Eingeben großer Zahlen auf einem Computer kein Komma. Tippe einfach `15750`.
 
 -- gap
 -- left
