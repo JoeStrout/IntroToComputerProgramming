@@ -1,9 +1,9 @@
-## Klänge und Musik
+## Geräusche und Musik
 
 -- left
-Mini Micro kann Klänge abspielen, die in Klangdateien gespeichert sind. Du kannst eine mit `file.loadSound` laden und dann mit dem Befehl `play` abspielen.
+Mini Micro kann Geräusche abspielen, die in Audiodateien gespeichert sind. Du kannst eine mit `file.loadSound` laden und dann mit dem Befehl `play` abspielen.
 -- right
-Eine Reihe von eingebauten Klängen findest du im Ordner `/sys/sounds`. Einige davon sind unten dargestellt; schau, wie viele du findest, wenn du es selbst ausprobierst.
+Eine Reihe von eingebauten Geräuschen findest du im Ordner `/sys/sounds`. Einige davon sind unten dargestellt; schau, wie viele du findest, wenn du es selbst ausprobierst.
 
 -- left
 [!](p20-band.png)
