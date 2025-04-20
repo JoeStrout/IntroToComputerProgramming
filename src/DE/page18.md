@@ -1,7 +1,7 @@
 -- left
 
 ## Schleifen
-Wenn ein Computer so programmiert ist, dass er etwas mehrmals tut, nennt man das _Schleifen_. Der Computer ist wie ein Roboter, der auf einer Rennstrecke läuft und immer wieder dasselbe tut.
+Wenn ein Computer so programmiert ist, dass er etwas mehrmals tut, nennt man das _Schleife_. Der Computer ist wie ein Roboter, der auf einer Rennstrecke läuft und immer wieder dasselbe tut.
 
 Eine Möglichkeit, dies zu tun, ist mit einer _while-Schleife_. Eine while-Schleife wiederholt alles zwischen `while` und `end while`, solange die Bedingung nach `while` wahr ist.
 -- right
@@ -27,7 +27,7 @@ Hier ist ein kleines Ratespiel. Ändere die Zahl in Zeile 1 und lass jemand ande
 [!](p18-listing1.png)
 
 -- left
-Eine andere Art der Schleife ist die _for-Schleife_. Sie wiederholt die Codezeilen zwischen `for` und `end for`, weist aber auch einer Variablen (der _Schleifenvariablen_) Werte zu, während sie läuft. Die Schleife wird beendet, wenn sie alle Werte im Bereich durchlaufen hat.
+Eine andere Art der Schleife ist die _for-Schleife_. Sie wiederholt die Codezeilen zwischen `for` und `end for`, weist aber auch einer Variable (der _Schleifenvariable_) Werte zu, während sie läuft. Die Schleife wird beendet, wenn sie alle Werte im Bereich durchlaufen hat.
 -- right
 [!](p18-forSyntax.png)
 
