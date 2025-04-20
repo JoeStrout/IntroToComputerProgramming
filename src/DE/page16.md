@@ -2,7 +2,7 @@
 ## Entscheidungen treffen
 
 -- left
-Viele Computerprogramme müssen je nach einem vom Benutzer eingegebenen Wert unterschiedliche Dinge tun. Dies geschieht mit einer *if-Anweisung*. Probiere dieses Programm aus:
+Viele Computerprogramme müssen, je nachdem welchen Wert der Benutzer oder die Benutzerin eingegebenen hat, unterschiedliche Dinge tun. Dies geschieht mit einer *if-Anweisung*. Probiere dieses Programm aus:
 [!](p16-ifExample.png)
 -- right
 [!](p16-opTable.png)
