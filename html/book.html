@@ -2,104 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Introduction to Computer Programming</title>
-  <style>
-    body {
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-      background: #ffffff;
-    }
-    #reader {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      position: relative;
-    }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-    .nav-button {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 20%;
-      background: rgba(0, 0, 0, 0);
-      z-index: 2;
-    }
-    #prevBtn { left: 0; }
-    #nextBtn { right: 0; }
-    @media (hover: hover) and (pointer: fine) {
-      /* Disable clickability of invisible left/right buttons on desktop */
-      .nav-button {
-        pointer-events: none;
-      }
-    }
-    #tocBtn {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      background: #eee;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      z-index: 3;
-      cursor: pointer;
-    }
-    #toc {
-      position: absolute;
-      top: 3.5rem;
-      left: 1rem;
-      background: white;
-      border: 1px solid #ccc;
-      padding: 1rem;
-      display: none;
-      z-index: 4;
-      max-height: 60vh;
-      overflow-y: auto;
-    }
-    #toc a {
-      display: block;
-      margin-bottom: 0.5rem;
-      text-decoration: none;
-      color: #333;
-    }
-    .fallback-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem;
-      width: 100%;
-      box-sizing: border-box;
-    }
-    .fallback-nav a {
-      flex: 0 0 auto;
-      cursor: pointer;
-    }
-    .fallback-nav span {
-      flex: 1;
-      text-align: center;
-      pointer-events: none;
-    }
-  </style>
+  <link rel="stylesheet" href="/book.css">
 </head>
 <body>
+  <!-- Main content area with iframe -->
   <div id="reader">
-    <div id="tocBtn">☰ TOC</div>
+    <div id="tocBtn">☰</div>
     <div id="toc"></div>
     <div id="prevBtn" class="nav-button"></div>
     <iframe id="pageFrame" src=""></iframe>
     <div id="nextBtn" class="nav-button"></div>
   </div>
-  <div class="fallback-nav">
-    <a id="fallbackPrev" href="#">☜ Previous Page</a>
+  
+  <!-- Fixed footer with navigation -->
+  <div class="footer">
+    <a id="fallbackPrev" href="#">☜ Previous</a>
     <span id="pageNumber">Pages 0—1</span>
-    <a id="fallbackNext" href="#">Next Page ☞</a>
+    <a id="fallbackNext" href="#">Next ☞</a>
   </div>
 
   <script>
@@ -120,88 +41,298 @@
       return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
     }
     
-    function loadPage(n) {
-      if (n < -2) n = -2;
-      if (n > 58) n = 56;
-      if (n % 2) n--;
-      currentPage = n;
-      
-      let langCode = getUrlParameter('lang');
-      if (!langCode) langCode = "EN";
-
-      // HACK During development: break caching by appending current timestamp
-      pageURL = `${langCode}/page${String(n).padStart(2, '0')}.html`;
-      const cacheBuster = `v=${Date.now()}`;
-      pageURL = `${pageURL}?${cacheBuster}`;
-      //  Comment out the above for deployment
-      console.log("Loading: " + pageURL);
-      pageFrame.src = pageURL;
-      if (n < 0) pageNumber.textContent = `Cover`;
-      else if (n < 56) pageNumber.textContent = `Pages ${n}—${n+1}`;
-      else pageNumber.textContent = `Back Cover`;
-    }
-
+	function loadPage(n) {
+		if (n < -2) n = -2;
+		if (n > 58) n = 56;
+		if (n % 2) n--;
+		currentPage = n;
+		
+		let langCode = getUrlParameter('lang');
+		if (!langCode) langCode = "EN";
+		
+		// Create the page URL for the current language
+		let pageURL = `${langCode}/page${String(n).padStart(2, '0')}.html`;
+		
+		// HACK During development: break caching by appending current timestamp
+		const cacheBuster = `v=${Date.now()}`;
+		pageURL = `${pageURL}?${cacheBuster}`;
+		//  Comment out the above for deployment
+		
+		console.log("Attempting to load: " + pageURL);
+		
+		// Try to fetch the page in the current language first
+		fetch(pageURL)
+		.then(response => {
+			  if (!response.ok && langCode !== "EN") {
+				// If page not found and language is not English, try loading the English version
+				console.log(`Page not found in ${langCode}, falling back to EN`);
+				const fallbackURL = `EN/page${String(n).padStart(2, '0')}.html?${cacheBuster}`;
+				console.log("Loading fallback: " + fallbackURL);
+				pageFrame.src = fallbackURL;
+			  } else {
+				// If page found or already trying English, load the page
+				pageFrame.src = pageURL;
+			  }
+			})
+		.catch(error => {
+			  if (langCode !== "EN") {
+				// In case of network error and language is not English, try English version
+				console.log(`Error loading ${langCode} page: ${error}, falling back to EN`);
+				const fallbackURL = `EN/page${String(n).padStart(2, '0')}.html?${cacheBuster}`;
+				console.log("Loading fallback: " + fallbackURL);
+				pageFrame.src = fallbackURL;
+			  } else {
+				// If already trying English, just show the error in console
+				console.error(`Failed to load page: ${error}`);
+				pageFrame.src = pageURL; // Try to load anyway
+			  }
+			});
+		  
+		// Update page number display
+		if (n < 0) pageNumber.textContent = `Cover`;
+		else if (n < 56) pageNumber.textContent = `${n} — ${n+1}`;
+		else pageNumber.textContent = `Back Cover`;
+	}
+	
     prevBtn.addEventListener("click", () => loadPage(currentPage - 2));
     nextBtn.addEventListener("click", () => loadPage(currentPage + 2));
-    fallbackPrev.addEventListener("click", () => loadPage(currentPage - 2));
-    fallbackNext.addEventListener("click", () => loadPage(currentPage + 2));
+    fallbackPrev.addEventListener("click", (e) => {
+      e.preventDefault();
+      loadPage(currentPage - 2);
+    });
+    fallbackNext.addEventListener("click", (e) => {
+      e.preventDefault();
+      loadPage(currentPage + 2);
+    });
 
-	pageFrame.addEventListener("load", () => {
-	  const links = pageFrame.contentDocument.querySelectorAll('a[data-page]');
-	  links.forEach(link => {
-		link.addEventListener('click', e => {
-		  e.preventDefault();
-		  const page = parseInt(link.getAttribute('data-page'), 10);
-		  if (!isNaN(page)) loadPage(page);
-		});
-	  });
-	});
+    // Handle links within page content
+    pageFrame.addEventListener("load", () => {
+      try {
+        const links = pageFrame.contentDocument.querySelectorAll('a[data-page]');
+        links.forEach(link => {
+          link.addEventListener('click', e => {
+            e.preventDefault();
+            const page = parseInt(link.getAttribute('data-page'), 10);
+            if (!isNaN(page)) loadPage(page);
+          });
+        });
+      } catch (e) {
+        console.error("Error setting up page links:", e);
+      }
+    });
 
+    // Keyboard navigation
     document.addEventListener("keydown", (e) => {
       if (e.key === "ArrowRight") loadPage(currentPage + 2);
       if (e.key === "ArrowLeft") loadPage(currentPage - 2);
     });
 
+    // Touch swipe handling
     let startX = null;
-    let touchTarget = null;
+    let touchStarted = false;
+    
     document.addEventListener("touchstart", e => {
-      if (e.touches.length === 1) {
+      // Only process swipes on the iframe or navigation areas
+      if (e.target === pageFrame || e.target.classList.contains('nav-button')) {
         startX = e.touches[0].clientX;
-        touchTarget = e.target;
+        touchStarted = true;
       }
-    });
+    }, { passive: true });
+    
     document.addEventListener("touchend", e => {
-      if (startX !== null) {
-        // Prevent swipe if interaction was with scrollable area like TOC
-        if (touchTarget.closest('#toc')) {
-          startX = null;
-          return;
-        }
+      if (touchStarted && startX !== null) {
         let endX = e.changedTouches[0].clientX;
-        if (endX - startX > 50) loadPage(currentPage - 1);
-        else if (startX - endX > 50) loadPage(currentPage + 1);
+        let diff = endX - startX;
+        
+        // Only process horizontal swipes, not small movements
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) {
+            loadPage(currentPage - 2); // Swipe right, go back
+          } else {
+            loadPage(currentPage + 2); // Swipe left, go forward
+          }
+        }
         startX = null;
+        touchStarted = false;
       }
-    });
+    }, { passive: true });
+    
+    document.addEventListener("touchmove", e => {
+      // Prevent scrolling on the main container when swiping
+      if (touchStarted) {
+        e.preventDefault();
+      }
+    }, { passive: false });
 
+    // TOC handling
     tocBtn.addEventListener("click", () => {
       toc.style.display = toc.style.display === "block" ? "none" : "block";
     });
-
-    // Populate TOC with links to all pages (update range as needed)
-    for (let i = -2; i <= 56; i += 2) {
-      let a = document.createElement("a");
-      a.href = "#";
-      a.textContent = (i >= 0 ? `Pages ${i}-${i + 1}` : `Cover`);
-      a.addEventListener("click", e => {
-        e.preventDefault();
-        loadPage(i);
+    
+    // Close TOC when clicking outside
+    document.addEventListener("click", (e) => {
+      if (toc.style.display === "block" && !toc.contains(e.target) && e.target !== tocBtn) {
+        toc.style.display = "none";
+      }
+    });
+    
+    // Handle menu items and language selector
+    let currentLang = getUrlParameter('lang') || "EN";
+    const langSelector = document.createElement("div");
+    langSelector.id = "langSelector";
+    langSelector.style.display = "none";
+    document.body.appendChild(langSelector);
+    
+    function createMenuContent() {
+      // Clear existing content
+      toc.innerHTML = '';
+      
+      // Create header
+      const menuHeader = document.createElement("div");
+      menuHeader.className = "menu-header";
+      
+      const menuTitle = document.createElement("div");
+      menuTitle.className = "menu-title";
+      menuTitle.textContent = "Navigation";
+      
+      const closeBtn = document.createElement("div");
+      closeBtn.className = "menu-close";
+      closeBtn.innerHTML = "✕";
+      closeBtn.addEventListener("click", () => {
         toc.style.display = "none";
       });
-      toc.appendChild(a);
+      
+      menuHeader.appendChild(menuTitle);
+      menuHeader.appendChild(closeBtn);
+      toc.appendChild(menuHeader);
+      
+      // Create main navigation items
+      const frontCoverLink = document.createElement("a");
+      frontCoverLink.className = "menu-item";
+      frontCoverLink.href = "#";
+      frontCoverLink.textContent = "Front Cover";
+      frontCoverLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        loadPage(-2);
+        toc.style.display = "none";
+      });
+      toc.appendChild(frontCoverLink);
+      
+      const tocLink = document.createElement("a");
+      tocLink.className = "menu-item";
+      tocLink.href = "#";
+      tocLink.textContent = "Table of Contents";
+      tocLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        loadPage(0);
+        toc.style.display = "none";
+      });
+      toc.appendChild(tocLink);
+      
+      const backCoverLink = document.createElement("a");
+      backCoverLink.className = "menu-item";
+      backCoverLink.href = "#";
+      backCoverLink.textContent = "Back Cover";
+      backCoverLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        loadPage(56);
+        toc.style.display = "none";
+      });
+      toc.appendChild(backCoverLink);
+      
+      // Language selector
+      const langLink = document.createElement("a");
+      langLink.className = "menu-item";
+      langLink.href = "#";
+      langLink.textContent = `Language: ${currentLang}`;
+      langLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        showLanguageSelector(e);
+      });
+      toc.appendChild(langLink);
     }
     
-    loadPage(-2);		// start here!
+    function showLanguageSelector(event) {
+      // Create language options
+      langSelector.innerHTML = '';
+      
+      const langHeader = document.createElement("div");
+      langHeader.className = "menu-header";
+      
+      const langTitle = document.createElement("div");
+      langTitle.className = "menu-title";
+      langTitle.textContent = "Select Language";
+      
+      const langCloseBtn = document.createElement("div");
+      langCloseBtn.className = "menu-close";
+      langCloseBtn.innerHTML = "✕";
+      langCloseBtn.addEventListener("click", () => {
+        langSelector.style.display = "none";
+      });
+      
+      langHeader.appendChild(langTitle);
+      langHeader.appendChild(langCloseBtn);
+      langSelector.appendChild(langHeader);
+      
+      // Add language options
+      const languages = [
+        { code: "EN", name: "English" },
+        { code: "DE", name: "Deutsch" }
+      ];
+      
+      languages.forEach(lang => {
+        const langOption = document.createElement("a");
+        langOption.className = "menu-item";
+        langOption.href = "#";
+        langOption.textContent = lang.name;
+        if (lang.code === currentLang) {
+          langOption.style.fontWeight = "bold";
+        }
+        langOption.addEventListener("click", (e) => {
+          e.preventDefault();
+          changeLanguage(lang.code);
+          langSelector.style.display = "none";
+          toc.style.display = "none";
+        });
+        langSelector.appendChild(langOption);
+      });
+      
+      // Position and show the language selector
+      const rect = event.target.getBoundingClientRect();
+      langSelector.style.top = `${rect.bottom}px`;
+      langSelector.style.left = `${rect.left}px`;
+      langSelector.style.display = "block";
+    }
+    
+    function changeLanguage(langCode) {
+      currentLang = langCode;
+      
+      // Update URL with the new language parameter
+      const url = new URL(window.location.href);
+      url.searchParams.set('lang', langCode);
+      window.history.replaceState({}, '', url);
+      
+      // Reload current page with new language
+      loadPage(currentPage);
+      
+      // Update language in the menu
+      createMenuContent();
+    }
+    
+    // Initialize menu content
+    createMenuContent();
+    
+    // Close language selector when clicking outside
+    document.addEventListener("click", (e) => {
+      if (langSelector.style.display === "block" && 
+          !langSelector.contains(e.target) && 
+          !e.target.matches('.menu-item')) {
+        langSelector.style.display = "none";
+      }
+    });
+
+    // Start with cover page
+    loadPage(-2);
   </script>
 </body>
 </html>

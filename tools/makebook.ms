@@ -312,7 +312,7 @@ process = function(filename, lang="EN")
 		"    <meta charset=""UTF-8"">",
 		"    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">",
 		"    <title>Introduction to Computer Programming</title>",
-		"	<link rel=""stylesheet"" href=""/book.css"">",
+		"	<link rel=""stylesheet"" href=""/page.css"">",
 		"</head>",
 		"<body>"]
 	if filename == "page48.md" then
