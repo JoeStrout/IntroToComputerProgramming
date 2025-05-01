@@ -1,7 +1,7 @@
 -- full
 ## Listen von Werten
 -- left
-Bis zu diesem Punkt hat eine Variable immer einen einzelnen Wert gespeichert, entweder eine Zahl oder einen String. Aber oft ist es nützlich, eine ganze Liste von Werten in einer Variablen zu speichern. Um dies zu tun, musst du die eckigen Klammern auf deiner Tastatur finden!
+Bis zu diesem Punkt hat eine Variable immer einen einzelnen Wert gespeichert, entweder eine Zahl oder einen String. Aber oft ist es nützlich, eine ganze Liste von Werten in einer Variable zu speichern. Um dies zu tun, musst du die eckigen Klammern auf deiner Tastatur finden!
 -- right
 Du erstellst eine Liste mit eckigen Klammern um eine beliebige Anzahl von Werten, die durch Kommas getrennt sind.
 Tippe Folgendes ein, um eine Liste mit drei Elementen zu erstellen: "I", "love" und "pi".

@@ -1,9 +1,10 @@
 ## Pixel-Grafik
 
 -- left 60
-Wenn du einen Computerbildschirm mit einer Lupe betrachtest, wirst du sehen, dass er eigentlich eine Menge winziger Quadrate anzeigt, die "Pixel" genannt werden (kurz für "Bildelemente"). Durch Ändern der Farben dieser Pixel kann ein Computer Fotos, Wörter oder alles andere darstellen.
+Wenn du einen Computerbildschirm mit einer Lupe betrachtest, wirst du sehen, dass er eigentlich eine Menge winziger Quadrate anzeigt, die "Pixel" genannt werden. 
+Indem die Farben dieser Pixel geändert werden kann ein Computer Fotos, Wörter oder alles andere darstellen.
 
-Du kannst Pixel in Mini Micro zeichnen, indem du Befehle verwendest, die mit `gfx` beginnen.
+Du kannst diese Pixel in Mini Micro malen, indem du Befehle verwendest, die mit `gfx` beginnen.
 -- right
 [!](p22-painting.png)
 
@@ -13,7 +14,7 @@ Du kannst Pixel in Mini Micro zeichnen, indem du Befehle verwendest, die mit `gf
 [!](p22-gridCode.png)
 
 -- left
-Weise `gfx.color` einen Wert zu, um die Zeichenfarbe festzulegen. Verwende etwas wie `color.aqua` oder eine Funktion wie `rgb(0, 255, 100)`, wobei die Zahlen die Menge an Rot, Grün und Blau angeben, die in die Farbe einfließen sollen.
+Weise `gfx.color` einen Wert zu, um die Farbe festzulegen, mit der du malen möchtest. Verwende etwas wie `color.aqua` oder eine Funktion wie `rgb(0, 255, 100)`, wobei die Zahlen die Menge an Rot, Grün und Blau angeben, die in die Farbe einfließen.
 
 Verwende dann den Befehl `gfx.line` mit vier Zahlen: x1, y1, x2 und y2. Diese geben die Endpunkte der zu zeichnenden Linie an.
 -- right
@@ -30,7 +31,7 @@ Welcher Befehl würde eine Linie von der unteren linken Ecke des Bildschirms zur
 [!](p22-moireCode.png)
 
 -- left 75%
-Du kannst auch `gfx.fillRect` verwenden, um ein Rechteck mit Farbe zu füllen. Die vier Zahlen, die es benötigt, sind: X-Position der linken Seite, Y-Position der unteren Seite, Breite und Höhe. (Es gibt auch `gfx.drawRect`, das das Rechteck umrandet, aber nicht ausfüllt.)
+Du kannst `gfx.fillRect` verwenden, um ein Rechteck mit Farbe zu füllen. Die vier Zahlen, die es benötigt, sind: X-Position der linken Seite, Y-Position der unteren Seite, Breite und Höhe. (Es gibt auch `gfx.drawRect`. Damit wird das Rechteck umrandet, aber nicht ausfüllt.)
 
 [!](p22-tunnelCode.png)
 

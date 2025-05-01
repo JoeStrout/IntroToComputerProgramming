@@ -36,7 +36,7 @@ Du kannst deine Programme nennen, wie du willst. Denke nur daran, den Programmna
 -- left 47%
 -- callout
 #### Abkürzung #1
-Du kannst dein Programm auch im Code-Editor speichern, indem du auf die Schaltfläche [!](p24-saveIcon.png) Speichern klickst oder Strg-S drückst.
+Du kannst dein Programm auch im Code-Editor speichern, indem du auf die Schaltfläche [!](p24-saveIcon.png) Speichern klickst oder Strg+S drückst.
 
 -- right
 -- callout

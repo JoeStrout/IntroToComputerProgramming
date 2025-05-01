@@ -2,11 +2,11 @@
 [!](p30-spriteBot.png)
 -- right
 ## Sprites
-Mini Micro unterstützt eine besondere Art des Zeichnens, genannt *Sprites*. Sprites sind kleine Bilder, die sich bewegen, drehen und ihre Größe oder Farbe ändern können, und das sehr schnell.
-Du siehst Sprites in Computerspielen wie Pac-Man, Super Mario Bros und Angry Birds. Immer wenn sich ein flaches kleines Bild auf einem Bildschirm bewegt, handelt es sich fast immer um ein Sprite.
+Mini Micro unterstützt eine besondere Art des Zeichnens, die wir *Sprites* nennen. Sprites sind kleine Bilder, die sich bewegen, drehen und ihre Größe oder Farbe ändern können, und das sehr schnell.
+Du siehst Sprites in Computerspielen wie Pac-Man, Super Mario Bros und Angry Birds. Wenn sich ein flaches kleines Bild auf einem Bildschirm bewegt, handelt es sich fast immer um ein Sprite.
 
 -- left 65%
-Die Schritte, die zur Einrichtung eines Sprites erforderlich sind, werden in den Zeilen 2-5 des Programms unten gezeigt. Zuerst erstellst du ein Sprite mit `new Sprite` und weist es einer Variablen zu. Dann lädst du ein Bild, das das Sprite anzeigen soll. Als Nächstes fügst du es mit `display(4).sprites.push` zum Display hinzu, damit wir es sehen können. Schließlich stellst du seine `x` (horizontale) und `y` (vertikale) Position ein.
+Die Schritte, die zur Einrichtung eines Sprites erforderlich sind, werden in den Zeilen 2-5 des Programms unten gezeigt. Zuerst erstellst du ein Sprite mit `new Sprite` und weist es einer Variable zu. Dann lädst du ein Bild, welches das Sprite anzeigen soll. Als Nächstes fügst du es mit `display(4).sprites.push` zum Display hinzu, damit wir es sehen können. Schließlich stellst du seine `x` (horizontale) und `y` (vertikale) Position ein.
 -- right
 [!](p30-ufoScreen.png)
 
@@ -25,7 +25,7 @@ Sobald ein Sprite erstellt wurde, kannst du seine Größe, Farbe, Rotation oder 
 [!](p30-spritePropsTable.png)
 
 -- left
-Normalerweise erhältst du das Bild für ein Sprite, indem du direkt file.loadImage verwendest. Aber manchmal ist die Bilddatei auf der Festplatte eigentlich eine Sammlung kleinerer Bilder, die Frames genannt werden. Jeder Frame repräsentiert einen Schritt einer Animation.
+Normalerweise lädst du das Bild für ein Sprite, indem du direkt file.loadImage verwendest. Aber manchmal ist die Bilddatei auf der Festplatte eigentlich eine Sammlung kleinerer Bilder, die Frames genannt werden. Jedes Frame repräsentiert ein Bild einer Animation. Wie du vielleicht weißt, ist eine Animation mehrere Bilder, die hintereinander abgespielt werden.
 -- right
 Um diese zu verwenden, lädst du zuerst das größere Bild (in diesem Fall ein *Sprite-Sheet* genannt) in eine Variable, dann rufst du `getImage` darauf auf, um die einzelnen Frames herauszuholen, wie unten gezeigt.
 
