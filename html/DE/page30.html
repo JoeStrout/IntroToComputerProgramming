@@ -13,13 +13,13 @@
 </div>
 <div class="column-right">
 <h2>Sprites</h2>
-<p>Mini Micro unterstützt eine besondere Art des Zeichnens, genannt <b>Sprites</b>. Sprites sind kleine Bilder, die sich bewegen, drehen und ihre Größe oder Farbe ändern können, und das sehr schnell.</p>
-<p>Du siehst Sprites in Computerspielen wie Pac-Man, Super Mario Bros und Angry Birds. Immer wenn sich ein flaches kleines Bild auf einem Bildschirm bewegt, handelt es sich fast immer um ein Sprite.</p>
+<p>Mini Micro unterstützt eine besondere Art des Zeichnens, die wir <b>Sprites</b> nennen. Sprites sind kleine Bilder, die sich bewegen, drehen und ihre Größe oder Farbe ändern können, und das sehr schnell.</p>
+<p>Du siehst Sprites in Computerspielen wie Pac-Man, Super Mario Bros und Angry Birds. Wenn sich ein flaches kleines Bild auf einem Bildschirm bewegt, handelt es sich fast immer um ein Sprite.</p>
 </div>
 </div>
 <div class="section two-column">
 <div class="column-left" style="flex: 0 0 65%">
-<p>Die Schritte, die zur Einrichtung eines Sprites erforderlich sind, werden in den Zeilen 2-5 des Programms unten gezeigt. Zuerst erstellst du ein Sprite mit <code>new Sprite</code> und weist es einer Variablen zu. Dann lädst du ein Bild, das das Sprite anzeigen soll. Als Nächstes fügst du es mit <code>display(4).sprites.push</code> zum Display hinzu, damit wir es sehen können. Schließlich stellst du seine <code>x</code> (horizontale) und <code>y</code> (vertikale) Position ein.</p>
+<p>Die Schritte, die zur Einrichtung eines Sprites erforderlich sind, werden in den Zeilen 2-5 des Programms unten gezeigt. Zuerst erstellst du ein Sprite mit <code>new Sprite</code> und weist es einer Variable zu. Dann lädst du ein Bild, welches das Sprite anzeigen soll. Als Nächstes fügst du es mit <code>display(4).sprites.push</code> zum Display hinzu, damit wir es sehen können. Schließlich stellst du seine <code>x</code> (horizontale) und <code>y</code> (vertikale) Position ein.</p>
 </div>
 <div class="column-right">
 <img src="/pics/p30-ufoScreen.png" alt="" style="aspect-ratio: 702 / 530"/>
@@ -49,7 +49,7 @@
 </div>
 <div class="section two-column">
 <div class="column-left">
-<p>Normalerweise erhältst du das Bild für ein Sprite, indem du direkt file.loadImage verwendest. Aber manchmal ist die Bilddatei auf der Festplatte eigentlich eine Sammlung kleinerer Bilder, die Frames genannt werden. Jeder Frame repräsentiert einen Schritt einer Animation.</p>
+<p>Normalerweise lädst du das Bild für ein Sprite, indem du direkt file.loadImage verwendest. Aber manchmal ist die Bilddatei auf der Festplatte eigentlich eine Sammlung kleinerer Bilder, die Frames genannt werden. Jedes Frame repräsentiert ein Bild einer Animation. Wie du vielleicht weißt, ist eine Animation mehrere Bilder, die hintereinander abgespielt werden.</p>
 </div>
 <div class="column-right">
 <p>Um diese zu verwenden, lädst du zuerst das größere Bild (in diesem Fall ein <b>Sprite-Sheet</b> genannt) in eine Variable, dann rufst du <code>getImage</code> darauf auf, um die einzelnen Frames herauszuholen, wie unten gezeigt.</p>
