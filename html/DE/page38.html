@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section-centered">
+<h2>Code organisieren mit Funktionen</h2>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Die Befehle, die du im Laufe dieses Buches verwendet hast, werden korrekterweise als <b>Funktionen</b> bezeichnet, und die Werte, die du nach dem Funktionsnamen angibst, werden als <b>Parameter</b> dieser Funktion bezeichnet.</p>
+</div>
+<div class="column-right">
+<p>Zum Beispiel ist <code>print</code> eine Funktion, die einen Parameter benötigt (den zu druckenden String). <code>clear</code> ist eine Funktion, die keine Parameter benötigt. <code>gfx.line</code> ist eine Funktion, die mindestens vier Parameter benötigt (x0, y0, x1 und y1) und ein oder zwei weitere haben kann.</p>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p38-blueBar.png" alt="" style="aspect-ratio: 1676 / 40"/>
+<div class="small-gap"></div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 55%">
+<p>Du kannst auch deine eigenen Funktionen definieren! Verwende dazu das Schlüsselwort <code>function</code>, gefolgt von Variablennamen für die Parameter (falls vorhanden) in Klammern. Im Beispiel rechts nimmt die Funktion einen Parameter an und nennt ihn <code>msg</code>. Probier es aus! Jedes Mal, wenn du den neuen Befehl <code>say3</code> verwendest, wird der Code zwischen <code>function</code> und <code>end function</code> (Zeilen 2-5) ausgeführt.</p>
+</div>
+<div class="column-right">
+<img src="/pics/p38-listing1.png" alt="" style="aspect-ratio: 816 / 434"/>
+</div>
+</div>
+<div class="section">
+<p>Das Definieren von Funktionen ist ein großartiges Werkzeug, wenn du im Grunde dasselbe tun möchtest, aber mit unterschiedlichen Daten. Das Beispiel unten definiert eine Funktion <code>printMeal</code>, die eine Menüoption für ein Restaurant ausgibt. Dann rufen die Zeilen 6-9 sie viermal auf, für vier verschiedene Mahlzeiten.</p>
+<img src="/pics/p38-listing2.png" alt="" style="aspect-ratio: 1694 / 540"/>
+<p>Denk daran, dass der Code innerhalb der Funktion (wie die Zeilen 2-3 im obigen Beispiel) nicht ausgeführt wird, wenn die Funktion definiert wird. Er wird erst ausgeführt, wenn die Funktion aufgerufen wird, indem der Name verwendet wird, der ihr in der Funktionszeile zugewiesen wurde.</p>
+<div class="small-gap"></div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 55%">
+<p>Hier ist ein Programm, das mit Warpgeschwindigkeit fliegt! Jede der "Warp"-Linien wird durch eine Liste mit fünf Elementen dargestellt: den x0-, y0-, x1- und y1-Koordinaten der Linie sowie der Farbe. Wir müssen diese Linien zurücksetzen, wenn das Programm beginnt, und auch immer dann, wenn eine über den oberen oder unteren Bildschirmrand hinausgeht. Also definieren wir eine Funktion <code>resetLine</code>, um dies zu erleichtern!</p>
+</div>
+<div class="column-right">
+<img src="/pics/p38-warpScreen.png" alt="" style="aspect-ratio: 760 / 528"/>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p38-listing3.png" alt="" style="aspect-ratio: 1858 / 1656"/>
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>Mache die Warp-Linien doppelt so dick! <b>Hinweis:</b> Gib <code>@gfx.line</code> ein, um alle Parameter zu sehen, die diese Funktion annehmen kann, und verlängere dann Zeile 19 ein wenig.</p>
+</div>
+<div class="small-gap"></div>
+</div>
+</body></html>

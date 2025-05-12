@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section two-column">
+<div class="column-left">
+<img src="/pics/p30-spriteBot.png" alt="" style="aspect-ratio: 944 / 787"/>
+</div>
+<div class="column-right">
+<h2>Sprites</h2>
+<p>Mini Micro unterstützt eine besondere Art des Zeichnens, genannt <b>Sprites</b>. Sprites sind kleine Bilder, die sich bewegen, drehen und ihre Größe oder Farbe ändern können, und das sehr schnell.</p>
+<p>Du siehst Sprites in Computerspielen wie Pac-Man, Super Mario Bros und Angry Birds. Immer wenn sich ein flaches kleines Bild auf einem Bildschirm bewegt, handelt es sich fast immer um ein Sprite.</p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 65%">
+<p>Die Schritte, die zur Einrichtung eines Sprites erforderlich sind, werden in den Zeilen 2-5 des Programms unten gezeigt. Zuerst erstellst du ein Sprite mit <code>new Sprite</code> und weist es einer Variablen zu. Dann lädst du ein Bild, das das Sprite anzeigen soll. Als Nächstes fügst du es mit <code>display(4).sprites.push</code> zum Display hinzu, damit wir es sehen können. Schließlich stellst du seine <code>x</code> (horizontale) und <code>y</code> (vertikale) Position ein.</p>
+</div>
+<div class="column-right">
+<img src="/pics/p30-ufoScreen.png" alt="" style="aspect-ratio: 702 / 530"/>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p30-listing1.png" alt="" style="aspect-ratio: 1828 / 668"/>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Die <code>while</code>-Schleife in den Zeilen 6-10 ermöglicht es dir, das Sprite zu bewegen. Sie zeigt auch eine neue Möglichkeit, Eingaben vom Benutzer zu erhalten: <code>key.axis</code>. Mit dieser Methode kannst du das Sprite mit den Pfeiltasten, den WASD-Tasten oder sogar einem Gamepad steuern!</p>
+</div>
+<div class="column-right">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>Lass das UFO doppelt so schnell bewegen! Hinweis: Seine aktuelle Geschwindigkeit beträgt 10 horizontal und 6 vertikal.</p>
+</div>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 30%">
+<p>Sobald ein Sprite erstellt wurde, kannst du seine Größe, Farbe, Rotation oder Position ändern, indem du den in der Tabelle rechts gezeigten Eigenschaften Werte zuweist. Siehe Zeilen 7-8 in der Auflistung oben oder Zeilen 11-12 unten.</p>
+</div>
+<div class="column-right">
+<img src="/pics/p30-spritePropsTable.png" alt="" style="aspect-ratio: 1308 / 578"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Normalerweise erhältst du das Bild für ein Sprite, indem du direkt file.loadImage verwendest. Aber manchmal ist die Bilddatei auf der Festplatte eigentlich eine Sammlung kleinerer Bilder, die Frames genannt werden. Jeder Frame repräsentiert einen Schritt einer Animation.</p>
+</div>
+<div class="column-right">
+<p>Um diese zu verwenden, lädst du zuerst das größere Bild (in diesem Fall ein <b>Sprite-Sheet</b> genannt) in eine Variable, dann rufst du <code>getImage</code> darauf auf, um die einzelnen Frames herauszuholen, wie unten gezeigt.</p>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p30-listing2.png" alt="" style="aspect-ratio: 1890 / 882"/>
+<img src="/pics/p30-enemyFrames.png" alt="" style="aspect-ratio: 1022 / 538"/>
+<div class="small-gap"></div>
+</div>
+</body></html>

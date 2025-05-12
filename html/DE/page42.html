@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section">
+<h2>Maps und Objekte</h2>
+<p>Wenn du in MiniScript Werten Variablen zuweist, speichert der Computer sie in einer kleinen Tabelle im Speicher. Diese Tabelle ordnet jedem Variablennamen seinen Wert zu. Verwende den Befehl <code>reset</code>, um den Speicher zu löschen, und gib dann die folgenden drei Zuweisungen ein.</p>
+<img src="/pics/p42-mapScreen1.png" alt="" style="aspect-ratio: 1898 / 704"/>
+<p>Der Speicher des Computers enthält eine Tabelle, die <code>a</code> auf <code>"Hi"</code>, <code>b</code> auf <code>3.14</code> und <code>c</code> auf <code>42</code> abbildet, wie oben gezeigt. Ersetze nun den Wert von <code>b</code> durch die neuen Sachen, die unten gezeigt werden.</p>
+<img src="/pics/p42-mapScreen2.png" alt="" style="aspect-ratio: 1874 / 706"/>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Die beiden geschweiften Klammern, <code>{}</code>, definieren eine leere <b>Map</b> — eine neue Tabelle von Namen und Werten. Unsere Variable <code>b</code> zeigt jetzt einfach auf diese neue Tabelle. Mit der <b>Punktsyntax</b>, wie <code>b.uno</code>, können wir auf die Variablen innerhalb dieser Map zugreifen.</p>
+</div>
+<div class="column-right">
+<p>Nach diesen Zuweisungen sieht der Speicher des Computers wie oben aus. Die Variablen <code>a</code> und <code>c</code> enthalten einfache Werte, aber <code>b</code> enthält einen Zeiger auf eine andere Map, die <code>uno</code>, <code>dos</code> und <code>hola</code> enthält.</p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 40%">
+<p>Du kannst die Punktsyntax auch verwenden, um die Werte wieder herauszuholen. Probiere <code>print b.hola</code>, um eine Begrüßung direkt aus der Map zu drucken, die du gerade erstellt hast. Es funktioniert genau wie normale Variablen, aber mit (in diesem Fall) einem <code>b.</code>-Präfix.</p>
+</div>
+<div class="column-right">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>Sorge dafür, dass <code>pool</code> auf eine Map verweist, die <code>width</code> auf 8 und <code>length</code> auf 12 abbildet. Verwende dies dann, um die Fläche (Breite mal Länge) des Pools auszugeben.</p>
+</div>
+</div>
+</div>
+<div class="section-centered">
+<p>Du hast diese Art von Punktsyntax schon früher gesehen. Erinnerst du dich an diesen Code von Seite 20?</p>
+<img src="/pics/p42-listing1.png" alt="" style="aspect-ratio: 1506 / 138"/>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p><code>file</code> ist eigentlich eine Map, die dateibezogene Funktionen wie <code>loadSound</code> enthält. Und was es zurückgibt, ist eine weitere Map, die den geladenen Sound repräsentiert, mit Funktionen wie <code>play</code>. Manchmal wird eine solche Map als <b>Objekt</b> bezeichnet.</p>
+</div>
+<div class="column-right">
+<p>Ein Objekt kann auch durch die Verwendung von <code>new</code> erstellt werden, wie in <code>new Sprite</code>. Der Befehl <code>new</code> erstellt eine spezielle Art von Map, die mit der Map verknüpft ist, aus der sie erstellt wurde. Im Programm unten erstellen wir eine <code>Friend</code>-Map aus <code>Sprite</code>, dann erstellen wir <code>mochi</code> und <code>wumpus</code> aus <code>Friend</code>.</p>
+</div>
+</div>
+<div class="section">
+<img src="/pics/p42-listing2.png" alt="" style="aspect-ratio: 1552 / 880"/>
+<p>Alle Werte, die in <code>mochi</code> und <code>wumpus</code> nicht definiert sind (wie <code>scale</code> und <code>y</code>), werden stattdessen in <code>Friend</code> nachgeschlagen. Und weil <code>Friend</code> aus <code>Sprite</code> erstellt wurde, erhalten sie alle auch die Funktionalität von <code>Sprite</code>.</p>
+<div class="small-gap"></div>
+</div>
+</body></html>

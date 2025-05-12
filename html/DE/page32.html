@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section two-column">
+<div class="column-left">
+<h2>Würfeln</h2>
+<p>Viele Brettspiele basieren auf dem Würfeln, was eine Möglichkeit ist, <i>Zufallszahlen</i> zu erzeugen. Bei jedem Wurf weißt du nicht, was du bekommen wirst. Andere Beispiele für Zufälligkeit sind das Werfen einer Münze oder das Ziehen von Karten aus einem gemischten Kartendeck.</p>
+<p>Computer können auch Zufallszahlen erzeugen. In MiniScript machst du das mit dem Wort <code>rnd</code>.</p>
+<p>Probiere Folgendes an der Mini Micro-Eingabeaufforderung aus:</p>
+</div>
+<div class="column-right">
+<img src="/pics/p32-diceBot.png" alt="" style="aspect-ratio: 943 / 888"/>
+</div>
+</div>
+<div class="section three-column">
+<div class="column-left" style="flex: 0 0 34%">
+<img src="/pics/p32-rndScreen1.png" alt="" style="aspect-ratio: 662 / 502"/>
+<p>Jedes Mal, wenn du <code>rnd</code> verwendest, gibt es eine Zufallszahl zwischen 0 und 1 zurück.</p>
+</div>
+<div class="column-mid" style="flex: 0 0 32%">
+<img src="/pics/p32-rndScreen2.png" alt="" style="aspect-ratio: 664 / 496"/>
+<p>Wenn du <code>rnd</code> mit 6 multiplizierst, erhältst du eine Zahl zwischen 0 und 6.</p>
+</div>
+<div class="column-right">
+<img src="/pics/p32-rndScreen3.png" alt="" style="aspect-ratio: 664 / 498"/>
+<p>Wenn du <code>ceil()</code> darum setzt, wird aufgerundet und es entsteht eine ganze Zahl von 1 bis 6, wie beim Würfeln.</p>
+</div>
+</div>
+<div class="section-centered">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>1. Wie würdest du eine zufällige ganze Zahl von 1 bis 100 erzeugen?</p>
+<p>2. Wie wäre es mit einer ganzen Zahl von 51 bis 150?</p>
+</div>
+<div class="small-gap"></div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 80%">
+<img src="/pics/p32-listing1.png" alt="" style="aspect-ratio: 1450 / 766"/>
+</div>
+<div class="column-right">
+<img src="/pics/p32-coin.png" alt="" style="aspect-ratio: 335 / 832"/>
+</div>
+</div>
+<div class="section">
+<p>Das Programm oben wirft eine Münze, indem es <code>rnd</code> in Zeile 9 verwendet, was in der Hälfte der Fälle einen Wert größer als 0,5 zurückgibt. Alles darüber ist nur für den Stil.</p>
+<p><code>text.row = text.row + 1</code> bewegt den Cursor nach oben zur vorherigen Zeile, so dass wir diese Schrägstriche, vertikalen Striche und Bindestriche alle an derselben Stelle drucken können, um wie eine sich drehende Münze auszusehen.</p>
+<p>Probiere dann das Programm unten aus, bei dem ein Wurm zufällig auf deinem Bildschirm herumkriecht, bis du Strg-C drückst!</p>
+<img src="/pics/p32-listing2.png" alt="" style="aspect-ratio: 1944 / 882"/>
+<div class="small-gap"></div>
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>Kehre zum Ratespiel auf Seite 18 zurück. Ändere den Code so, dass der Computer eine Zufallszahl von 1 bis 100 auswählt.</p>
+</div>
+<div class="small-gap"></div>
+</div>
+</body></html>
