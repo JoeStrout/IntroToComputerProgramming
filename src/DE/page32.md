@@ -1,7 +1,7 @@
 -- left
 ## Würfeln
-Viele Brettspiele basieren auf dem Würfeln, was eine Möglichkeit ist, _Zufallszahlen_ zu erzeugen. Bei jedem Wurf weißt du nicht, was du bekommen wirst. Andere Beispiele für Zufälligkeit sind das Werfen einer Münze oder das Ziehen von Karten aus einem gemischten Kartendeck.
-Computer können auch Zufallszahlen erzeugen. In MiniScript machst du das mit dem Wort `rnd`.
+Viele Brettspiele basieren auf Würfelwürfen, was eine Möglichkeit ist, _Zufallszahlen_ zu erzeugen. Bei jedem Wurf weißt du nicht, was du bekommen wirst. Andere Beispiele für Zufall sind das Werfen einer Münze oder das Ziehen von Karten aus einem gemischten Kartendeck.
+Computer können auch Zufallszahlen erzeugen. In MiniScript machst du das mit dem Befehl `rnd`.
 Probiere Folgendes an der Mini Micro-Eingabeaufforderung aus:
 -- right
 [!](p32-diceBot.png)
@@ -27,9 +27,9 @@ Wenn du `ceil()` darum setzt, wird aufgerundet und es entsteht eine ganze Zahl v
 -- right
 [!](p32-coin.png)
 -- fulljust
-Das Programm oben wirft eine Münze, indem es `rnd` in Zeile 9 verwendet, was in der Hälfte der Fälle einen Wert größer als 0,5 zurückgibt. Alles darüber ist nur für den Stil.
-`text.row = text.row + 1` bewegt den Cursor nach oben zur vorherigen Zeile, so dass wir diese Schrägstriche, vertikalen Striche und Bindestriche alle an derselben Stelle drucken können, um wie eine sich drehende Münze auszusehen.
-Probiere dann das Programm unten aus, bei dem ein Wurm zufällig auf deinem Bildschirm herumkriecht, bis du Strg-C drückst!
+Das Programm oben wirft eine Münze, indem es `rnd` in Zeile 9 verwendet, was in der Hälfte der Fälle einen Wert größer als 0,5 zurückgibt.
+`text.row = text.row + 1` bewegt den Cursor nach oben zur vorherigen Zeile, so dass wir diese Schrägstriche, vertikalen Striche und Bindestriche alle an derselben Stelle ausgeben können, um wie eine sich drehende Münze auszusehen.
+Probiere dann das Programm unten aus, bei dem ein Wurm zufällig auf deinem Bildschirm herumkriecht, bis du Strg+C drückst!
 [!](p32-listing2.png)
 -- gap
 -- puzzle
