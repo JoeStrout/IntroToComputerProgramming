@@ -3,7 +3,7 @@
 -- left
 Die Befehle, die du im Laufe dieses Buches verwendet hast, werden korrekterweise als *Funktionen* bezeichnet, und die Werte, die du nach dem Funktionsnamen angibst, werden als *Parameter* dieser Funktion bezeichnet.
 -- right
-Zum Beispiel ist `print` eine Funktion, die einen Parameter benötigt (den zu druckenden String). `clear` ist eine Funktion, die keine Parameter benötigt. `gfx.line` ist eine Funktion, die mindestens vier Parameter benötigt (x0, y0, x1 und y1) und ein oder zwei weitere haben kann.
+Zum Beispiel ist `print` eine Funktion, die einen Parameter benötigt (den zu schreibenden String). `clear` ist eine Funktion, die keine Parameter benötigt. `gfx.line` ist eine Funktion, die mindestens vier Parameter benötigt (x0, y0, x1 und y1) und ein oder zwei weitere haben kann.
 -- full
 [!](p38-blueBar.png)
 -- gap
@@ -19,13 +19,13 @@ Denk daran, dass der Code innerhalb der Funktion (wie die Zeilen 2-3 im obigen B
 
 -- gap
 -- left 55%
-Hier ist ein Programm, das mit Warpgeschwindigkeit fliegt! Jede der "Warp"-Linien wird durch eine Liste mit fünf Elementen dargestellt: den x0-, y0-, x1- und y1-Koordinaten der Linie sowie der Farbe. Wir müssen diese Linien zurücksetzen, wenn das Programm beginnt, und auch immer dann, wenn eine über den oberen oder unteren Bildschirmrand hinausgeht. Also definieren wir eine Funktion `resetLine`, um dies zu erleichtern!
+Hier ist ein Programm, das mit Warpgeschwindigkeit fliegt! Jede der "Warp"-Linien wird durch eine Liste mit fünf Elementen dargestellt: den x0, y0, x1 und y1 Koordinaten der Linie sowie der Farbe. Wir müssen diese Linien zurücksetzen, wenn das Programm beginnt, und auch immer dann, wenn eine über den oberen oder unteren Bildschirmrand hinausgeht. Also definieren wir eine Funktion `resetLine`, um dies zu erleichtern!
 -- right
 [!](p38-warpScreen.png)
 
 -- full
 [!](p38-listing3.png)
 -- puzzle
-Mache die Warp-Linien doppelt so dick! *Hinweis:* Gib `@gfx.line` ein, um alle Parameter zu sehen, die diese Funktion annehmen kann, und verlängere dann Zeile 19 ein wenig.
+Mache die Warp-Linien doppelt so dick! *Hinweis:* Gib `@gfx.line` ein, um alle Parameter zu sehen, die diese Funktion annehmen kann.
 
 -- gap
