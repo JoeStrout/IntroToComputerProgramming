@@ -1,13 +1,13 @@
 -- full
-## _Muffin-Fang_ Spiel
+## _Pong_ Spiel
 -- left
-Hier ist ein Spiel, das Sprites (Seite 30) sowie Zufälligkeit (Seite 32) verwendet. Muffins fallen von der Oberseite des Bildschirms herab. Benutze die Pfeiltasten (oder einen Gamepad, wenn du einen hast), um den Fänger hin und her zu bewegen. Jeder Muffin fällt schneller als der vorherige. Wie viele kannst du fangen?
+Hier ist ein weiteres lustiges Spiel mit Sprites! Dies ist das klassische Spiel _Pong_, angepasst für einen Spieler statt zwei. Benutze die Pfeil-oben/unten-Tasten (oder, auch hier, einen Gamecontroller, wenn du einen hast), um dein Paddel zu bewegen. Halte den Ball so lange wie möglich auf dem Bildschirm!
 -- right
-Dies ist das längste Programm in diesem Buch bisher. Nimm dir Zeit und tippe sorgfältig (beide Seiten). Wenn du einen Fehler bekommst, vergleiche deinen Code mit der hier abgedruckten Auflistung. Wenn du möchtest, speichere deine Arbeit mit `save "muffin"` und lade sie später mit `load "muffin"` wieder in den Speicher.
+Eine Zeile, die mit `//` beginnt (wie Zeile 2 in diesem Programm), wird als *Kommentar* bezeichnet. Ein Kommentar ist nur eine kleine Notiz für menschliche Leser des Codes, wie dich und mich. Du kannst auch einen Kommentar am Ende einer Zeile setzen, wie in Zeile 31. Mini Micro ignoriert alles von `//` bis zum Ende der Zeile.
 
 -- full
-[!](p34-listing1a.png)
-[!](p34-listing1b.png)
-[!](p34-muffinCatchBot.png)
+[!](p36-listing1a.png)
+[!](p36-listing1b.png)
+[!](p36-pongBot.png)
 
 -- gap
