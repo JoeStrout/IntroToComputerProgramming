@@ -8,9 +8,9 @@ Der Speicher des Computers enthält eine Tabelle, die `a` auf `"Hi"`, `b` auf `3
 [!](p42-mapScreen2.png)
 
 -- left
-Die beiden geschweiften Klammern, `{}`, definieren eine leere *Map* — eine neue Tabelle von Namen und Werten. Unsere Variable `b` zeigt jetzt einfach auf diese neue Tabelle. Mit der *Punktsyntax*, wie `b.uno`, können wir auf die Variablen innerhalb dieser Map zugreifen.
+Die beiden geschwungenen Klammern, `{}`, definieren eine leere *Map* — eine neue Tabelle von Namen und Werten. Unsere Variable `b` zeigt jetzt einfach auf diese neue Tabelle. Mit der *Punktsyntax*, wie `b.uno`, können wir auf die Variablen innerhalb dieser Map zugreifen.
 -- right
-Nach diesen Zuweisungen sieht der Speicher des Computers wie oben aus. Die Variablen `a` und `c` enthalten einfache Werte, aber `b` enthält einen Zeiger auf eine andere Map, die `uno`, `dos` und `hola` enthält.
+Nach diesen Zuweisungen sieht der Speicher des Computers wie oben aus. Die Variablen `a` und `c` enthalten einfache Werte, aber `b` enthält einen Pointer auf eine andere Map, die `uno`, `dos` und `hola` enthält.
 
 -- left 40%
 Du kannst die Punktsyntax auch verwenden, um die Werte wieder herauszuholen. Probiere `print b.hola`, um eine Begrüßung direkt aus der Map zu drucken, die du gerade erstellt hast. Es funktioniert genau wie normale Variablen, aber mit (in diesem Fall) einem `b.`-Präfix.
