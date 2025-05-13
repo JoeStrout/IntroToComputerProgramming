@@ -1,7 +1,7 @@
 -- left
 ## Daten grafisch darstellen
-Computer sind großartig darin, Diagramme und Grafiken zu erstellen. Normalerweise wirst du dafür eine Pixelanzeige wie gfx verwenden (siehe Seite 22).
-Wenn deine Daten eine lange Liste von Werten sind (Seite 28), dann erstelle eine `for`-Schleife, um über diese Daten zu iterieren, wobei du die x- und y-Koordinaten auf dem Bildschirm aus der Schleifenvariablen und dem Datenwert berechnest. Verwende ein paar Variablen (`lastx` und `lasty` in diesem Beispiel), um die Position des letzten Punktes zu verfolgen.
+Computer sind großartig darin, Diagramme und Grafiken zu erstellen. Normalerweise wirst du dafür einen Pixeldisplay wie gfx verwenden (siehe Seite 22).
+Wenn deine Daten eine lange Liste von Werten sind (Seite 28), dann erstelle eine `for`-Schleife, um über diese Daten zu iterieren, wobei du die x und y Koordinaten auf dem Bildschirm aus der Schleifenvariablen und dem Datenwert berechnest. Verwende ein paar Variablen (`lastx` und `lasty` in diesem Beispiel), um die Position des letzten Punktes zu verfolgen.
 -- right
 [!](p40-graphScreen.png)
 Zeichne eine Linie vom letzten Punkt zum neuen, und fahre dann fort, bis die Schleife beendet ist.
