@@ -3,7 +3,7 @@
 -- left
 *Seite 9:* Tippe Folgendes:
 `print "Schön, dich kennenzulernen!"`
-und drücke die Return- oder Enter-Taste.
+und drücke die Enter-Taste.
 -----
 *Seite 12:*
 `favColor = input("Was ist deine Lieblingsfarbe?")`

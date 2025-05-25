@@ -2,7 +2,7 @@
 ## Glossar der Programmier-Begriffe
 -- left
 *Bug*: ein Fehler in einem Computerprogramm.
-*Code*: Anweisungen in einem Computerprogramm. Manchmal auch "Quellcode" genannt.
+*Code*: Anweisungen in einem Computerprogramm. Manchmal auch "Quellcode" oder "Sourcecode" genannt.
 *Code-Editor*: ein Texteditor, der auf die Bearbeitung von Computerprogrammen (Code) spezialisiert ist.
 *Befehl*: ein Wort mit besonderer Bedeutung für einen Computer; seine Verwendung in einem Programm oder an einer Befehlszeile veranlasst den Computer, etwas zu tun.
 *Kommentar*: ein Teil eines Programms, der vom Computer ignoriert wird. Kommentare werden hinzugefügt, um den Code zu erklären oder zu verdeutlichen.
@@ -17,11 +17,11 @@
 *Game Jam*: eine Art Wettbewerb, bei dem die Teilnehmer in kurzer Zeit (oft 3-7 Tage) ein Spiel schreiben, basierend auf einem Thema, das erst zu Beginn des Wettbewerbs bekannt gegeben wird.
 *Histogramm*: eine Art Balkendiagramm, bei dem jeder Balken eine Anzahl von Werten innerhalb eines bestimmten Bereichs darstellt.
 *Indexierung*: Nachschlagen eines bestimmten Elements in einer Liste, einem String oder einer Map, indem man den Index des gewünschten Elements in eckige Klammern setzt. Zum Beispiel erhält `msg[3]` das Element 3 von `msg`.
-*Endlosschleife*: eine Schleife, die sich endlos wiederholt, bis entweder der Benutzer sie durch Drücken von Strg-C stoppt oder der Code mit `break` aus der Schleife ausbricht.
+*Endlosschleife*: eine Schleife, die sich endlos wiederholt, bis entweder der Benutzer sie durch Drücken von Strg+C stoppt oder der Code mit `break` aus der Schleife ausbricht.
 *Liste*: eine geordnete Folge von Werten. In MiniScript werden diese mit eckigen Klammern dargestellt, wie: `[2, 4, 6, 8]`.
 -- left
 *Schleife*: ein Codeabschnitt, der sich mehrmals wiederholt.
-*Map*: eine Sammlung von Schlüssel-Wert-Paaren. In MiniScript werden Maps in geschweifte Klammern eingeschlossen. Maps unterstützen auch die _Punktsyntax_.
+*Map*: eine Sammlung von Schlüssel und Wert Paaren. In MiniScript werden Maps in geschwungenen Klammern eingeschlossen. Maps unterstützen auch die _Punktsyntax_.
 *Mini Micro*: ein neo-retro virtueller Computer, mit dem du auf einheitliche Weise lustige Spiele und Demos erstellen kannst, egal welche Art von echtem Computer du hast.
 *MiniScript*: eine Programmiersprache, die dafür bekannt ist, besonders einfach, klar und leicht zu erlernen zu sein, während sie dennoch leistungsfähig genug ist, um echte Programme zu schreiben.
 *Objekt*: eine Art Map, die sowohl Werte als auch Funktionen enthält.
