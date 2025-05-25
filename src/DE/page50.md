@@ -13,7 +13,7 @@
 -- gap
 ## Kreise, Winkel und Koordinaten
 -- left 45%
-Es gibt zwei verschiedene Arten, Drehungen zu messen: Grad und Radiant. Grad gehen von 0 bis 360. Eine halbe Drehung entspricht 180 Grad, oft mit einem kleinen Kreis geschrieben, wie 180°.
+Es gibt zwei verschiedene Arten, Rotationen zu messen: Grad und Radiant. Grad gehen von 0 bis 360. Eine halbe Drehung entspricht 180 Grad, oft mit einem kleinen Kreis geschrieben, wie 180°.
 Radiant gehen von 0 bis `2\*pi` (`pi` ist einfach eine spezielle Zahl, die ungefähr 3,14 entspricht). Eine halbe Drehung entspricht `pi` Radiant. Grad und Radiant sind nur zwei Wege, dieselbe Idee auszudrücken.
 -- right
 [!](p50-angleChart.png)
