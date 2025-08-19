@@ -10,9 +10,9 @@ Operator | Bedeutung
 `==` | gleich
 `!=` | ungleich
 `>` | größer als
-`>=` | größer als oder gleich
+`>=` | größer gleich als
 `<` | kleiner als
-`<=` | kleiner als oder gleich
+`<=` | kleiner gleich als
 -- endtable
 
 -- left
