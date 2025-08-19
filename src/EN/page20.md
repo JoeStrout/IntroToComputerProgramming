@@ -24,6 +24,7 @@ Changing the speed also changes the pitch, and this lets you make music.  A func
 To calculate the right speed for any note, divide the `noteFreq` of that note by the `noteFreq` of the recorded note (which is usually 60, or middle C).
 (That's what's going on in line 10 of the program below.)
 
+-- pagebreak
 -- full
 [!](p20-piano.png)
 

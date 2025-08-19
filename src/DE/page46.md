@@ -17,6 +17,7 @@ Jeder macht Fehler beim Schreiben von Code. Hier sind einige der häufigsten Feh
 *Fehlende Anführungszeichen.* Jeder String im Code muss Anführungszeichen haben. Achte darauf, doppelte Anführungszeichen wie "diese" zu verwenden, nicht die einfache Art wie 'diese'.
 Wenn du Anführungszeichen _in_ einem String setzen musst, tippe sie zweimal:
 `print "Sag ""Hallo"" zu mir."`
+-- pagebreak
 -- gap
 -- left
 [!](p46-tip5.png)

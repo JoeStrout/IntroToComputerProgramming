@@ -17,6 +17,7 @@ Defining functions is a great tool when you want to do basically the same thing,
 [!](p38-listing2.png)
 Remember, the code inside the function (like lines 2-3 in the example above) does not run when the function is being defined.  It only runs when the function is called, by using the name it was assigned to on the function line.
 
+-- pagebreak
 -- gap
 -- left 55%
 Here's a program that goes at warp speed!  Each of the “warp” lines is represented by a list with five elements: the x0, y0, x1, and y1 coordinates of the line, plus the color.  We need to reset these lines when the program begins, and again whenever one goes off the top or bottom of the screen.  So, we define a `resetLine` function to make this easy!

@@ -17,16 +17,36 @@ Lists may also be created by splitting a string into words, as in the little pro
 In fact there are many handy things you can do with lists — see the table below.
 -- left 55%
 [!](p28-listing1.png)
-[!](p28-listMethodTable.png)
+
+-- table
+Useful list-related functions
+`lst.push` _value_ | append _value_ to the end of list _lst_
+`lst.shuffle` | randomly reorder the elements of _lst_
+`lst.sort` | sort elements of _lst_ into ascending order
+`lst.len` | get the number of elements in _lst_
+`lst.sum` | add up all the elements in _lst_
+`msg.split` | convert string `msg` into a list
+`lst.join` | convert list `lst` into a string
+`range(1,10)` | create a list containing numbers 1 - 10
+-- endtable
 -- right
 [!](p28-helloBot.png)
 
+-- pagebreak
 -- left
 To refer to any element in a list, you put the index of the one you want after the list name, in square brackets.  Because computers usually start counting at 0, these indexes start at 0 for the first item, 1 for the second, and so on.  
 -- right
 You can also count from the end of the list, using negative numbers: -1 is the last item, -2 is the second from the end, etc.
 -- full
-[!](p28-indexingTable.png)
+
+-- table
+Examples of indexing into a list
+`lst[0]` | first element of list _lst_
+`lst[1]` | second element of _lst_
+`lst[-1]` | last element of _lst_
+`lst[-2]` | next-to-last element of _lst_
+-- endtable
+
 -- left
 [!](p28-listScreen.png)
 -- right

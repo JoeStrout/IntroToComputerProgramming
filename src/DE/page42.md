@@ -12,6 +12,7 @@ Die beiden geschwungenen Klammern, `{}`, definieren eine leere *Map* — eine ne
 -- right
 Nach diesen Zuweisungen sieht der Speicher des Computers wie oben aus. Die Variablen `a` und `c` enthalten einfache Werte, aber `b` enthält einen Pointer auf eine andere Map, die `uno`, `dos` und `hola` enthält.
 
+-- pagebreak
 -- left 40%
 Du kannst die Punktsyntax auch verwenden, um die Werte wieder herauszuholen. Probiere `print b.hola`, um eine Begrüßung direkt aus der Map zu drucken, die du gerade erstellt hast. Es funktioniert genau wie normale Variablen, aber mit (in diesem Fall) einem `b.`-Präfix.
 -- right

@@ -21,6 +21,7 @@ Putting `ceil()` around that rounds up, producing a whole number from 1 to 6, li
 1. How would you generate a random whole number from 1 to 100?
 2. How about a whole number from 51 to 150?
 
+-- pagebreak
 -- gap
 -- left 80%
 [!](p32-listing1.png)

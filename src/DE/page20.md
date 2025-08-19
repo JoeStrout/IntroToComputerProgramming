@@ -24,6 +24,7 @@ Das Ändern der Geschwindigkeit ändert auch die Tonhöhe, und das ermöglicht e
 Um die richtige Geschwindigkeit für eine Note zu berechnen, teile die `noteFreq` dieser Note durch die `noteFreq` der aufgenommenen Note (was normalerweise 60 ist, oder das mittlere C).
 (Das ist es, was in Zeile 10 des Programms unten geschieht.)
 
+-- pagebreak
 -- full
 [!](p20-piano.png)
 

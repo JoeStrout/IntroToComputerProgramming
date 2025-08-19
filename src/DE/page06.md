@@ -25,6 +25,7 @@ Bei Computern ist es so: Sie sind schnell, aber nicht sehr schlau. Du musst ihne
 -- right
 Aber das ist in Ordnung. Ein Computer ist eigentlich nur ein ausgeklügeltes Werkzeug. Wie bei jedem Werkzeug braucht es etwas Übung und Erfahrung, um es dazu zu bringen, das zu tun, was du willst — aber wenn du das erst einmal geschafft hast, kann er verwendet werden, um wirklich erstaunliche Dinge zu erschaffen!
 
+-- pagebreak
 -- fulljust
 -- gap
 #### Programmiersprachen

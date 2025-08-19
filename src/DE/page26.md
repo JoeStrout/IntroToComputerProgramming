@@ -27,8 +27,15 @@ zeigt das flauschige lila Monster namens Wumpus an. Oder versuche:
 Wie würdest du das Programm auf der `/sys` Festplatte laden und ausführen, das einen Sonnenuntergang zeichnet? *Hinweis:* Verwende `dir`, um es zu finden!
 
 -- right
-[!](p26-folderTable.png)
+-- table
+Wichtigste Ordner
+`/sys/demo` | eingebaute Spiele und Demonstrationen
+`/sys/pics` | Bilder zur Verwendung als Sprites, etc.
+`/sys/sounds` | Sound-Dateien zum Abspielen
+`/usr` | Speicher für all deine eigenen Dateien
+-- endtable
 
+-- pagebreak
 -- left 45%
 ## _Mini-Golf_ Spiel
 Probiere dieses lustige Golfspiel aus! Du gibst an, wie stark du in Bezug auf die Geschwindigkeit in X (horizontal) und Y (vertikal) schlagen möchtest. Versuche es zunächst mit 5 und 25. Wie viele Schläge brauchst du, um den Ball ins Loch zu bekommen?

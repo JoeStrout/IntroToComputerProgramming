@@ -9,6 +9,7 @@
 -- right
 [!](p50-listing1.png)
 
+-- pagebreak
 -- full
 -- gap
 ## Kreise, Winkel und Koordinaten
@@ -23,5 +24,9 @@ Radiant gehen von 0 bis `2\*pi` (`pi` ist einfach eine spezielle Zahl, die ungef
 Die meisten Dinge in Mini Micro (wie `Sprite.rotation`) verwenden Grad. Aber einige wirklich praktische Funktionen namens `sin` (Sinus), `cos` (Kosinus) und `atan` (Arkustangens) ermöglichen es dir, die x- und y-Koordinaten eines beliebigen Punktes auf einem Kreis zu finden oder den Winkel zu bestimmen, der durch beliebige x- und y-Koordinaten gebildet wird. Diese Funktionen verwenden alle Radiant.
 Die Tabelle unten zeigt, wie du diese nutzen kannst, um von Dingen, die du kennst, zu Dingen zu gelangen, die du möglicherweise brauchst. Du kannst diese Mathematik in den Zeilen 10-15 des _Lichtmotorräder_-Spiels (S. 44) in Aktion sehen.
 -- full
-[!](p50-conversionTable.png)
+-- table gold
+Wenn du hast... | Aber du willst... | Dann tu:
+Winkel (`a`) in Grad,<br/>Radius (`r`), und<br/>Zentrum (`cx`, `cy`) | Pixelposition (`x`, `y`) | `x = cx + r * cos(a * pi/180)<br/>y = cy + r * sin(a * pi/180)`
+Pixelposition (`x`, `y`)<br/>und Zentrum (`cx`, `cy`) | Winkel (`a`) in Grad<br/>oder Radius (`r`) | `a = atan(y-cy, x-cy) * 180/pi<br/>r = sqrt((x-cx)^2 + (y-cy)^2)`
+-- endtable
 -- gap

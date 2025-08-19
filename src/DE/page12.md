@@ -22,6 +22,7 @@ Probiere die Befehle rechts aus. Ändere die Frage oder deine Antwort, wenn du m
 -- puzzle
 Bringe den Computer dazu, nach deiner Lieblingsfarbe zu fragen, und speichere das Ergebnis in einer Variable namens `favColor`.
 
+-- pagebreak
 -- gap
 -- left
 Das folgende Programm verwendet `input` zweimal und speichert das Ergebnis in zwei Variablen namens `name` und `food`. Dann gibt es sie wieder aus, um einen Vorschlag zu machen.

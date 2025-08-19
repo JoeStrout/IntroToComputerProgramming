@@ -9,6 +9,7 @@
 -- right
 [!](p50-listing1.png)
 
+-- pagebreak
 -- full
 -- gap
 ## Circles, Angles, and Coordinates
@@ -23,5 +24,9 @@ Radians go from 0 to `2\*pi` (`pi` is just a special number equal to about 3.14)
 Most things in Mini Micro (like `Sprite.rotation`) use degrees.  But some really handy functions called `sin` (sine), `cos` (cosine), and `atan` (arctangent) let you find the x and y coordinates of any point on a circle, or find the angle made by any x and y coordinates.  These functions all use radians.
 The table below shows how you can use these to get from things you know to things you may need.  You can see this math in use in lines 10-15 of the the _Light Bikes_ game (p. 44).
 -- full
-[!](p50-conversionTable.png)
+-- table gold
+If You Have... | But You Want... | Then Do:
+Angle (`a`) in degrees,<br/>Radius (`r`), and<br/>Center (`cx`, `cy`) | Pixel position (`x`, `y`) | `x = cx + r * cos(a * pi/180)<br/>y = cy + r * sin(a * pi/180)`
+Pixel position (`x`, `y`)<br/>and Center (`cx`, `cy`) | Angle (`a`) in degrees<br/>or Radius (`r`) | `a = atan(y-cy, x-cy) * 180/pi<br/>r = sqrt((x-cx)^2 + (y-cy)^2)`
+-- endtable
 -- gap

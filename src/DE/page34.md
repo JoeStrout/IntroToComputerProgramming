@@ -7,6 +7,7 @@ Dies ist das längste Programm in diesem Buch bisher. Nimm dir Zeit und tippe so
 
 -- full
 [!](p34-listing1a.png)
+-- pagebreak
 [!](p34-listing1b.png)
 [!](p34-muffinCatchBot.png)
 

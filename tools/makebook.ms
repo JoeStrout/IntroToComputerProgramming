@@ -162,6 +162,30 @@ encodeSpecialLinks = function(s)
 	return s
 end function
 
+encodeMarkupSkippingCode = function(s, markupChar, tag)
+	pos = -1
+	tagOpen = false
+	while true
+		pos = s.indexOf(markupChar, pos)
+		if pos == null then break
+		if pos > 0 and s[pos-1] == "\" then
+			s = s[:pos-1] + s[pos:]
+			continue
+		end if
+		// Check if we're inside a <code> block
+		codeStart = s.lastIndexOf("<code>", pos)
+		codeEnd = s.lastIndexOf("</code>", pos)
+		if codeStart != null and (codeEnd == null or codeStart > codeEnd) then
+			// We're inside a code block, skip this character
+			pos = pos + 1
+			continue
+		end if
+		s = s[:pos] + "<" + "/"*tagOpen + tag + ">" + s[pos+1:]
+		tagOpen = not tagOpen
+	end while
+	return s
+end function
+
 encode = function(s, withMarkup=true)
 	s = s.replace("&", "&amp;")
 	s = s.replace("<", "&lt;")
@@ -169,12 +193,16 @@ encode = function(s, withMarkup=true)
 	s = s.replace("&lt;br/&gt;", "<br/>")  // special case allowing this
 	s = s.replace("&amp;nbsp;", "&nbsp;")  // ...and this
 	if withMarkup then
+		// Process backticks first to create code blocks
 		s = encodePairedMarkup(s, "`", "code")
-		s = encodePairedMarkup(s, "_", "i")
-		s = encodePairedMarkup(s, "*", "b")
+		// Process other markup, but skip content inside code blocks
+		s = encodeMarkupSkippingCode(s, "_", "i")
+		s = encodeMarkupSkippingCode(s, "*", "b")
 		s = encodeImages(s)	
 		s = encodePageLinks(s)
 		s = encodeSpecialLinks(s)
+		// Fix <br/> tags that got re-encoded inside code blocks
+		s = s.replace("&lt;br/&gt;", "<br/>")
 	end if
 	return s
 end function
@@ -256,9 +284,26 @@ processLine = function(line, out, context)
 	else if line == "-- endtoc" then
 		context.inTOC = false
 		out.push "</ul>"
+	else if line.startsWith("-- table") then
+		context.inTable = true
+		context.tableHeaderDone = false
+		if line.contains("gold") then
+			out.push "<table class=""book-table gold-headers"">"
+			context.goldHeaders = true
+		else
+			out.push "<table class=""book-table"">"
+			context.goldHeaders = false
+		end if
+	else if line == "-- endtable" or line == "--endtable" then
+		context.inTable = false
+		out.push "</tbody></table>"
 	else if line == "-- gap" then
 //		endSection out, context
 		out.push "<div class=""small-gap""></div>"
+	else if line == "-- pagebreak" then
+		// Generate page marker for the odd page number
+		oddPageNum = context.basePageNum + 1
+		out.push "<div id=""page" + oddPageNum + """ class=""page-marker""></div>"
 	else if line.startsWith("--") then
 		endSection out, context
 	else if line.startsWith("[!") then
@@ -293,6 +338,30 @@ processLine = function(line, out, context)
 		else
 			out.push "<li><a href=""#"" data-page=""{location}""><span>{label}</span><span>{location}</span></a></li>".fill(locals)
 		end if
+	else if context.inTable then
+		if not context.tableHeaderDone then
+			if line.indexOf(" | ") == null then
+				// This is a table title (no pipe separator)
+				out.push "<thead><tr><th colspan=""999"">" + encode(line) + "</th></tr></thead><tbody>"
+			else
+				// This is column headers (has pipe separator)
+				cells = line.split(" | ")
+				out.push "<thead><tr>"
+				for cell in cells
+					out.push "<th>" + encode(cell) + "</th>"
+				end for
+				out.push "</tr></thead><tbody>"
+			end if
+			context.tableHeaderDone = true
+		else
+			// This is a data row
+			cells = line.split(" | ")
+			out.push "<tr>"
+			for cell in cells
+				out.push "<td>" + encode(cell) + "</td>"
+			end for
+			out.push "</tr>"
+		end if
 	else
 		out.push "<p>" + encode(line) + "</p>"
 	end if
@@ -319,7 +388,9 @@ process = function(filename, lang="EN")
 		// special case: page 48 uses a yellow background
 		out[-1] = "<body bgcolor=""fffdcf"">"
 	end if
-	context = {"section":"none", "inBox":false, "inCode":false, "inTOC":false}
+	// Extract base page number from filename (e.g., "page50.md" -> 50)
+	basePageNum = val(filename[4:-3])  // Remove "page" prefix and ".md" suffix
+	context = {"section":"none", "inBox":false, "inCode":false, "inTOC":false, "inTable":false, "tableHeaderDone":false, "goldHeaders":false, "basePageNum":basePageNum}
 	for line in file.readLines(inputPath)
 		processLine line, out, context
 	end for

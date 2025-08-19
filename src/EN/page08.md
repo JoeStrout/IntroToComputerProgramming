@@ -20,6 +20,7 @@ Mini Micro should respond by printing “hello” (without the quotation marks) 
 -- right
 [!](p08-helloScreen.png)
 
+-- pagebreak
 -- left
 Computers are fast, but not very smart.  And they can be very picky!  If you misspell a word, or use a capital letter where it should be lower-case, the computer will not understand what you mean.  Instead of doing what you wanted, it will print an *error message*.  But that's OK!  That’s just the computer’s way of letting you know it is confused.
 -- right

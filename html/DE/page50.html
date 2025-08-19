@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="section-centered">
-<h2>Character Chart</h2>
+<h2>Zeichentabelle</h2>
 </div>
 <div class="section two-column">
 <div class="column-left">
@@ -29,12 +29,12 @@
 </div>
 <div class="section-centered">
 <div class="small-gap"></div>
-<h2>Circles, Angles, and Coordinates</h2>
+<h2>Kreise, Winkel und Koordinaten</h2>
 </div>
 <div class="section two-column">
 <div class="column-left" style="flex: 0 0 45%">
-<p>There are two different ways to measure rotations: degrees and radians.  Degrees go from 0 to 360.  Rotating halfway around is 180 degrees, often written with a little circle, like 180°.</p>
-<p>Radians go from 0 to <code>2*pi</code> (<code>pi</code> is just a special number equal to about 3.14).  Rotating halfway around is <code>pi</code> radians.  Degrees and radians are just two ways of expressing the same idea.</p>
+<p>Es gibt zwei verschiedene Arten, Rotationen zu messen: Grad und Radiant. Grad gehen von 0 bis 360. Eine halbe Drehung entspricht 180 Grad, oft mit einem kleinen Kreis geschrieben, wie 180°.</p>
+<p>Radiant gehen von 0 bis <code>2*pi</code> (<code>pi</code> ist einfach eine spezielle Zahl, die ungefähr 3,14 entspricht). Eine halbe Drehung entspricht <code>pi</code> Radiant. Grad und Radiant sind nur zwei Wege, dieselbe Idee auszudrücken.</p>
 </div>
 <div class="column-right">
 <img src="/pics/p50-angleChart.png" alt="" style="aspect-ratio: 1382 / 994"/>
@@ -45,25 +45,25 @@
 <img src="/pics/p50-trig.png" alt="" style="aspect-ratio: 670 / 782"/>
 </div>
 <div class="column-right">
-<p>Most things in Mini Micro (like <code>Sprite.rotation</code>) use degrees.  But some really handy functions called <code>sin</code> (sine), <code>cos</code> (cosine), and <code>atan</code> (arctangent) let you find the x and y coordinates of any point on a circle, or find the angle made by any x and y coordinates.  These functions all use radians.</p>
-<p>The table below shows how you can use these to get from things you know to things you may need.  You can see this math in use in lines 10-15 of the the <i>Light Bikes</i> game (<a href="#" data-page="44">p. 44</a>).</p>
+<p>Die meisten Dinge in Mini Micro (wie <code>Sprite.rotation</code>) verwenden Grad. Aber einige wirklich praktische Funktionen namens <code>sin</code> (Sinus), <code>cos</code> (Kosinus) und <code>atan</code> (Arkustangens) ermöglichen es dir, die x- und y-Koordinaten eines beliebigen Punktes auf einem Kreis zu finden oder den Winkel zu bestimmen, der durch beliebige x- und y-Koordinaten gebildet wird. Diese Funktionen verwenden alle Radiant.</p>
+<p>Die Tabelle unten zeigt, wie du diese nutzen kannst, um von Dingen, die du kennst, zu Dingen zu gelangen, die du möglicherweise brauchst. Du kannst diese Mathematik in den Zeilen 10-15 des <i>Lichtmotorräder</i>-Spiels (S. 44) in Aktion sehen.</p>
 </div>
 </div>
 <div class="section-centered">
 <table class="book-table gold-headers">
 <thead><tr>
-<th>If You Have...</th>
-<th>But You Want...</th>
-<th>Then Do:</th>
+<th>Wenn du hast...</th>
+<th>Aber du willst...</th>
+<th>Dann tu:</th>
 </tr></thead><tbody>
 <tr>
-<td>Angle (<code>a</code>) in degrees,<br/>Radius (<code>r</code>), and<br/>Center (<code>cx</code>, <code>cy</code>)</td>
-<td>Pixel position (<code>x</code>, <code>y</code>)</td>
+<td>Winkel (<code>a</code>) in Grad,<br/>Radius (<code>r</code>), und<br/>Zentrum (<code>cx</code>, <code>cy</code>)</td>
+<td>Pixelposition (<code>x</code>, <code>y</code>)</td>
 <td><code>x = cx + r * cos(a * pi/180)<br/>y = cy + r * sin(a * pi/180)</code></td>
 </tr>
 <tr>
-<td>Pixel position (<code>x</code>, <code>y</code>)<br/>and Center (<code>cx</code>, <code>cy</code>)</td>
-<td>Angle (<code>a</code>) in degrees<br/>or Radius (<code>r</code>)</td>
+<td>Pixelposition (<code>x</code>, <code>y</code>)<br/>und Zentrum (<code>cx</code>, <code>cy</code>)</td>
+<td>Winkel (<code>a</code>) in Grad<br/>oder Radius (<code>r</code>)</td>
 <td><code>a = atan(y-cy, x-cy) * 180/pi<br/>r = sqrt((x-cx)^2 + (y-cy)^2)</code></td>
 </tr>
 </tbody></table>

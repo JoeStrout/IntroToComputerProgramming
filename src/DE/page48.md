@@ -40,6 +40,7 @@ Füge schließlich eine weitere Zeile vor dem end if in Zeile 12 ein:
 -----
 [!](p48-puzzleBots.png)
 -- gap
+-- pagebreak
 -- left
 *Seite 23:* Du solltest einen runden Tunnel anstelle eines rechteckigen sehen.
 -----

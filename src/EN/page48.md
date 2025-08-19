@@ -40,6 +40,7 @@ Finally, insert one more line before the end if on line 12:
 -----
 [!](p48-puzzleBots.png)
 -- gap
+-- pagebreak
 -- left
 *Page 23:* you should see a round tunnel instead of a rectangular one.
 -----

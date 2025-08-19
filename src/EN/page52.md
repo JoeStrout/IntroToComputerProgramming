@@ -19,6 +19,7 @@
 *indexing*: looking up a particular item in a list, string, or map by putting the index of the thing you want in square brackets.  For example, `msg[3]` gets element 3 of `msg`.
 *infinite loop*: a loop that repeats forever, until either the user stops it by pressing Control-C, or the code breaks out of the loop with `break`.
 *list*: an ordered sequence of values.  In MiniScript, these are represented with square brackets, like: `[2, 4, 6, 8]`.
+-- pagebreak
 -- left
 *loop*: a section of code that repeats multiple times.
 *map*: a collection of key-value pairs.  In MiniScript, maps are enclosed in curly braces.  Maps also support _dot syntax_.

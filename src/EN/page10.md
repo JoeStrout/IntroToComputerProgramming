@@ -19,6 +19,7 @@ Type the following two lines into Mini Micro, pressing Return or Enter after eac
 -- right
 Variables are how computers remember things!  Once something is stored in a variable, it stays there until it is replaced by a new value, or cleared by the `reset` command.
 
+-- pagebreak
 -- full
 -- gap
 ## Using the Code Editor

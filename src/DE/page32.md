@@ -21,6 +21,7 @@ Wenn du `ceil()` darum setzt, wird aufgerundet und es entsteht eine ganze Zahl v
 1. Wie würdest du eine zufällige ganze Zahl von 1 bis 100 erzeugen?
 2. Wie wäre es mit einer ganzen Zahl von 51 bis 150?
 
+-- pagebreak
 -- gap
 -- left 80%
 [!](p32-listing1.png)

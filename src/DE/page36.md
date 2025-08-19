@@ -7,6 +7,7 @@ Eine Zeile, die mit `//` beginnt (wie Zeile 2 in diesem Programm), wird als *Kom
 
 -- full
 [!](p36-listing1a.png)
+-- pagebreak
 [!](p36-listing1b.png)
 [!](p36-pongBot.png)
 

@@ -22,6 +22,7 @@ Double-click this to open it up.  On Windows, you'll then need to click the Extr
 -- right
 The Mini Micro application icon looks like the picture at left.  Once you find that, double-click it to launch Mini Micro.  If you get a security warning, for example about needing access to files, go ahead and allow it.  Mini Micro will need to read and write files in order to save your work.
 
+-- pagebreak
 -- full
 -- gap
 ## How computers work

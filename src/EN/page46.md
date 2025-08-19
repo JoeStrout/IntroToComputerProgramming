@@ -17,6 +17,7 @@ Everybody makes mistakes when writing code.  Here are some of the most common on
 *Missing quotation marks.*  Every string in code needs to have quotation marks around it.  Be sure to use double quotation marks like "this", not the single kind like 'this'.
 If you need to put quotation marks _in_ a string, type them twice:
 `print "Say ""hi"" to me."`
+-- pagebreak
 -- gap
 -- left
 [!](p46-tip5.png)

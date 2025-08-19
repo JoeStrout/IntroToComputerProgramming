@@ -17,6 +17,7 @@ Das Definieren von Funktionen ist ein großartiges Werkzeug, wenn du im Grunde d
 [!](p38-listing2.png)
 Denk daran, dass der Code innerhalb der Funktion (wie die Zeilen 2-3 im obigen Beispiel) nicht ausgeführt wird, wenn die Funktion definiert wird. Er wird erst ausgeführt, wenn die Funktion aufgerufen wird, indem der Name verwendet wird, der ihr in der Funktionszeile zugewiesen wurde.
 
+-- pagebreak
 -- gap
 -- left 55%
 Hier ist ein Programm, das mit Warpgeschwindigkeit fliegt! Jede der "Warp"-Linien wird durch eine Liste mit fünf Elementen dargestellt: den x0, y0, x1 und y1 Koordinaten der Linie sowie der Farbe. Wir müssen diese Linien zurücksetzen, wenn das Programm beginnt, und auch immer dann, wenn eine über den oberen oder unteren Bildschirmrand hinausgeht. Also definieren wir eine Funktion `resetLine`, um dies zu erleichtern!

@@ -12,6 +12,7 @@ Dieses Programm zeigt eine neue Möglichkeit, Eingaben vom Benutzer zu erhalten,
 -- right
 [!](p24-cookieScreen.png)
 
+-- pagebreak
 -- full
 -- gap
 ## Deine Arbeit speichern

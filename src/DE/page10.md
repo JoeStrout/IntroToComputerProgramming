@@ -19,6 +19,7 @@ Gib die folgenden zwei Zeilen in Mini Micro ein und drücke nach jeder Zeile die
 -- right
 Variablen sind die Art, wie Computer sich Dinge merken! Sobald etwas in einer Variable gespeichert ist, bleibt es dort, bis es durch einen neuen Wert ersetzt oder durch den Befehl `reset` gelöscht wird.
 
+-- pagebreak
 -- full
 -- gap
 ## Den Code-Editor verwenden

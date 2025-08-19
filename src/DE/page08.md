@@ -20,6 +20,7 @@ Mini Micro sollte darauf reagieren, indem es "hello" (ohne die Anführungszeiche
 -- right
 [!](p08-helloScreen.png)
 
+-- pagebreak
 -- left
 Computer sind schnell, aber nicht sehr schlau. Und sie können sehr pingelig sein! Wenn du ein Wort falsch schreibst oder einen Großbuchstaben verwendest, wo es ein Kleinbuchstabe sein sollte, wird der Computer nicht verstehen, was du meinst. Anstatt das zu tun, was du wolltest, gibt er eine *Fehlermeldung* aus. Aber das ist in Ordnung! Das ist nur die Art des Computers, dir mitzuteilen, dass er verwirrt ist.
 -- right

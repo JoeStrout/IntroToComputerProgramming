@@ -12,6 +12,7 @@ The two curly braces, `{}`, define an empty *map* — a new table of names and v
 -- right
 After those assignments, the computer's memory looks like the above.  Variables `a` and `c` hold simple values, but `b` holds a pointer to another map containing `uno`, `dos`, and `hola`.
 
+-- pagebreak
 -- left 40%
 You can use dot syntax to get the values back out, too.  Try `print b.hola` to print a greeting, right out of the map you just created.  It works exactly like normal variables, but with (in this case) a `b.` prefix.
 -- right

@@ -14,7 +14,14 @@ Anything you can do with a calculator, you can do in a computer program.  On a c
 You can put spaces around the operator, or leave them out.  It’s up to you.
 
 -- left
-[!Table showing five math operators: addition, subtraction, multiplication, division, and power.](p14-opTable.png)
+-- table
+Operator | Meaning
+`+` | addition
+`-` | subtraction
+`*` | multiplication
+`/` | division
+`^` | power
+-- endtable
 -- right
 [!](p14-calculator.png)
 
@@ -22,6 +29,7 @@ You can put spaces around the operator, or leave them out.  It’s up to you.
 -- puzzle
 Use Mini Micro to figure out what you get when you divide 15,750 by 375.  *Tip:* don’t include the comma when typing big numbers on a computer.  Just type `15750`.
 
+-- pagebreak
 -- gap
 -- left
 You can also add two strings together (as in the silly-story program on page 13), or multiply a string by a number, which just repeats it that many times.

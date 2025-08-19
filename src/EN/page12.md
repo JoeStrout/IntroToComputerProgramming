@@ -22,6 +22,7 @@ Try the commands shown at right.  Change the question or your answer if you like
 -- puzzle
 Make the computer ask your favorite color, and store the result in a variable called `favColor`.
 
+-- pagebreak
 -- gap
 -- left
 The program below uses `input` twice, storing the result in two variables called `name` and `food`.  Then it prints them back out to make a suggestion.

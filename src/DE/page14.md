@@ -14,7 +14,14 @@ Alles, was du mit einem Taschenrechner machen kannst, kannst du auch in einem Co
 Du kannst Leerzeichen um den Operator setzen oder sie weglassen. Das bleibt dir überlassen.
 
 -- left
-[!Tabelle mit fünf mathematischen Operatoren: Addition, Subtraktion, Multiplikation, Division und Potenz.](p14-opTable.png)
+-- table
+Operator | Bedeutung
+`+` | Addition
+`-` | Subtraktion
+`*` | Multiplikation
+`/` | Division
+`^` | Potenz
+-- endtable
 -- right
 [!](p14-calculator.png)
 
@@ -22,6 +29,7 @@ Du kannst Leerzeichen um den Operator setzen oder sie weglassen. Das bleibt dir 
 -- puzzle
 Benutze Mini Micro, um herauszufinden, was du bekommst, wenn du 15 750 durch 375 teilst. *Tipp:* Verwende beim Eingeben großer Zahlen auf einem Computer kein Komma. Tippe einfach `15750`.
 
+-- pagebreak
 -- gap
 -- left
 Du kannst auch zwei Strings miteinander verbinden (wie im albernen Geschichtenprogramm auf Seite 13) oder einen String mit einer Zahl multiplizieren, was ihn einfach so oft wiederholt.

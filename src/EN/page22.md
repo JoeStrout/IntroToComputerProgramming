@@ -23,6 +23,7 @@ Then use the `gfx.line` command with four numbers: x1, y1, x2, and y2. These spe
 -- puzzle
 What command would draw a line from the lower-left corner of the screen to the upper-right corner?
 
+-- pagebreak
 -- gap
 -- left 34%
 [!](p22-moire.png)

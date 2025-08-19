@@ -27,8 +27,15 @@ displays the fuzzy purple monster known as the Wumpus.  Or try:
 How would you load and run the program on the `/sys` disk that draws a sunset?  *Hint:* use `dir` to find it!
 
 -- right
-[!](p26-folderTable.png)
+-- table
+Most Important Folders
+`/sys/demo` | built-in games and demonstrations
+`/sys/pics` | images for use as sprites, etc.
+`/sys/sounds` | sound files for you to play
+`/usr` | storage for all your own stuff
+-- endtable
 
+-- pagebreak
 -- left 45%
 ## _Mini-Golf_ Game
 Try this fun golf game!  You specify how hard you want to hit in terms of speed in X (horizontal) and Y (vertical).   Try 5 and 25 for starters.  How many swings does it take you to get the ball into the hole?

@@ -12,6 +12,7 @@ This program shows a new way to get input from the user, one key at a time.  Use
 -- right
 [!](p24-cookieScreen.png)
 
+-- pagebreak
 -- full
 -- gap
 ## Saving Your Work

@@ -7,6 +7,7 @@ This is the longest program in this book so far.  Take your time and type carefu
 
 -- full
 [!](p34-listing1a.png)
+-- pagebreak
 [!](p34-listing1b.png)
 [!](p34-muffinCatchBot.png)
 

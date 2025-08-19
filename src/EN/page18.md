@@ -26,6 +26,7 @@ Here’s a fun little guessing game.  Change the number in line 1, and have some
 -- right
 [!](p18-listing1.png)
 
+-- pagebreak
 -- left
 Another way to loop is the _for loop_.  It repeats the lines of code between `for` and `end for`, but also assigns values to a variable (called the _loop variable_) as it goes.  The loop exits when it has gone through all the values in the range.
 -- right

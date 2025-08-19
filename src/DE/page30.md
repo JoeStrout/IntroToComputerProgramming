@@ -19,10 +19,18 @@ Die `while`-Schleife in den Zeilen 6-10 ermöglicht es dir, das Sprite zu bewege
 -- puzzle
 Lass das UFO doppelt so schnell bewegen! Hinweis: Seine aktuelle Geschwindigkeit beträgt 10 horizontal und 6 vertikal.
 
+-- pagebreak
 -- left 30%
 Sobald ein Sprite erstellt wurde, kannst du seine Größe, Farbe, Rotation oder Position ändern, indem du den in der Tabelle rechts gezeigten Eigenschaften Werte zuweist. Siehe Zeilen 7-8 in der Auflistung oben oder Zeilen 11-12 unten.
 -- right
-[!](p30-spritePropsTable.png)
+-- table
+Sprite-Eigenschaften
+`spr.x` | horizontale Position des Sprites _spr_ (0-960)
+`spr.y` | vertikale Position des Sprites _spr_ (0-640)
+`spr.rotation` | Rotationswinkel in Grad (0-360)
+`spr.scale` | Größenfaktor: 1=normal, 2=doppelt, etc.
+`spr.tint` | Sprite-Farbe (color.white, color.red, etc.)
+-- endtable
 
 -- left
 Normalerweise lädst du das Bild für ein Sprite, indem du direkt file.loadImage verwendest. Aber manchmal ist die Bilddatei auf der Festplatte eigentlich eine Sammlung kleinerer Bilder, die Frames genannt werden. Jedes Frame repräsentiert ein Bild einer Animation. Wie du vielleicht weißt, ist eine Animation mehrere Bilder, die hintereinander abgespielt werden.

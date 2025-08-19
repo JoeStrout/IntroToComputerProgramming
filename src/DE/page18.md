@@ -26,6 +26,7 @@ Hier ist ein kleines Ratespiel. Ändere die Zahl in Zeile 1 und lass jemand ande
 -- right
 [!](p18-listing1.png)
 
+-- pagebreak
 -- left
 Eine andere Art der Schleife ist die _for-Schleife_. Sie wiederholt die Codezeilen zwischen `for` und `end for`, weist aber auch einer Variable (der _Schleifenvariable_) Werte zu, während sie läuft. Die Schleife wird beendet, wenn sie alle Werte im Bereich durchlaufen hat.
 -- right

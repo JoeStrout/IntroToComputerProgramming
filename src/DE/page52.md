@@ -19,6 +19,7 @@
 *Indexierung*: Nachschlagen eines bestimmten Elements in einer Liste, einem String oder einer Map, indem man den Index des gewünschten Elements in eckige Klammern setzt. Zum Beispiel erhält `msg[3]` das Element 3 von `msg`.
 *Endlosschleife*: eine Schleife, die sich endlos wiederholt, bis entweder der Benutzer sie durch Drücken von Strg+C stoppt oder der Code mit `break` aus der Schleife ausbricht.
 *Liste*: eine geordnete Folge von Werten. In MiniScript werden diese mit eckigen Klammern dargestellt, wie: `[2, 4, 6, 8]`.
+-- pagebreak
 -- left
 *Schleife*: ein Codeabschnitt, der sich mehrmals wiederholt.
 *Map*: eine Sammlung von Schlüssel und Wert Paaren. In MiniScript werden Maps in geschwungenen Klammern eingeschlossen. Maps unterstützen auch die _Punktsyntax_.

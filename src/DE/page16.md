@@ -5,7 +5,15 @@
 Viele Computerprogramme müssen, je nachdem welchen Wert der Benutzer oder die Benutzerin eingegebenen hat, unterschiedliche Dinge tun. Dies geschieht mit einer *if-Anweisung*. Probiere dieses Programm aus:
 [!](p16-ifExample.png)
 -- right
-[!](p16-opTable.png)
+-- table
+Operator | Bedeutung
+`==` | gleich
+`!=` | ungleich
+`>` | größer als
+`>=` | größer als oder gleich
+`<` | kleiner als
+`<=` | kleiner als oder gleich
+-- endtable
 
 -- left
 Zeile 1 fordert den Benutzer auf, eine Antwort einzugeben. In Zeile 2 prüft die `if`-Anweisung, ob die eingegebene Antwort gleich "4" ist. Wenn ja, fährt der Computer mit Zeile 3 fort und springt dann zum `end if` in Zeile 6. Wenn die Antwort aber _nicht_ gleich "4" ist, springt er von Zeile 2 zum `else`-Teil in Zeile 5.
@@ -20,6 +28,7 @@ _Führe das Programm mehrmals aus und probiere verschiedene Antworten aus!_
 -- fulljust
 Eine `if`-Anweisung kann viele Teile haben, um verschiedene Bedingungen zu behandeln. Der erste Teil, nach der Zeile mit `if` und `then`, muss immer vorhanden sein. Dann kannst du eine beliebige Anzahl von `else if`-Teilen haben, die andere Bedingungen prüfen. Der erste davon, der übereinstimmt, führt seinen Code aus und überspringt den Rest. Schließlich wird ein `else`-Teil ausgeführt, wenn _keine_ der Bedingungen wahr war. Welche Teile siehst du im obigen Programm?
 
+-- pagebreak
 -- left 30%
 Eine Bedingung kann ein einfacher Vergleich sein, oder sie kann aus mehreren Vergleichen bestehen, die mit `and` oder `or` verbunden sind.
 -- right

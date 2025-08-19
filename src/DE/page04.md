@@ -44,4 +44,6 @@ Es ist hilfreich, einen Computer anhand seiner _Eingaben_, _Ausgaben_ und _Verar
 *Ausgaben* sind Dinge, die der Computer steuern kann, wie das Zeichnen von Bildern auf dem Bildschirm und das Erzeugen von Tönen mit den Lautsprechern.
 *Verarbeitung* ist das, was der Computer tatsächlich tut, in der Regel um Ausgaben zu erzeugen, die auf irgendeine Weise von den Eingaben abhängen.
 
+-- pagebreak
+-- full
 -- gap

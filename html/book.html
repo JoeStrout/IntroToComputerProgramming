@@ -41,17 +41,35 @@
       return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
     }
     
-	function loadPage(n) {
+	function loadPage(n, updateHash = true) {
 		if (n < -2) n = -2;
 		if (n > 58) n = 56;
-		if (n % 2) n--;
-		currentPage = n;
+		
+		// Store the original requested page number
+		const requestedPage = n;
+		
+		// Calculate the file page (always even)
+		const filePage = (n % 2) ? n - 1 : n;
+		
+		// Set currentPage to the requested page for proper navigation
+		currentPage = requestedPage;
+		
+		// Update URL hash if requested
+		if (updateHash) {
+			if (n < 0) {
+				window.location.hash = 'cover';
+			} else if (n >= 56) {
+				window.location.hash = 'backcover';
+			} else {
+				window.location.hash = `page${n}`;
+			}
+		}
 		
 		let langCode = getUrlParameter('lang');
 		if (!langCode) langCode = "EN";
 		
 		// Create the page URL for the current language
-		let pageURL = `${langCode}/page${String(n).padStart(2, '0')}.html`;
+		let pageURL = `${langCode}/page${String(filePage).padStart(2, '0')}.html`;
 		
 		// HACK During development: break caching by appending current timestamp
 		const cacheBuster = `v=${Date.now()}`;
@@ -66,19 +84,24 @@
 			  if (!response.ok && langCode !== "EN") {
 				// If page not found and language is not English, try loading the English version
 				console.log(`Page not found in ${langCode}, falling back to EN`);
-				const fallbackURL = `EN/page${String(n).padStart(2, '0')}.html?${cacheBuster}`;
+				const fallbackURL = `EN/page${String(filePage).padStart(2, '0')}.html?${cacheBuster}`;
 				console.log("Loading fallback: " + fallbackURL);
 				pageFrame.src = fallbackURL;
 			  } else {
 				// If page found or already trying English, load the page
 				pageFrame.src = pageURL;
 			  }
+			  
+			  // After the iframe loads, scroll to the appropriate page if it's an odd page
+			  pageFrame.onload = function() {
+				scrollToPageIfNeeded(requestedPage, filePage);
+			  };
 			})
 		.catch(error => {
 			  if (langCode !== "EN") {
 				// In case of network error and language is not English, try English version
 				console.log(`Error loading ${langCode} page: ${error}, falling back to EN`);
-				const fallbackURL = `EN/page${String(n).padStart(2, '0')}.html?${cacheBuster}`;
+				const fallbackURL = `EN/page${String(filePage).padStart(2, '0')}.html?${cacheBuster}`;
 				console.log("Loading fallback: " + fallbackURL);
 				pageFrame.src = fallbackURL;
 			  } else {
@@ -86,12 +109,34 @@
 				console.error(`Failed to load page: ${error}`);
 				pageFrame.src = pageURL; // Try to load anyway
 			  }
+			  
+			  // After the iframe loads, scroll to the appropriate page if it's an odd page
+			  pageFrame.onload = function() {
+				scrollToPageIfNeeded(requestedPage, filePage);
+			  };
 			});
 		  
-		// Update page number display
-		if (n < 0) pageNumber.textContent = `Cover`;
-		else if (n < 56) pageNumber.textContent = `${n} — ${n+1}`;
+		// Update page number display based on the file page (always even)
+		if (filePage < 0) pageNumber.textContent = `Cover`;
+		else if (filePage < 56) pageNumber.textContent = `${filePage} — ${filePage+1}`;
 		else pageNumber.textContent = `Back Cover`;
+	}
+	
+	function scrollToPageIfNeeded(requestedPage, filePage) {
+		try {
+			// Only scroll if we're looking for an odd page that's different from the file page
+			if (requestedPage !== filePage && requestedPage % 2 === 1) {
+				const pageMarker = pageFrame.contentDocument.getElementById(`page${requestedPage}`);
+				if (pageMarker) {
+					console.log(`Scrolling to page marker: page${requestedPage}`);
+					pageMarker.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				} else {
+					console.log(`Page marker page${requestedPage} not found`);
+				}
+			}
+		} catch (e) {
+			console.error("Error scrolling to page marker:", e);
+		}
 	}
 	
     prevBtn.addEventListener("click", () => loadPage(currentPage - 2));
@@ -331,8 +376,40 @@
       }
     });
 
-    // Start with cover page
-    loadPage(-2);
+    // Handle hash change for direct navigation and back/forward buttons
+    window.addEventListener('hashchange', () => {
+      handleHashNavigation();
+    });
+    
+    function handleHashNavigation() {
+      const hash = window.location.hash.slice(1); // Remove the '#'
+      if (!hash) {
+        loadPage(-2, false); // Cover page, don't update hash
+        return;
+      }
+      
+      if (hash === 'cover') {
+        loadPage(-2, false);
+      } else if (hash === 'backcover') {
+        loadPage(56, false);
+      } else if (hash.startsWith('page')) {
+        const pageNum = parseInt(hash.substring(4), 10);
+        if (!isNaN(pageNum) && pageNum >= 0 && pageNum <= 58) {
+          loadPage(pageNum, false);
+        } else {
+          loadPage(-2, false); // Default to cover if invalid page
+        }
+      } else {
+        loadPage(-2, false); // Default to cover for unknown hash
+      }
+    }
+    
+    // Initialize page based on URL hash or start with cover page
+    if (window.location.hash) {
+      handleHashNavigation();
+    } else {
+      loadPage(-2);
+    }
   </script>
 </body>
 </html>

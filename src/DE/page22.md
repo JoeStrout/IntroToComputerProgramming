@@ -24,6 +24,7 @@ Verwende dann den Befehl `gfx.line` mit vier Zahlen: x1, y1, x2 und y2. Diese ge
 -- puzzle
 Welcher Befehl würde eine Linie von der unteren linken Ecke des Bildschirms zur oberen rechten Ecke zeichnen?
 
+-- pagebreak
 -- gap
 -- left 34%
 [!](p22-moire.png)

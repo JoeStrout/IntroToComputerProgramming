@@ -19,10 +19,18 @@ The `while` loop on lines 6-10 allows you to move the sprite around.  It also sh
 -- puzzle
 Make the UFO move twice as fast!  Hint: its current speed is 10 horizontally, and 6 vertically.
 
+-- pagebreak
 -- left 30%
 Once a sprite is created, you can change its size, color, rotation, or position by assigning to the properties shown in the table at right.  See lines 7-8 in the listing above, or lines 11-12 below.
 -- right
-[!](p30-spritePropsTable.png)
+-- table
+Sprite properties
+`spr.x` | horizontal position of sprite _spr_ (0-960)
+`spr.y` | vertical position of sprite _spr_ (0-640)
+`spr.rotation` | rotation angle, in degrees (0-360)
+`spr.scale` | size factor: 1=normal, 2=double, etc.
+`spr.tint` | sprite color (color.white, color.red, etc.)
+-- endtable
 
 -- left
 Usually you get the image for a sprite by using file.loadImage directly.  But sometimes the image file on disk is actually a bunch of smaller pictures called frames.  Each frame represents one step of an animation.
