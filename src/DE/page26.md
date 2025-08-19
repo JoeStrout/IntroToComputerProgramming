@@ -29,7 +29,7 @@ Wie würdest du das Programm auf der `/sys` Festplatte laden und ausführen, das
 -- right
 -- table
 Wichtigste Ordner
-`/sys/demo` | eingebaute Spiele und Demonstrationen
+`/sys/demo` | eingebaute Spiele und Demos
 `/sys/pics` | Bilder zur Verwendung als Sprites, etc.
 `/sys/sounds` | Sound-Dateien zum Abspielen
 `/usr` | Speicher für all deine eigenen Dateien
