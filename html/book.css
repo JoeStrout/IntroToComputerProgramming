@@ -176,3 +176,42 @@ iframe {
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   min-width: 150px;
 }
+
+#langSelector .menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: #f5f5f5;
+  border-bottom: 1px solid #eee;
+}
+
+#langSelector .menu-title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#langSelector .menu-close {
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.25rem;
+}
+
+#langSelector .menu-item {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+#langSelector .menu-item:last-child {
+  border-bottom: none;
+}
+
+#langSelector .menu-item:hover,
+#langSelector .menu-item:active {
+  background: #f8f8f8;
+}

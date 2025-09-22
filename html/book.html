@@ -285,11 +285,26 @@
       });
       toc.appendChild(backCoverLink);
       
+      // Amazon link
+      const amazonLink = document.createElement("a");
+      amazonLink.className = "menu-item";
+      amazonLink.href = "https://www.amazon.com/dp/1736167618";
+      amazonLink.textContent = "View on Amazon";
+      toc.appendChild(amazonLink);
+      
       // Language selector
       const langLink = document.createElement("a");
       langLink.className = "menu-item";
       langLink.href = "#";
-      langLink.textContent = `Language: ${currentLang}`;
+
+      // Map language codes to full names
+      const langNames = {
+        "EN": "English",
+        "DE": "Deutsch"
+      };
+      const langDisplayName = langNames[currentLang] || currentLang;
+
+      langLink.textContent = `Language: ${langDisplayName}`;
       langLink.addEventListener("click", (e) => {
         e.preventDefault();
         showLanguageSelector(e);
@@ -351,15 +366,21 @@
     
     function changeLanguage(langCode) {
       currentLang = langCode;
-      
+
       // Update URL with the new language parameter
       const url = new URL(window.location.href);
       url.searchParams.set('lang', langCode);
       window.history.replaceState({}, '', url);
-      
-      // Reload current page with new language
-      loadPage(currentPage);
-      
+
+      // If currently on the title page (page -2), redirect to TOC (page 0)
+      // so user can see the language change
+      if (currentPage === -2) {
+        loadPage(0);
+      } else {
+        // Reload current page with new language
+        loadPage(currentPage);
+      }
+
       // Update language in the menu
       createMenuContent();
     }
