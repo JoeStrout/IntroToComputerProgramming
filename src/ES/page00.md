@@ -16,7 +16,7 @@ Tomando Decisiones	16
 Bucles	18
 Sonidos y Música	20
 Gráficos de Píxeles	22
-Juego del Panadero de Galletas	24
+Juego del Horneador de Galletas	24
 Guardando tu Trabajo	25
 Más Comandos de Archivos	26
 -- endtoc

@@ -34,7 +34,7 @@ Funciones útiles relacionadas con listas
 
 -- pagebreak
 -- left
-Para referirte a cualquier elemento en una lista, pones el índice del que quieres después del nombre de la lista, en corchetes. Porque las computadoras usualmente empiezan a contar en 0, estos índices comienzan en 0 para el primer elemento, 1 para el segundo, y así sucesivamente.
+Para referirte a cualquier elemento en una lista, pones el índice del que quieres después del nombre de la lista, en corchetes. Porque las computadoras usualmente empiezan a contar desde 0, estos índices comienzan en 0 para el primer elemento, 1 para el segundo, y así sucesivamente.
 -- right
 También puedes contar desde el final de la lista, usando números negativos: -1 es el último elemento, -2 es el segundo desde el final, etc.
 -- full

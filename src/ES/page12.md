@@ -11,7 +11,7 @@ Puedes pedirle un valor al usuario con la función `input`. Se ve así:
 [!x = input("What is x? ")](p12-inputSyntax.png)
 
 -- left
-El nombre de la variable, a la izquierda del signo `=`, puede ser el nombre de cualquier variable en la que quieras almacenar la entrada del usuario. La pregunta puede ser cualquier cadena (mensaje) que quieras mostrar al usuario. La palabra `input` debe ser exactamente `input`.
+El nombre de la variable, a la izquierda del signo `=`, puede ser el nombre de cualquier variable en la que quieras almacenar la entrada del usuario. La pregunta puede ser cualquier cadena de texto (mensaje) que quieras mostrar al usuario. La palabra `input` debe ser exactamente `input`.
 Prueba los comandos mostrados a la derecha. Cambia la pregunta o tu respuesta si quieres.
 -- right
 [!](p12-rainbowPonyScreen.png)
@@ -27,7 +27,7 @@ Haz que la computadora pregunte tu color favorito, y almacene el resultado en un
 -- left
 El programa de abajo usa `input` dos veces, almacenando el resultado en dos variables llamadas `name` y `food`. Luego las imprime de vuelta para hacer una sugerencia.
 
-Para ingresar este programa, primero usa `reset` para limpiar el programa anterior, luego `edit` para abrir el editor de código. Escribe el código mostrado, luego sal del editor de código y `run` el programa.
+Para ingresar este programa, primero usa `reset` para limpiar el programa anterior, luego `edit` para abrir el editor de código. Escribe el código mostrado, luego sal del editor de código y ejecuta el programa con `run`.
 -- right
 [!](p12-cookingBot.png)
 
