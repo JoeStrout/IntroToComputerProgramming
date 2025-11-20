@@ -12,7 +12,7 @@ Haz clic en la pestaña "Download" en la parte superior de la página, y luego b
 
 -- right
 [!](p04-downloadPage.png)
-Haz doble clic en este para abrirlo. En Windows, necesitarás hacer clic en el botón Extract; en Mac, se extrae automáticamente. Luego deberías encontrar la aplicación Mini Micro.
+Haz doble clic en este para abrirlo. En Windows, necesitarás hacer clic en el botón Extraer; en Mac, se extrae automáticamente. Luego deberías encontrar la aplicación Mini Micro.
 
 -- full
 [!](p04-extract.png)
@@ -20,7 +20,7 @@ Haz doble clic en este para abrirlo. En Windows, necesitarás hacer clic en el b
 -- left 20%
 [!](p04-MiniMicro-icon.png)
 -- right
-El ícono de la aplicación Mini Micro se ve como la imagen de la izquierda. Una vez que lo encuentres, haz doble clic en él para lanzar Mini Micro. Si obtienes una advertencia de seguridad, por ejemplo sobre necesitar acceso a archivos, adelante y permítelo. Mini Micro necesitará leer y escribir archivos para guardar tu trabajo.
+El ícono de la aplicación Mini Micro se ve como la imagen de la izquierda. Una vez que lo encuentres, haz doble clic en él para ejecutar Mini Micro. Si recibes una advertencia de seguridad, por ejemplo sobre necesitar acceso a archivos, permítelo. Mini Micro necesitará leer y escribir archivos para guardar tu trabajo.
 
 -- pagebreak
 -- full

@@ -39,7 +39,7 @@ You can also add two strings together (as in the silly-story program on page 13)
 -- left 18%
 [!](p14-cautionIcon.png)
 -- right
-*Careful!*  The `input` function always returns a string, not a number.  But you can convert a string into a number by using another function called val.  `Used` together, you can ask the user for a number like this:
+*Careful!*  The `input` function always returns a string, not a number.  But you can convert a string into a number by using another function called `val`.  Used together, you can ask the user for a number like this:
 
 -- full
 [!x = val(input("Give me a number:"))](p14-valInput.png)

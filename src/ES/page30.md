@@ -3,7 +3,7 @@
 -- right
 ## Sprites
 Mini Micro soporta un tipo especial de dibujo llamado *sprites*. Los sprites son pequeñas imágenes que pueden moverse, rotar, y cambiar su tamaño o color, y hacerlo muy rápido.
-Ves sprites en juegos de computadora como Pac-Man, Super Mario Bros, y Angry Birds. Cualquier momento que una pequeña imagen plana se mueve por una pantalla, casi siempre es un sprite.
+Ves sprites en juegos de computadora como Pac-Man, Super Mario Bros, y Angry Birds. Cada vez que una pequeña imagen plana se mueve por una pantalla, casi siempre es un sprite.
 
 -- left 65%
 Los pasos necesarios para configurar un sprite se muestran en las líneas 2-5 del programa de abajo. Primero creas un sprite con `new Sprite`, y lo asignas a una variable. Luego cargas una imagen para que el sprite la muestre. Después, lo agregas a la pantalla para que podamos verlo con `display(4).sprites.push`. Finalmente, estableces su posición `x` (horizontal) y `y` (vertical).
@@ -33,7 +33,7 @@ Propiedades de sprite
 -- endtable
 
 -- left
-Usualmente obtienes la imagen para un sprite usando file.loadImage directamente. Pero a veces el archivo de imagen en el disco es en realidad un montón de imágenes más pequeñas llamadas fotogramas. Cada fotograma representa un paso de una animación.
+Usualmente obtienes la imagen para un sprite usando `file.loadImage` directamente. Pero a veces el archivo de imagen en el disco es en realidad un montón de imágenes más pequeñas llamadas fotogramas. Cada fotograma representa un paso de una animación.
 -- right
 Para usar estos, primero carga la imagen más grande (llamada una *hoja de sprites* en este caso) en una variable, luego llama `getImage` en esa para extraer los fotogramas individuales, como se muestra abajo.
 

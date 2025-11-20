@@ -7,7 +7,7 @@ Puedes referenciar un archivo en cualquier disco usando una *ruta completa* al a
 
 -- left 52%
 #### Listar archivos con `dir`
-El comando dir lista todos los archivos y carpetas (directorios) bajo la ruta que especifiques. Por ejemplo:
+El comando `dir` lista todos los archivos y carpetas (directorios) bajo la ruta que especifiques. Por ejemplo:
 `dir "/sys/demo"`
 lista todos los archivos en el directorio demo en el disco /sys. (¡Hay muchos programas divertidos aquí — dales una oportunidad!)
 -- right

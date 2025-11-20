@@ -1,7 +1,7 @@
 -- full
 ## Variables
 -- left
-A veces necesitas almacenar algo como un número o un mensaje (llamado una cadena en jerga de computadoras) para usar más tarde. En programación de computadoras, almacenas tales valores en variables. Una variable es como un pequeño contenedor de almacenamiento para una cadena, número, u otro valor.
+A veces necesitas almacenar algo como un número o un mensaje (llamado una cadena de texto en jerga de computadoras) para usar más tarde. En la programación de computadoras, almacenas tales valores en variables. Una variable es como un pequeño contenedor de almacenamiento para una cadena de texto, número, u otro valor.
 -- right
 Cada variable tiene un nombre, y puede almacenar solo una cosa a la vez. Cuando pones un nuevo valor en una variable, cualquier valor previo almacenado ahí es desechado.
 

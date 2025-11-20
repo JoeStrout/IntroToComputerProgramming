@@ -5,7 +5,7 @@
 Las computadoras pueden realizar instrucciones simples, como sumar números, muy rápido — mucho más rápido que los humanos. Pero no tienen sentido común. Por ejemplo, si alguien te pide que le des al gato una lata de comida, ¡probablemente sabes abrirla primero! Pero una computadora no piensa en cosas como esa. Tiene que recibir instrucciones de qué hacer, paso a paso.
 Si tuvieras un robot que pudiera entender instrucciones, y quisieras que alimentara y diera agua a tu gato, podrías escribir instrucciones algo así:
 
-1. Ve al armario.
+1. Ve a la alacena.
 2. Saca una lata de comida para gatos.
 3. Ve al abrelatas.
 4. Abre la lata con el abrelatas.
@@ -39,7 +39,7 @@ Hay muchos, muchos lenguajes de programación diferentes. Pueden verse diferente
 [!](p06-languages.png)
 
 -- left
-Arriba se muestra una muestra de diferentes lenguajes de programación. Algunos usan mucha puntuación extraña, mientras que otros usan menos. Algunos están hechos de pequeñas imágenes que arrastras y conectas juntas, pero la mayoría están hechos para escribir. ¿Qué otras diferencias puedes ver?
+Arriba puedes ver una muestra de diferentes lenguajes de programación. Algunos usan mucha puntuación extraña, mientras que otros usan menos. Algunos están hechos de pequeñas imágenes que arrastras y conectas juntas, pero la mayoría están hechos para escribir. ¿Qué otras diferencias puedes ver?
 -- right
 En este libro estarás usando un lenguaje llamado *MiniScript*. Es un lenguaje bastante nuevo, y diseñado para ser especialmente simple y claro. Pero una vez que hayas aprendido un lenguaje de programación, es fácil aprender otros si alguna vez los necesitas.
 
