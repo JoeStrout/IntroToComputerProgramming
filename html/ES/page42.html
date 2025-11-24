@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section">
+<h2>Mapas y Objetos</h2>
+<p>Cuando asignas valores a variables en MiniScript, la computadora los almacena en una pequeña tabla en memoria. Esta tabla mapea cada nombre de variable a su valor. Usa el comando <code>reset</code> para limpiar la memoria, luego ingresa las siguientes tres asignaciones.</p>
+<img src="/pics/p42-mapScreen1.png" alt="" style="aspect-ratio: 1898 / 704"/>
+<p>La memoria de la computadora contiene una tabla mapeando <code>a</code> a <code>"Hi"</code>, <code>b</code> a <code>3.14</code>, y <code>c</code> a <code>42</code> como se muestra arriba. Ahora, reemplaza el valor de <code>b</code> con las cosas nuevas mostradas abajo.</p>
+<img src="/pics/p42-mapScreen2.png" alt="" style="aspect-ratio: 1874 / 706"/>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Las dos llaves, <code>{}</code>, definen un <b>mapa</b> vacío — una nueva tabla de nombres y valores. Nuestra variable <code>b</code> ahora simplemente apunta a esta nueva tabla. Usando <b>sintaxis de punto</b>, como <code>b.uno</code>, podemos llegar a las variables dentro de ese mapa.</p>
+</div>
+<div class="column-right">
+<p>Después de esas asignaciones, la memoria de la computadora se ve como arriba. Las variables <code>a</code> y <code>c</code> contienen valores simples, pero <code>b</code> contiene un puntero a otro mapa que contiene <code>uno</code>, <code>dos</code>, y <code>hola</code>.</p>
+<div id="page43" class="page-marker"></div>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 40%">
+<p>También puedes usar la sintaxis de punto para sacar los valores. Prueba <code>print b.hola</code> para imprimir un saludo, directamente del mapa que acabas de crear. Funciona exactamente como variables normales, pero con (en este caso) un prefijo <code>b.</code>.</p>
+</div>
+<div class="column-right">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>Haz que <code>pool</code> se refiera a un mapa que mapee <code>width</code> a 8 y <code>length</code> a 12. Luego usa esto para imprimir el área (ancho por largo) de la piscina.</p>
+</div>
+</div>
+</div>
+<div class="section-centered">
+<p>Has visto este tipo de sintaxis de punto antes. ¿Recuerdas este código de la página 20?</p>
+<img src="/pics/p42-listing1.png" alt="" style="aspect-ratio: 1506 / 138"/>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p><code>file</code> es en realidad un mapa que contiene funciones relacionadas con archivos como <code>loadSound</code>. Y, lo que devuelve es otro mapa representando el sonido cargado, con funciones en él como <code>play</code>. A veces un mapa como ese se llama un <b>objeto</b>.</p>
+</div>
+<div class="column-right">
+<p>Un objeto también puede crearse usando <code>new</code>, como en <code>new Sprite</code>. El comando <code>new</code> crea un tipo especial de mapa que está vinculado al mapa del cual fue creado. En el programa de abajo, creamos un mapa <code>Friend</code> desde <code>Sprite</code>, luego creamos <code>mochi</code> y <code>wumpus</code> desde <code>Friend</code>.</p>
+</div>
+</div>
+<div class="section">
+<img src="/pics/p42-listing2.png" alt="" style="aspect-ratio: 1552 / 880"/>
+<p>Cualquier valor no definido en <code>mochi</code> y <code>wumpus</code> (como <code>scale</code> y <code>y</code>) se busca en <code>Friend</code> en su lugar. Y porque <code>Friend</code> fue creado desde <code>Sprite</code>, todos obtienen la funcionalidad de <code>Sprite</code> también.</p>
+<div class="small-gap"></div>
+</div>
+</body></html>

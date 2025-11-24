@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section-centered">
+<h2>Tomando Decisiones</h2>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Muchos programas de computadora necesitan hacer cosas diferentes dependiendo de algún valor ingresado por el usuario. Esto se hace con una <b>declaración if</b>. Prueba este programa:</p>
+<img src="/pics/p16-ifExample.png" alt="" style="aspect-ratio: 1050 / 376"/>
+</div>
+<div class="column-right">
+<table class="book-table">
+<thead><tr>
+<th>Operador</th>
+<th>Significado</th>
+</tr></thead><tbody>
+<tr>
+<td><code>==</code></td>
+<td>igual a</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>no igual a</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>mayor que</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>mayor o igual que</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>menor que</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>menor o igual que</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>La línea 1 le pide al usuario que ingrese una respuesta. En la línea 2, la declaración <code>if</code> verifica si la respuesta ingresada es igual a "4". Si lo es, la computadora continúa a la línea 3, y luego salta hacia abajo al <code>end if</code> en la línea 6. Pero si la respuesta <i>no</i> es igual a "4", entonces salta de la línea 2 hacia abajo a la parte <code>else</code> en la línea 5.</p>
+</div>
+<div class="column-right">
+<p>También puedes hacer otros tipos de comparaciones. Ve la tabla de arriba para todos los diferentes <b>operadores de comparación</b> que puedes usar para comparar dos valores.</p>
+<p><i>¡Ejecuta el programa varias veces, probando diferentes respuestas!</i></p>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p16-ifSyntax.png" alt="" style="aspect-ratio: 1842 / 694"/>
+</div>
+<div class="section">
+<p>Una declaración <code>if</code> puede tener muchas partes para tratar con diferentes condiciones. La primera parte, después de la línea con <code>if</code> y <code>then</code>, siempre debe estar ahí. Luego puedes tener cualquier cantidad de partes <code>else if</code>, verificando otras condiciones. La primera de estas que coincida ejecutará su código, saltándose el resto. Finalmente, una parte <code>else</code> se ejecuta si <i>ninguna</i> de las condiciones fue verdadera. ¿Qué partes ves en el programa de arriba?</p>
+<div id="page17" class="page-marker"></div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 30%">
+<p>Una condición puede ser una comparación simple, o pueden ser varias comparaciones unidas con <code>and</code> u <code>or</code>.</p>
+</div>
+<div class="column-right">
+<img src="/pics/p16-listing1.png" alt="" style="aspect-ratio: 1360 / 480"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>Agrega dos partes <code>else if</code> más al programa de arriba: si el usuario ingresa "S", dile que pare de sisear; y si ingresa "O", ¡pregúntale si es un fantasma!</p>
+</div>
+<div class="column-right">
+<img src="/pics/p16-scale.png" alt="Robot contemplating a scale weighing a variable called `answer` against the value 4." style="aspect-ratio: 855 / 499"/>
+</div>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Aquí hay un programa divertido que decide si el usuario tiene la edad suficiente para ver una película de terror. (¡Si no te gusta su decisión, cambia las condiciones — es tu programa!)</p>
+</div>
+<div class="column-right">
+<p>Porque queremos comparar números, no mensajes, convertimos la entrada del usuario en un número usando val (como en la página 15).</p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 21%">
+<img src="/pics/p16-movie-poster.png" alt="Movie poster: "Mutant Zombies IV"" style="aspect-ratio: 512 / 803"/>
+</div>
+<div class="column-right">
+<img src="/pics/p16-listing2.png" alt="" style="aspect-ratio: 1512 / 658"/>
+<div class="small-gap"></div>
+</div>
+</div>
+</body></html>

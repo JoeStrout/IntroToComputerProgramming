@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section-centered">
+<h2>Sonidos y Música</h2>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Mini Micro puede reproducir sonidos que están almacenados en archivos de sonido. Puedes cargar uno usando <code>file.loadSound</code>, y luego reproducirlo usando el comando <code>play</code>.</p>
+</div>
+<div class="column-right">
+<p>Varios sonidos incorporados se pueden encontrar en la carpeta <code>/sys/sounds</code>. Algunos de estos se muestran abajo; ve cuántos encuentras cuando lo pruebes tú mismo.</p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<img src="/pics/p20-band.png" alt="" style="aspect-ratio: 980 / 490"/>
+</div>
+<div class="column-right">
+<img src="/pics/p20-dir-sounds.png" alt="" style="aspect-ratio: 352 / 264"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>El comando <code>play</code> toma hasta tres valores: el volumen (1 es normal), el balance izquierda/derecha (0 está centrado), y la velocidad y tono (normalmente 1). ¡Pruébalo!</p>
+</div>
+<div class="column-right">
+<img src="/pics/p20-snd-play.png" alt="" style="aspect-ratio: 512 / 175"/>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p20-snd-examples.png" alt="" style="aspect-ratio: 948 / 256"/>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Cambiar la velocidad también cambia el tono, y esto te permite hacer música. Una función llamada <code>noteFreq</code> es útil aquí; calcula la frecuencia del sonido para cualquier nota musical. Los números de nota se muestran en el diagrama de piano abajo.</p>
+</div>
+<div class="column-right">
+<p>Para calcular la velocidad correcta para cualquier nota, divide el <code>noteFreq</code> de esa nota por el <code>noteFreq</code> de la nota grabada (que usualmente es 60, o do central).</p>
+<p>(Eso es lo que está pasando en la línea 10 del programa de abajo.)</p>
+<div id="page21" class="page-marker"></div>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p20-piano.png" alt="" style="aspect-ratio: 822 / 159"/>
+<div class="small-gap"></div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<h4>Guitarra de Teclado</h4>
+<p>¡El programa de abajo te permite tocar guitarra en tu computadora! Usa las teclas numéricas del 1 al 9 en la parte superior de tu teclado. 1 toca la nota 60 (do central), 2 toca la nota 62, y así sucesivamente hasta 9, que toca la nota 74.</p>
+</div>
+<div class="column-right">
+<p>Para encontrar el número de nota, primero convertimos la tecla presionada en un número del 0 al 8 (línea 5). Luego, como la mayoría de las teclas blancas en un piano están dos notas separadas, multiplicamos esto por 2 y sumamos a 60, nuestra nota base.</p>
+<p>Pero no hay tecla negra (nota) entre Mi y Fa, o entre Si y Do. Así que las líneas 7-8 verifican esos casos y restan uno por la nota faltante.</p>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p20-listing1.png" alt="" style="aspect-ratio: 1550 / 606"/>
+</div>
+<div class="section-centered">
+<img src="/pics/p20-song.png" alt="" style="aspect-ratio: 1878 / 246"/>
+<div class="small-gap"></div>
+</div>
+<div class="section-centered">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>¡Cambia este programa para tocar piano en lugar de guitarra! Aquí hay una pista: usa <code>dir "/sys/sounds"</code> para listar todos los sonidos incorporados.</p>
+</div>
+<div class="small-gap"></div>
+</div>
+</body></html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section-centered">
+<h2>Tabla de Caracteres</h2>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<img src="/pics/p50-charTableLeft.png" alt="" style="aspect-ratio: 923 / 1944"/>
+</div>
+<div class="column-right">
+<img src="/pics/p50-charTableRight.png" alt="" style="aspect-ratio: 923 / 1944"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 35%">
+<img src="/pics/p50-charTableKey.png" alt="" style="aspect-ratio: 640 / 374"/>
+</div>
+<div class="column-right">
+<img src="/pics/p50-listing1.png" alt="" style="aspect-ratio: 1198 / 398"/>
+<div id="page51" class="page-marker"></div>
+</div>
+</div>
+<div class="section-centered">
+<div class="small-gap"></div>
+<h2>Círculos, Ángulos y Coordenadas</h2>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 45%">
+<p>Hay dos maneras diferentes de medir rotaciones: grados y radianes. Los grados van de 0 a 360. Rotar la mitad del camino son 180 grados, a menudo escrito con un pequeño círculo, como 180°.</p>
+<p>Los radianes van de 0 a <code>2*pi</code> (<code>pi</code> es solo un número especial igual a aproximadamente 3.14). Rotar la mitad del camino son <code>pi</code> radianes. Los grados y radianes son solo dos maneras de expresar la misma idea.</p>
+</div>
+<div class="column-right">
+<img src="/pics/p50-angleChart.png" alt="" style="aspect-ratio: 1382 / 994"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 35%">
+<img src="/pics/p50-trig.png" alt="" style="aspect-ratio: 670 / 782"/>
+</div>
+<div class="column-right">
+<p>La mayoría de las cosas en Mini Micro (como <code>Sprite.rotation</code>) usan grados. Pero algunas funciones realmente útiles llamadas <code>sin</code> (seno), <code>cos</code> (coseno), y <code>atan</code> (arcotangente) te permiten encontrar las coordenadas x y y de cualquier punto en un círculo, o encontrar el ángulo hecho por cualquier coordenada x y y. Estas funciones todas usan radianes.</p>
+<p>La tabla de abajo muestra cómo puedes usar estas para ir de cosas que sabes a cosas que puedes necesitar. Puedes ver esta matemática en uso en las líneas 10-15 del juego <i>Motos de Luz</i> (<a href="#" data-page="44">p. 44</a>).</p>
+</div>
+</div>
+<div class="section-centered">
+<table class="book-table gold-headers">
+<thead><tr>
+<th>Si Tienes...</th>
+<th>Pero Quieres...</th>
+<th>Entonces Haz:</th>
+</tr></thead><tbody>
+<tr>
+<td>Ángulo (<code>a</code>) en grados,<br/>Radio (<code>r</code>), y<br/>Centro (<code>cx</code>, <code>cy</code>)</td>
+<td>Posición de píxel (<code>x</code>, <code>y</code>)</td>
+<td><code>x = cx + r * cos(a * pi/180)<br/>y = cy + r * sin(a * pi/180)</code></td>
+</tr>
+<tr>
+<td>Posición de píxel (<code>x</code>, <code>y</code>)<br/>y Centro (<code>cx</code>, <code>cy</code>)</td>
+<td>Ángulo (<code>a</code>) en grados<br/>o Radio (<code>r</code>)</td>
+<td><code>a = atan(y-cy, x-cy) * 180/pi<br/>r = sqrt((x-cx)^2 + (y-cy)^2)</code></td>
+</tr>
+</tbody></table>
+<div class="small-gap"></div>
+</div>
+</body></html>

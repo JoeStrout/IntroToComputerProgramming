@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section-centered">
+<h2>Gráficos de Píxeles</h2>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 60%">
+<p>Mira una pantalla de computadora con una lupa, y verás que en realidad muestra un montón de pequeños cuadrados llamados "píxeles" (abreviación de "elementos de imagen"). Al cambiar los colores de estos píxeles, una computadora puede mostrar fotografías, palabras, o cualquier otra cosa.</p>
+<p>Puedes dibujar píxeles en Mini Micro usando comandos que comienzan con <code>gfx</code>.</p>
+</div>
+<div class="column-right">
+<img src="/pics/p22-painting.png" alt="" style="aspect-ratio: 889 / 775"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 35%">
+<img src="/pics/p22-grid.png" alt="" style="aspect-ratio: 354 / 266"/>
+</div>
+<div class="column-right">
+<img src="/pics/p22-gridCode.png" alt="" style="aspect-ratio: 616 / 266"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Asigna a <code>gfx.color</code> para establecer el color de dibujo. Usa algo como <code>color.aqua</code>, o una función como <code>rgb(0, 255, 100)</code>, donde los números dan la cantidad de rojo, verde, y azul para formar el color.</p>
+<p>Luego usa el comando <code>gfx.line</code> con cuatro números: x1, y1, x2, y y2. Estos especifican los puntos finales de la línea a dibujar.</p>
+</div>
+<div class="column-right">
+<img src="/pics/p22-coordinates.png" alt="" style="aspect-ratio: 986 / 680"/>
+</div>
+</div>
+<div class="section-centered">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>¿Qué comando dibujaría una línea desde la esquina inferior-izquierda de la pantalla hasta la esquina superior-derecha?</p>
+</div>
+<div id="page23" class="page-marker"></div>
+<div class="small-gap"></div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 34%">
+<img src="/pics/p22-moire.png" alt="" style="aspect-ratio: 746 / 558"/>
+</div>
+<div class="column-right">
+<img src="/pics/p22-moireCode.png" alt="" style="aspect-ratio: 1228 / 504"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 75%">
+<p>También puedes usar <code>gfx.fillRect</code> para llenar un rectángulo con color. Los cuatro números que necesita son: posición X del lado izquierdo, posición Y del fondo, ancho, y alto. (También hay <code>gfx.drawRect</code>, que traza el contorno del rectángulo pero no lo rellena.)</p>
+<img src="/pics/p22-tunnelCode.png" alt="" style="aspect-ratio: 1358 / 252"/>
+</div>
+<div class="column-right">
+<img src="/pics/p22-tunnel.png" alt="" style="aspect-ratio: 696 / 522"/>
+</div>
+</div>
+<div class="section-centered">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>¿Qué crees que pasará si cambias <code>gfx.fillRect</code> a <code>gfx.fillEllipse</code> en el programa de arriba? ¡Pruébalo y ve!</p>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p22-classroom.png" alt="" style="aspect-ratio: 1740 / 730"/>
+<div class="small-gap"></div>
+</div>
+</body></html>

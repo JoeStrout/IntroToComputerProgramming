@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section two-column">
+<div class="column-left">
+<img src="/pics/p30-spriteBot.png" alt="" style="aspect-ratio: 944 / 787"/>
+</div>
+<div class="column-right">
+<h2>Sprites</h2>
+<p>Mini Micro soporta un tipo especial de dibujo llamado <b>sprites</b>. Los sprites son pequeñas imágenes que pueden moverse, rotar, y cambiar su tamaño o color, y hacerlo muy rápido.</p>
+<p>Ves sprites en juegos de computadora como Pac-Man, Super Mario Bros, y Angry Birds. Cada vez que una pequeña imagen plana se mueve por una pantalla, casi siempre es un sprite.</p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 65%">
+<p>Los pasos necesarios para configurar un sprite se muestran en las líneas 2-5 del programa de abajo. Primero creas un sprite con <code>new Sprite</code>, y lo asignas a una variable. Luego cargas una imagen para que el sprite la muestre. Después, lo agregas a la pantalla para que podamos verlo con <code>display(4).sprites.push</code>. Finalmente, estableces su posición <code>x</code> (horizontal) y <code>y</code> (vertical).</p>
+</div>
+<div class="column-right">
+<img src="/pics/p30-ufoScreen.png" alt="" style="aspect-ratio: 702 / 530"/>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p30-listing1.png" alt="" style="aspect-ratio: 1828 / 668"/>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>El bucle <code>while</code> en las líneas 6-10 te permite mover el sprite. También muestra una nueva manera de obtener entrada del usuario: <code>key.axis</code>. ¡Con este método, puedes controlar el sprite con las teclas de flecha, o las teclas WASD, o incluso un control de juego!</p>
+</div>
+<div class="column-right">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>¡Haz que el OVNI se mueva el doble de rápido! Pista: su velocidad actual es 10 horizontalmente, y 6 verticalmente.</p>
+</div>
+<div id="page31" class="page-marker"></div>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 30%">
+<p>Una vez que se crea un sprite, puedes cambiar su tamaño, color, rotación, o posición asignando a las propiedades mostradas en la tabla de la derecha. Ve las líneas 7-8 en el listado de arriba, o las líneas 11-12 de abajo.</p>
+</div>
+<div class="column-right">
+<table class="book-table">
+<thead><tr><th colspan="999">Propiedades de sprite</th></tr></thead><tbody>
+<tr>
+<td><code>spr.x</code></td>
+<td>posición horizontal del sprite <i>spr</i> (0-960)</td>
+</tr>
+<tr>
+<td><code>spr.y</code></td>
+<td>posición vertical del sprite <i>spr</i> (0-640)</td>
+</tr>
+<tr>
+<td><code>spr.rotation</code></td>
+<td>ángulo de rotación, en grados (0-360)</td>
+</tr>
+<tr>
+<td><code>spr.scale</code></td>
+<td>factor de tamaño: 1=normal, 2=doble, etc.</td>
+</tr>
+<tr>
+<td><code>spr.tint</code></td>
+<td>color del sprite (color.white, color.red, etc.)</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Usualmente obtienes la imagen para un sprite usando <code>file.loadImage</code> directamente. Pero a veces el archivo de imagen en el disco es en realidad un montón de imágenes más pequeñas llamadas fotogramas. Cada fotograma representa un paso de una animación.</p>
+</div>
+<div class="column-right">
+<p>Para usar estos, primero carga la imagen más grande (llamada una <b>hoja de sprites</b> en este caso) en una variable, luego llama <code>getImage</code> en esa para extraer los fotogramas individuales, como se muestra abajo.</p>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p30-listing2.png" alt="" style="aspect-ratio: 1890 / 882"/>
+<img src="/pics/p30-enemyFrames.png" alt="" style="aspect-ratio: 1022 / 538"/>
+<div class="small-gap"></div>
+</div>
+</body></html>

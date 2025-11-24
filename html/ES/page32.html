@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section two-column">
+<div class="column-left">
+<h2>Tirando los Dados</h2>
+<p>Muchos juegos de mesa están basados en tirar dados, que es una manera de generar <i>números aleatorios</i>. En cada tirada, no sabes lo que vas a obtener. Otros ejemplos de aleatoriedad incluyen lanzar una moneda o sacar cartas de un mazo barajado.</p>
+<p>Las computadoras también pueden generar números aleatorios. En MiniScript, haces esto con la palabra <code>rnd</code>.</p>
+<p>Prueba lo siguiente en el indicador de Mini Micro:</p>
+</div>
+<div class="column-right">
+<img src="/pics/p32-diceBot.png" alt="" style="aspect-ratio: 943 / 888"/>
+</div>
+</div>
+<div class="section three-column">
+<div class="column-left" style="flex: 0 0 34%">
+<img src="/pics/p32-rndScreen1.png" alt="" style="aspect-ratio: 662 / 502"/>
+<p>Cada vez que usas <code>rnd</code>, devuelve un número aleatorio entre 0 y 1.</p>
+</div>
+<div class="column-mid" style="flex: 0 0 32%">
+<img src="/pics/p32-rndScreen2.png" alt="" style="aspect-ratio: 664 / 496"/>
+<p>Si multiplicas <code>rnd</code> por 6, entonces obtienes un número entre 0 y 6.</p>
+</div>
+<div class="column-right">
+<img src="/pics/p32-rndScreen3.png" alt="" style="aspect-ratio: 664 / 498"/>
+<p>Poner <code>ceil()</code> alrededor de eso redondea hacia arriba, produciendo un número entero del 1 al 6, como tirar un dado.</p>
+</div>
+</div>
+<div class="section-centered">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>1. ¿Cómo generarías un número entero aleatorio del 1 al 100?</p>
+<p>2. ¿Qué tal un número entero del 51 al 150?</p>
+</div>
+<div id="page33" class="page-marker"></div>
+<div class="small-gap"></div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 80%">
+<img src="/pics/p32-listing1.png" alt="" style="aspect-ratio: 1450 / 766"/>
+</div>
+<div class="column-right">
+<img src="/pics/p32-coin.png" alt="" style="aspect-ratio: 335 / 832"/>
+</div>
+</div>
+<div class="section">
+<p>El programa de arriba lanza una moneda, usando <code>rnd</code> en la línea 9, que devolverá un valor mayor que 0.5 la mitad del tiempo. Todo lo de arriba es solo por estilo.</p>
+<p><code>text.row = text.row + 1</code> mueve el cursor hacia arriba a la línea anterior, permitiéndonos imprimir esas diagonales, barras verticales, y guiones todos en el mismo lugar, para verse como una moneda girando.</p>
+<p>Luego prueba el programa de abajo, ¡que hace que un gusano se arrastre aleatoriamente por tu pantalla hasta que presiones Control-C!</p>
+<img src="/pics/p32-listing2.png" alt="" style="aspect-ratio: 1944 / 882"/>
+<div class="small-gap"></div>
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>Regresa al juego de adivinanzas en la página 18. Cambia el código para que la computadora escoja un número aleatorio del 1 al 100.</p>
+</div>
+<div class="small-gap"></div>
+</div>
+</body></html>
