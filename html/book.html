@@ -223,6 +223,14 @@
     
     // Handle menu items and language selector
     let currentLang = getUrlParameter('lang') || "EN";
+
+    // Available languages - add new languages here
+    const availableLanguages = [
+      { code: "EN", name: "English" },
+      { code: "DE", name: "Deutsch" },
+      { code: "ES", name: "Español" }
+    ];
+
     const langSelector = document.createElement("div");
     langSelector.id = "langSelector";
     langSelector.style.display = "none";
@@ -297,12 +305,9 @@
       langLink.className = "menu-item";
       langLink.href = "#";
 
-      // Map language codes to full names
-      const langNames = {
-        "EN": "English",
-        "DE": "Deutsch"
-      };
-      const langDisplayName = langNames[currentLang] || currentLang;
+      // Get display name for current language
+      const currentLangObj = availableLanguages.find(l => l.code === currentLang);
+      const langDisplayName = currentLangObj ? currentLangObj.name : currentLang;
 
       langLink.textContent = `Language: ${langDisplayName}`;
       langLink.addEventListener("click", (e) => {
@@ -333,14 +338,9 @@
       langHeader.appendChild(langTitle);
       langHeader.appendChild(langCloseBtn);
       langSelector.appendChild(langHeader);
-      
+
       // Add language options
-      const languages = [
-        { code: "EN", name: "English" },
-        { code: "DE", name: "Deutsch" }
-      ];
-      
-      languages.forEach(lang => {
+      availableLanguages.forEach(lang => {
         const langOption = document.createElement("a");
         langOption.className = "menu-item";
         langOption.href = "#";
