@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section-centered">
+<h2>プログラミングのヒント</h2>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>コードを書いていれば、だれでも間違えるものです。ここでは、よくある間違いと、その直し方を紹介します！コードがうまく動かないときは、これらのどれかが原因になっていないか確かめてみましょう。</p>
+<div class="small-gap"></div>
+<img src="/pics/p46-tip1.png" alt="" style="aspect-ratio: 888 / 528"/>
+<p><b>大文字・小文字やつづりの間違い。</b>たとえば<code>print</code>のかわりに<code>Print</code>や<code>pront</code>と入力すると、コンピューターは何のことだかわかりません。</p>
+<div class="small-gap"></div>
+<img src="/pics/p46-tip2.png" alt="" style="aspect-ratio: 892 / 564"/>
+<p><b><code>==</code>を使うべきところで<code>=</code>を使ってしまう。</b>2つの値が等しいかどうかを調べるには<code>==</code>を使う、ということを覚えておきましょう。<code>=</code>ひとつだけの場合は、変数に新しい値を代入するときにしか使いません。また、「以下」を表す<code>&lt;=</code>のかわりに<code>=&lt;</code>と書いたり、「以上」を表す<code>&gt;=</code>のかわりに<code>=&gt;</code>と書いたりしたときも、このエラーが出ます。</p>
+<div class="small-gap"></div>
+</div>
+<div class="column-right">
+<img src="/pics/p46-tip3.png" alt="" style="aspect-ratio: 890 / 632"/>
+<p><b>ブロックの始まりと終わりが合っていない。</b><code>if</code>ブロックは必ず<code>end if</code>で終わらなければなりません。同じように、<code>while</code>で始まったブロックは<code>end while</code>で終わり、<code>for</code>はすべて<code>end for</code>で終わり、<code>function</code>にはすべて<code>end function</code>が必要です。これらを取りちがえると、コンピューターは混乱してしまいます。</p>
+<div class="small-gap"></div>
+<img src="/pics/p46-tip4.png" alt="" style="aspect-ratio: 916 / 532"/>
+<p><b>引用符（クォーテーションマーク）のつけ忘れ。</b>コードの中の文字列は、必ず引用符で囲む必要があります。'this'のような一重の引用符ではなく、"this"のような二重の引用符を使うように気をつけましょう。</p>
+<p>文字列の<i>中</i>に引用符を入れたいときは、2回続けて入力します。</p>
+<p><code>print "Say ""hi"" to me."</code></p>
+<div id="page47" class="page-marker"></div>
+<div class="small-gap"></div>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<img src="/pics/p46-tip5.png" alt="" style="aspect-ratio: 908 / 614"/>
+<p><b>カンマのつけ忘れ。</b><code>gfx.line</code>のように、パラメーターを複数受け取るコマンドでは、パラメーターの間にカンマが必要です。</p>
+<div class="small-gap"></div>
+</div>
+<div class="column-right">
+<img src="/pics/p46-tip6.png" alt="" style="aspect-ratio: 906 / 530"/>
+<p><b>文字列を数のようにあつかってしまう。</b><code>input</code>で使う人から入力を受け取ったとき、それは数ではなく文字列だということを覚えておきましょう。数として使うには、<code>val()</code>で変換する必要があります。（15ページを参照してください。）</p>
+</div>
+</div>
+<div class="section-callout">
+<div class="section-centered">
+<h3>全体的なアドバイス</h3>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p><b>サンプルコードを読みましょう。でも、<i>ただ</i>読むだけではいけません。</b>実際に入力して、いじって、遊んでみましょう。プログラミングは体を動かして学ぶものです！読むだけで本当に理解するのは、とてもむずかしいのです。</p>
+<p><b>やってみて学びましょう。</b>この本の例を、もう少し先まで発展させてみましょう。あるいは、まったく新しいプログラムをゼロから作ってみましょう。あるアイデアがむずかしすぎるとわかったら、別のものを選べばいいのです。どんなプロジェクトからも、学び、成長できます。</p>
+<p><b><code>print</code>で思いこみを確かめましょう。</b>コードが思ったとおりに動かないときは、<code>print</code>コマンドを追加して、変数の値を確かめてみましょう。</p>
+</div>
+<div class="column-right">
+<p><b>行きづまったら、助けを求めましょう。</b>まずは10分か15分、自分で考えてみて、それでもだめなら聞いてみましょう！（そしていつか、あなたが人を助ける番になります。）</p>
+<p><b>休憩をとりましょう。</b>デバッグのときも、コードを書いたり新しいことを学んだりしているときも、30分ごとに5分の休憩をとると、元気が回復します。</p>
+<p><b>いろいろな情報源を使いましょう。</b>ほかの本やwiki、動画など、いろいろなところから学びましょう。</p>
+<p><b>自分を信じましょう。</b>プログラミングがむずかしく感じても、がっかりしないでください。どのプログラマーも、特に最初のうちは苦労するものです。あきらめずに続けていれば、きっとだんだん楽になりますよ！</p>
+</div>
+</div>
+</div>
+<div class="small-gap"></div>
+</body></html>

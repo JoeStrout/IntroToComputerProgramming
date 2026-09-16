@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section-centered">
+<h2>判断してみよう</h2>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>多くのコンピュータープログラムは、使う人が入力した値によって、ちがうことをする必要があります。これは<b>if文</b>を使って実現できます。次のプログラムを試してみましょう。</p>
+<img src="/pics/p16-ifExample.png" alt="" style="aspect-ratio: 1050 / 376"/>
+</div>
+<div class="column-right">
+<table class="book-table">
+<thead><tr>
+<th>演算子</th>
+<th>意味</th>
+</tr></thead><tbody>
+<tr>
+<td><code>==</code></td>
+<td>等しい</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>等しくない</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>より大きい</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>以上</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>より小さい</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>以下</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>1行目では、使う人に答えを入力してもらいます。2行目の<code>if</code>文は、入力された答えが「4」と等しいかどうかを調べます。等しければ、コンピューターは3行目に進み、それから6行目の<code>end if</code>まで飛びます。でも、答えが「4」と<i>等しくない</i>場合は、2行目から5行目の<code>else</code>の部分へ飛ぶのです。</p>
+</div>
+<div class="column-right">
+<p>ほかの種類の比べ方もできます。2つの値を比べるのに使える<b>比較演算子</b>は、上の表にすべて載っています。</p>
+<p><i>プログラムを何回か実行して、いろいろな答えを試してみましょう！</i></p>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p16-ifSyntax.png" alt="" style="aspect-ratio: 1842 / 694"/>
+</div>
+<div class="section">
+<p><code>if</code>文は、いろいろな条件に対応するために、たくさんの部分を持つことができます。<code>if</code>と<code>then</code>のある行のあとに続く最初の部分は、かならず必要です。そのあとには、ほかの条件を調べる<code>else if</code>の部分をいくつでも置けます。最初に条件が当てはまったものだけがコードを実行し、残りは飛ばされます。そして最後の<code>else</code>の部分は、どの条件も<i>ひとつも</i>当てはまらなかったときに実行されます。上のプログラムには、どの部分がありますか？</p>
+<div id="page17" class="page-marker"></div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 30%">
+<p>条件は、単純な比較ひとつでもいいですし、<code>and</code>や<code>or</code>でつないだいくつもの比較でもかまいません。</p>
+</div>
+<div class="column-right">
+<img src="/pics/p16-listing1.png" alt="" style="aspect-ratio: 1360 / 480"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>上のプログラムに、<code>else if</code>の部分をもう2つ追加しましょう。使う人が「S」と入力したら、シューシュー言うのはやめてと伝えます。「O」と入力したら、もしかしてオバケですか？とたずねてみましょう！</p>
+</div>
+<div class="column-right">
+<img src="/pics/p16-scale.png" alt="Robot contemplating a scale weighing a variable called `answer` against the value 4." style="aspect-ratio: 855 / 499"/>
+</div>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>こちらは、使う人がこわい映画を見られる年齢かどうかを判断する、楽しいプログラムです。（判断の結果が気に入らなければ、条件を変えてしまいましょう。あなたのプログラムなのですから！）</p>
+</div>
+<div class="column-right">
+<p>ここではメッセージではなく数を比べたいので、15ページでやったように、valを使って入力された文字列を数に変換しています。</p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 21%">
+<img src="/pics/p16-movie-poster.png" alt="Movie poster: "Mutant Zombies IV"" style="aspect-ratio: 512 / 803"/>
+</div>
+<div class="column-right">
+<img src="/pics/p16-listing2.png" alt="" style="aspect-ratio: 1512 / 658"/>
+<div class="small-gap"></div>
+</div>
+</div>
+</body></html>

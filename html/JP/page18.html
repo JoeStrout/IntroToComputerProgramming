@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section two-column">
+<div class="column-left">
+<h2>ループ</h2>
+<p>コンピューターが同じことを何度もくり返すようにプログラムされているとき、それを <i>ループ</i> と呼びます。コンピューターは、サーキットをぐるぐる走り回りながら、同じことをくり返すロボットのようなものです。</p>
+<p>これを行う方法の1つが <i>whileループ</i> です。whileループは、<code>while</code>のあとに書かれた条件が真であるかぎり、<code>while</code>と<code>end while</code>のあいだにあるものをすべてくり返します。</p>
+</div>
+<div class="column-right">
+<img src="/pics/p18-racetrack.png" alt="" style="aspect-ratio: 913 / 725"/>
+</div>
+</div>
+<div class="section three-column">
+<div class="column-left" style="flex: 0 0 34%">
+<p>このwhileループを試してみましょう。numが20より小さいあいだ、3〜4行目をくり返します。</p>
+<img src="/pics/p18-loopCode.png" alt="" style="aspect-ratio: 630 / 312"/>
+</div>
+<div class="column-mid" style="flex: 0 0 32%">
+<img src="/pics/p18-loop.png" alt="" style="aspect-ratio: 712 / 542"/>
+</div>
+<div class="column-right">
+<p>条件はどんなものでもかまいません。<code>true</code>にすることもできて、そうすると <i>無限ループ</i> になります。</p>
+<p>無限ループから抜け出すには、<code>break</code>コマンドを使うか、Control-Cを押します。</p>
+</div>
+</div>
+<div class="section-centered">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>上のループを変更して、1000までの数を表示するようにしてみましょう。</p>
+</div>
+<div class="small-gap"></div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 26%">
+<p>これは、ちょっと楽しい数当てゲームです。1行目の数を変えて、だれかにプレイしてもらいましょう。そして役を交代します。（32ページを読んだら、このプログラムに戻ってきて、コンピューター自身に数を選ばせてみましょう！）</p>
+</div>
+<div class="column-right">
+<img src="/pics/p18-listing1.png" alt="" style="aspect-ratio: 1406 / 776"/>
+<div id="page19" class="page-marker"></div>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>もう1つのループの方法が <i>forループ</i> です。<code>for</code>と<code>end for</code>のあいだのコードをくり返しますが、そのたびに変数（ <i>ループ変数</i> と呼びます）に値を代入していきます。範囲の中の値をすべて使い終わると、ループは終了します。</p>
+</div>
+<div class="column-right">
+<img src="/pics/p18-forSyntax.png" alt="" style="aspect-ratio: 1016 / 364"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<img src="/pics/p18-forLoopCode.png" alt="" style="aspect-ratio: 754 / 334"/>
+<p>ここでの<code>for</code>ループは、10から1へと数を減らしながら数えます。<code>wait</code>コマンドは1秒間だけ止まります。</p>
+</div>
+<div class="column-right">
+<img src="/pics/p18-forLoopScreen.png" alt="" style="aspect-ratio: 716 / 540"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>forループやwhileループを途中で抜け出したいときは、breakコマンドを使うだけです。breakは、end whileやend forの次の行にすぐジャンプします。</p>
+</div>
+<div class="column-right">
+<img src="/pics/p18-breakCode.png" alt="" style="aspect-ratio: 908 / 334"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 72%">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>前のページの数当てゲームを変更して、forループを使って5回までしか答えられないようにしてみましょう。正解したらループから抜け出すようにします。</p>
+</div>
+<div class="small-gap"></div>
+<img src="/pics/p18-listing2.png" alt="" style="aspect-ratio: 1494 / 656"/>
+</div>
+<div class="column-right">
+<img src="/pics/p18-rocket.png" alt="" style="aspect-ratio: 325 / 824"/>
+<div class="small-gap"></div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section-centered">
+<h2>値のリスト</h2>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>ここまで、変数はいつも数か文字列かのどちらか1つの値だけを入れてきました。でも、たくさんの値をまとめて1つの変数に入れられると便利なことがよくあります。そのためには、キーボードにある角かっこ（[ と ]）のキーを探してください！</p>
+</div>
+<div class="column-right">
+<p>リストは、いくつでも好きなだけ値をコンマで区切って並べ、その全体を角かっこで囲むと作れます。</p>
+<p>次のように入力して、"I"、"love"、"pi"という3つの要素を持つリストを作ってみましょう。</p>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p28-IlovepiCode.png" alt="" style="aspect-ratio: 1384 / 146"/>
+</div>
+<div class="section">
+<p>この例のように、数でリストを作ることもできます。</p>
+</div>
+<div class="section-centered">
+<img src="/pics/p28-primesCode.png" alt="" style="aspect-ratio: 1380 / 138"/>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>下の小さなプログラムのように、文字列を単語に分けてリストを作ることもできます。</p>
+</div>
+<div class="column-right">
+<p>実は、リストを使ってできる便利なことはたくさんあります。下の表を見てください。</p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 55%">
+<img src="/pics/p28-listing1.png" alt="" style="aspect-ratio: 1080 / 250"/>
+<table class="book-table">
+<thead><tr><th colspan="999">リストに関する便利な関数</th></tr></thead><tbody>
+<tr>
+<td><code>lst.push</code> <i>value</i></td>
+<td>リスト <i>lst</i> の最後に <i>value</i> を追加する</td>
+</tr>
+<tr>
+<td><code>lst.shuffle</code></td>
+<td><i>lst</i> の要素をランダムに並べかえる</td>
+</tr>
+<tr>
+<td><code>lst.sort</code></td>
+<td><i>lst</i> の要素を小さい順に並べかえる</td>
+</tr>
+<tr>
+<td><code>lst.len</code></td>
+<td><i>lst</i> の要素の数を調べる</td>
+</tr>
+<tr>
+<td><code>lst.sum</code></td>
+<td><i>lst</i> の要素をすべて合計する</td>
+</tr>
+<tr>
+<td><code>msg.split</code></td>
+<td>文字列 <code>msg</code> をリストに変換する</td>
+</tr>
+<tr>
+<td><code>lst.join</code></td>
+<td>リスト <code>lst</code> を文字列に変換する</td>
+</tr>
+<tr>
+<td><code>range(1,10)</code></td>
+<td>1から10までの数が入ったリストを作る</td>
+</tr>
+</tbody></table>
+</div>
+<div class="column-right">
+<img src="/pics/p28-helloBot.png" alt="" style="aspect-ratio: 928 / 875"/>
+<div id="page29" class="page-marker"></div>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>リストの中の要素を指すには、リストの名前のうしろに、ほしい要素のインデックスを角かっこで囲んで書きます。コンピューターはたいてい0から数え始めるので、このインデックスも最初の要素が0、2番目が1、というふうに始まります。</p>
+</div>
+<div class="column-right">
+<p>負の数を使って、リストのうしろから数えることもできます。-1が最後の要素、-2はその1つ前の要素、というぐあいです。</p>
+</div>
+</div>
+<div class="section-centered">
+<table class="book-table">
+<thead><tr><th colspan="999">リストのインデックスの例</th></tr></thead><tbody>
+<tr>
+<td><code>lst[0]</code></td>
+<td>リスト <i>lst</i> の最初の要素</td>
+</tr>
+<tr>
+<td><code>lst[1]</code></td>
+<td><i>lst</i> の2番目の要素</td>
+</tr>
+<tr>
+<td><code>lst[-1]</code></td>
+<td><i>lst</i> の最後の要素</td>
+</tr>
+<tr>
+<td><code>lst[-2]</code></td>
+<td><i>lst</i> の最後から2番目の要素</td>
+</tr>
+</tbody></table>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<img src="/pics/p28-listScreen.png" alt="" style="aspect-ratio: 794 / 602"/>
+</div>
+<div class="column-right">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>左に示したとおりに <code>arr</code> を定義してください。このリストの中の、値が7の要素を指すには、どんな2通りの書き方ができるでしょうか？</p>
+</div>
+<p>下のプログラムを入力して、自分の家族の年れいについておもしろい事実を調べてみましょう。</p>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p28-listing2.png" alt="" style="aspect-ratio: 1626 / 878"/>
+<div class="small-gap"></div>
+</div>
+</body></html>

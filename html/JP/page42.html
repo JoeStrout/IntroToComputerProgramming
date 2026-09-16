@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section">
+<h2>マップとオブジェクト</h2>
+<p>MiniScriptで変数に値を代入すると、コンピューターはそれをメモリーの中の小さな表に保存します。この表は、それぞれの変数名をその値に対応づけています。<code>reset</code>コマンドを使ってメモリーを空にしてから、次の3つの代入を入力してみましょう。</p>
+<img src="/pics/p42-mapScreen1.png" alt="" style="aspect-ratio: 1898 / 704"/>
+<p>上の図のように、コンピューターのメモリーには<code>a</code>を<code>"Hi"</code>に、<code>b</code>を<code>3.14</code>に、<code>c</code>を<code>42</code>に対応づける表が入っています。では、<code>b</code>の値を下に示す新しいものに置きかえてみましょう。</p>
+<img src="/pics/p42-mapScreen2.png" alt="" style="aspect-ratio: 1874 / 706"/>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>2つの波かっこ<code>{}</code>は、空の<b>マップ</b>——名前と値の新しい表——を作ります。変数<code>b</code>は、いまこの新しい表を指しているだけです。<code>b.uno</code>のような<b>ドット構文</b>を使えば、そのマップの中の変数にアクセスできます。</p>
+</div>
+<div class="column-right">
+<p>これらの代入のあと、コンピューターのメモリーは上の図のようになります。変数<code>a</code>と<code>c</code>は単純な値を持っていますが、<code>b</code>は<code>uno</code>、<code>dos</code>、<code>hola</code>が入った別のマップへのポインターを持っています。</p>
+<div id="page43" class="page-marker"></div>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 40%">
+<p>ドット構文は、値を取り出すのにも使えます。<code>print b.hola</code>と入力して、いま作ったマップの中からあいさつを直接表示してみましょう。ふつうの変数とまったく同じように動きますが、（この場合は）<code>b.</code>という接頭辞がつくところがちがいます。</p>
+</div>
+<div class="column-right">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p><code>pool</code>が、<code>width</code>を8に、<code>length</code>を12に対応づけるマップを指すようにしましょう。そして、それを使ってプールの面積（幅かける長さ）を表示してください。</p>
+</div>
+</div>
+</div>
+<div class="section-centered">
+<p>このようなドット構文は、前にも見たことがありますね。20ページのこのコードを覚えていますか？</p>
+<img src="/pics/p42-listing1.png" alt="" style="aspect-ratio: 1506 / 138"/>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p><code>file</code>は実はマップで、<code>loadSound</code>のようなファイル関連の関数が入っています。そして、それが返すのは読み込んだ音をあらわす別のマップで、<code>play</code>のような関数を持っています。こういうマップのことを<b>オブジェクト</b>と呼ぶことがあります。</p>
+</div>
+<div class="column-right">
+<p>オブジェクトは、<code>new Sprite</code>のように<code>new</code>を使って作ることもできます。<code>new</code>コマンドは、作り元になったマップとつながった特別なマップを作ります。下のプログラムでは、<code>Sprite</code>から<code>Friend</code>マップを作り、さらに<code>Friend</code>から<code>mochi</code>と<code>wumpus</code>を作っています。</p>
+</div>
+</div>
+<div class="section">
+<img src="/pics/p42-listing2.png" alt="" style="aspect-ratio: 1552 / 880"/>
+<p><code>mochi</code>や<code>wumpus</code>に定義されていない値（<code>scale</code>や<code>y</code>など）は、代わりに<code>Friend</code>の中から探されます。そして<code>Friend</code>は<code>Sprite</code>から作られたので、みんな<code>Sprite</code>の機能も受けつぐことになるのです。</p>
+<div class="small-gap"></div>
+</div>
+</body></html>

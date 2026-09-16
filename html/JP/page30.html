@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section two-column">
+<div class="column-left">
+<img src="/pics/p30-spriteBot.png" alt="" style="aspect-ratio: 944 / 787"/>
+</div>
+<div class="column-right">
+<h2>スプライト</h2>
+<p>Mini Microには、<b>スプライト</b>と呼ばれる特別な描き方があります。スプライトとは、動いたり、回転したり、大きさや色を変えたりできる小さな絵のことで、しかもそれをとても速く行えます。</p>
+<p>スプライトは、Pac-ManやSuper Mario Bros、Angry Birdsのようなコンピューターゲームで目にします。平たい小さな絵が画面の上を動きまわっていたら、それはほぼ間違いなくスプライトです。</p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 65%">
+<p>スプライトを準備する手順は、下のプログラムの2〜5行目に示されています。まず<code>new Sprite</code>でスプライトを作り、変数に代入します。次に、そのスプライトに表示させる画像を読み込みます。そして<code>display(4).sprites.push</code>で画面に追加して、見えるようにします。最後に、<code>x</code>（横）と<code>y</code>（縦）の位置を設定します。</p>
+</div>
+<div class="column-right">
+<img src="/pics/p30-ufoScreen.png" alt="" style="aspect-ratio: 702 / 530"/>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p30-listing1.png" alt="" style="aspect-ratio: 1828 / 668"/>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>6〜10行目の<code>while</code>ループを使うと、スプライトを動かすことができます。ここでは、使う人から入力を受け取る新しい方法も登場します。<code>key.axis</code>です。この方法なら、矢印キーでもWASDキーでも、なんとゲームパッドでもスプライトを操作できます！</p>
+</div>
+<div class="column-right">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>UFOのスピードを2倍にしてみましょう！ヒント：今の速さは横方向が10、縦方向が6です。</p>
+</div>
+<div id="page31" class="page-marker"></div>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 30%">
+<p>スプライトを作ったあとは、右の表にあるプロパティに値を代入することで、大きさ、色、回転、位置を変えられます。上のリストの7〜8行目や、下のリストの11〜12行目を見てみましょう。</p>
+</div>
+<div class="column-right">
+<table class="book-table">
+<thead><tr><th colspan="999">スプライトのプロパティ</th></tr></thead><tbody>
+<tr>
+<td><code>spr.x</code></td>
+<td>スプライト<i>spr</i>の横の位置（0-960）</td>
+</tr>
+<tr>
+<td><code>spr.y</code></td>
+<td>スプライト<i>spr</i>の縦の位置（0-640）</td>
+</tr>
+<tr>
+<td><code>spr.rotation</code></td>
+<td>回転の角度、度単位（0-360）</td>
+</tr>
+<tr>
+<td><code>spr.scale</code></td>
+<td>大きさの倍率：1=そのまま、2=2倍、など</td>
+</tr>
+<tr>
+<td><code>spr.tint</code></td>
+<td>スプライトの色（color.white、color.red、など）</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>ふつうは、file.loadImageを直接使ってスプライトの画像を手に入れます。でも、ディスクにある画像ファイルが、実はフレームと呼ばれる小さな絵をたくさん集めたものになっていることもあります。それぞれのフレームは、アニメーションの1コマを表しています。</p>
+</div>
+<div class="column-right">
+<p>これを使うには、まず大きいほうの画像（この場合は<b>スプライトシート</b>と呼びます）を変数に読み込み、それに対して<code>getImage</code>を呼び出して個々のフレームを取り出します。下の例のとおりです。</p>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p30-listing2.png" alt="" style="aspect-ratio: 1890 / 882"/>
+<img src="/pics/p30-enemyFrames.png" alt="" style="aspect-ratio: 1022 / 538"/>
+<div class="small-gap"></div>
+</div>
+</body></html>

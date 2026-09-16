@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body bgcolor="fffdcf">
+<div class="section-centered">
+<h2><i>プログラミングパズル</i> の答え</h2>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p><b>9ページ:</b> 次のように入力しましょう。</p>
+<p><code>print "Nice to meet you!"</code></p>
+<p>そしてReturnキーまたはEnterキーを押します。</p>
+<hr/>
+<p><b>12ページ:</b></p>
+<p><code>favColor = input("What's your favorite color?")</code></p>
+<p>（すべて1行で入力してくださいね。）</p>
+<hr/>
+<p><b>14ページ:</b></p>
+<p><code>print 15750 / 375</code></p>
+<hr/>
+<p><b>15ページ:</b> プログラムを編集して、次の行を追加します。</p>
+<code><pre>
+print "or " + age*365*24*60*60 + "&nbsp;seconds!"
+</pre></code>
+<p>（すべて1行で入力してくださいね。）</p>
+<hr/>
+<p><b>17ページ:</b> 8行目の前に次を挿入します。</p>
+<code><pre>
+else if fav == "S" then
+    print "Stop hissing!"
+else if fav == "O" then
+    print "Are you a ghost?"
+</pre></code>
+<hr/>
+<p><b>18ページ:</b> 2行目を次のように変えます。</p>
+<p><code>while num &lt; 1000</code></p>
+<hr/>
+</div>
+<div class="column-right">
+<p><b>19ページ:</b> これはいくつか変更が必要です。まず、4行目を次のように変えます。</p>
+<p><code>for i in range(1, 5)</code></p>
+<p>（iのかわりに、まだ使っていない変数名ならどれを使ってもかまいません。）次に、最後の行である13行目を次のように変えます。</p>
+<p><code>end for</code></p>
+<p>最後に、12行目のend ifの前にもう1行挿入します。</p>
+<p><code>		break</code></p>
+<hr/>
+<p><b>21ページ:</b> 1行目の<code>elecGuitarC4</code>を<code>pianoLongC4</code>に変えます。行のほかの部分はそのままにしておきましょう。</p>
+<hr/>
+<p><b>22ページ:</b></p>
+<p><code>gfx.line 0,0, 960,640</code></p>
+<hr/>
+<img src="/pics/p48-puzzleBots.png" alt="" style="aspect-ratio: 1154 / 914"/>
+<div class="small-gap"></div>
+<div id="page49" class="page-marker"></div>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p><b>23ページ:</b> 四角いトンネルのかわりに、丸いトンネルが見えるはずです。</p>
+<hr/>
+<p><b>26ページ:</b></p>
+<code><pre>
+load "/sys/demo/sunset"
+run
+</pre></code>
+<hr/>
+<p><b>29ページ:</b></p>
+<code><pre>
+print arr[3]
+print arr[-2]
+</pre></code>
+<hr/>
+<p><b>30ページ:</b> 7行目の<code>10</code>を<code>20</code>に、8行目の<code>6</code>を<code>12</code>に変えます。</p>
+<hr/>
+<p><b>32ページ:</b></p>
+<p>1.	<code>ceil(rnd * 100)</code></p>
+<p>2.	<code>ceil(rnd * 100) + 50</code></p>
+<hr/>
+<p><b>33ページ:</b> このゲームの1行目を次のように変えます。</p>
+<p><code>n = ceil(rnd * 100)</code></p>
+<hr/>
+<img src="/pics/p48-puzzlePiece.png" alt="" style="aspect-ratio: 944 / 634"/>
+</div>
+<div class="column-right">
+<p><b>35ページ:</b> 21行目のwhileループの前に、新しい行を2つ挿入します。</p>
+<code><pre>
+caughtSnd = file.loadSound("/sys/sounds/pickup.wav")
+missSnd = file.loadSound("/sys/sounds/hit.wav")
+</pre></code>
+<p>（行を途中で折り返さないように気をつけてください。上で折れて見えるのは、印刷の都合だけです。）次に、「CAUGHT」と表示する行（今は42行目）のすぐあとに、次を挿入します。</p>
+<p><code>    caughtSnd.play</code></p>
+<p>最後に、「GAME OVER」と表示する行（今は48行目）のあとに、次を挿入します。</p>
+<p><code>    missSnd.play</code></p>
+<hr/>
+<p><b>39ページ:</b> 19行目の終わりに、カンマと数字の<code>2</code>を追加します。（<code>gfx.line</code>の6番目のパラメーターは、線の太さを指定するのです。）</p>
+<hr/>
+<p><b>41ページ:</b> 40ページのプログラムにある関数の名前は<code>plot</code>です。41ページのプログラムでは<code>drawBarGraph</code>です。でも、これらはただの変数名なので、関数を呼び出すところで同じ名前を使ってさえいれば、別の名前にしてもかまいません！</p>
+<hr/>
+<p><b>43ページ:</b> </p>
+<code><pre>
+pool = {}
+pool.width = 8
+pool.length = 12
+print pool.width * pool.length
+</pre></code>
+<div class="small-gap"></div>
+</div>
+</div>
+</body></html>

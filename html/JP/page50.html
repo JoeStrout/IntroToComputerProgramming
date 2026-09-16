@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section-centered">
+<h2>文字コード表</h2>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<img src="/pics/p50-charTableLeft.png" alt="" style="aspect-ratio: 923 / 1944"/>
+</div>
+<div class="column-right">
+<img src="/pics/p50-charTableRight.png" alt="" style="aspect-ratio: 923 / 1944"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 35%">
+<img src="/pics/p50-charTableKey.png" alt="" style="aspect-ratio: 640 / 374"/>
+</div>
+<div class="column-right">
+<img src="/pics/p50-listing1.png" alt="" style="aspect-ratio: 1198 / 398"/>
+<div id="page51" class="page-marker"></div>
+</div>
+</div>
+<div class="section-centered">
+<div class="small-gap"></div>
+<h2>円、角度、そして座標</h2>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 45%">
+<p>回転の大きさをはかる方法には、度（度数法）とラジアン（弧度法）の2種類があります。度は0から360まであります。半周ぶん回すと180度で、180°のように小さな丸をつけて書くことがよくあります。</p>
+<p>ラジアンは0から<code>2*pi</code>までです（<code>pi</code>は約3.14に等しい特別な数のことです）。半周ぶん回すと<code>pi</code>ラジアンになります。度とラジアンは、同じことを別の言い方で表しているだけなのです。</p>
+</div>
+<div class="column-right">
+<img src="/pics/p50-angleChart.png" alt="" style="aspect-ratio: 1382 / 994"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 35%">
+<img src="/pics/p50-trig.png" alt="" style="aspect-ratio: 670 / 782"/>
+</div>
+<div class="column-right">
+<p>Mini Microのほとんどのもの（<code>Sprite.rotation</code>など）は度を使います。でも、<code>sin</code>（サイン）、<code>cos</code>（コサイン）、<code>atan</code>（アークタンジェント）というとても便利な関数を使うと、円周上のどんな点でもそのx座標とy座標を求めたり、逆にx座標とy座標から角度を求めたりできます。これらの関数はすべてラジアンを使います。</p>
+<p>下の表は、わかっていることから知りたいことを求める方法をまとめたものです。この計算が実際に使われているところは、<i>Light Bikes</i>ゲーム（44ページ）の10〜15行目で見ることができます。</p>
+</div>
+</div>
+<div class="section-centered">
+<table class="book-table gold-headers">
+<thead><tr>
+<th>わかっているもの…</th>
+<th>知りたいもの…</th>
+<th>こうしましょう：</th>
+</tr></thead><tbody>
+<tr>
+<td>角度（<code>a</code>、度）、<br/>半径（<code>r</code>）、<br/>中心（<code>cx</code>, <code>cy</code>）</td>
+<td>ピクセル位置（<code>x</code>, <code>y</code>）</td>
+<td><code>x = cx + r * cos(a * pi/180)<br/>y = cy + r * sin(a * pi/180)</code></td>
+</tr>
+<tr>
+<td>ピクセル位置（<code>x</code>, <code>y</code>）<br/>と中心（<code>cx</code>, <code>cy</code>）</td>
+<td>角度（<code>a</code>、度）<br/>または半径（<code>r</code>）</td>
+<td><code>a = atan(y-cy, x-cy) * 180/pi<br/>r = sqrt((x-cx)^2 + (y-cy)^2)</code></td>
+</tr>
+</tbody></table>
+<div class="small-gap"></div>
+</div>
+</body></html>

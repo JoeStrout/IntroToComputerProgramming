@@ -34,6 +34,9 @@
 
     let currentPage = 0;
 
+    // The hash we set ourselves in loadPage(), awaiting its hashchange event.
+    let selfSetHash = null;
+
     function getUrlParameter(name) {
       name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
       const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -54,14 +57,16 @@
 		// Set currentPage to the requested page for proper navigation
 		currentPage = requestedPage;
 		
-		// Update URL hash if requested
+		// Update URL hash if requested.  Remember what we wrote, so that the
+		// hashchange event it provokes doesn't load the same page a second time.
 		if (updateHash) {
-			if (n < 0) {
-				window.location.hash = 'cover';
-			} else if (n >= 56) {
-				window.location.hash = 'backcover';
-			} else {
-				window.location.hash = `page${n}`;
+			let newHash;
+			if (n < 0) newHash = 'cover';
+			else if (n >= 56) newHash = 'backcover';
+			else newHash = `page${n}`;
+			if (window.location.hash.slice(1) !== newHash) {
+				selfSetHash = newHash;
+				window.location.hash = newHash;
 			}
 		}
 		
@@ -139,15 +144,26 @@
 		}
 	}
 	
-    prevBtn.addEventListener("click", () => loadPage(currentPage - 2));
-    nextBtn.addEventListener("click", () => loadPage(currentPage + 2));
+    // Navigation always steps a whole spread at a time, starting from the
+    // even (left-hand) page of the current spread.  Otherwise, once the reader
+    // jumps to an odd page (e.g. from the table of contents), currentPage stays
+    // odd forever and every subsequent page load scrolls down to the odd-page
+    // marker instead of resting at the top of the new spread.
+    function currentSpread() {
+      return (currentPage % 2) ? currentPage - 1 : currentPage;
+    }
+    function gotoNextSpread() { loadPage(currentSpread() + 2); }
+    function gotoPrevSpread() { loadPage(currentSpread() - 2); }
+
+    prevBtn.addEventListener("click", () => gotoPrevSpread());
+    nextBtn.addEventListener("click", () => gotoNextSpread());
     fallbackPrev.addEventListener("click", (e) => {
       e.preventDefault();
-      loadPage(currentPage - 2);
+      gotoPrevSpread();
     });
     fallbackNext.addEventListener("click", (e) => {
       e.preventDefault();
-      loadPage(currentPage + 2);
+      gotoNextSpread();
     });
 
     // Handle links within page content
@@ -168,8 +184,8 @@
 
     // Keyboard navigation
     document.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowRight") loadPage(currentPage + 2);
-      if (e.key === "ArrowLeft") loadPage(currentPage - 2);
+      if (e.key === "ArrowRight") gotoNextSpread();
+      if (e.key === "ArrowLeft") gotoPrevSpread();
     });
 
     // Touch swipe handling
@@ -192,9 +208,9 @@
         // Only process horizontal swipes, not small movements
         if (Math.abs(diff) > 50) {
           if (diff > 0) {
-            loadPage(currentPage - 2); // Swipe right, go back
+            gotoPrevSpread(); // Swipe right, go back
           } else {
-            loadPage(currentPage + 2); // Swipe left, go forward
+            gotoNextSpread(); // Swipe left, go forward
           }
         }
         startX = null;
@@ -228,7 +244,8 @@
     const availableLanguages = [
       { code: "EN", name: "English" },
       { code: "DE", name: "Deutsch" },
-      { code: "ES", name: "Español" }
+      { code: "ES", name: "Español" },
+      { code: "JP", name: "日本語" }
     ];
 
     const langSelector = document.createElement("div");
@@ -397,8 +414,14 @@
       }
     });
 
-    // Handle hash change for direct navigation and back/forward buttons
+    // Handle hash change for direct navigation and back/forward buttons.
+    // Ignore the event when we set the hash ourselves; that page is already loading.
     window.addEventListener('hashchange', () => {
+      if (selfSetHash !== null && window.location.hash.slice(1) === selfSetHash) {
+        selfSetHash = null;
+        return;
+      }
+      selfSetHash = null;
       handleHashNavigation();
     });
     

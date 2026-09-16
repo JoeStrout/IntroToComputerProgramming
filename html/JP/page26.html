@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section-centered">
+<h2>ファイルのコマンド、もう少し</h2>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Mini Microには、ファイルを入れておく「仮想ディスク」が2つあります。1つは<code>/sys</code>という名前で、Mini Microに最初から入っているものがすべて置かれています。もう1つは<code>/usr</code>で、こちらは自分の作品を保存する場所です。</p>
+</div>
+<div class="column-right">
+<p>どちらのディスクにあるファイルでも、<b>フルパス</b>を使えば指定できます。フルパスとは、"/sys"または"/usr"で始まり、そのファイルにたどり着くまでのフォルダーの名前を順番に並べ、最後にファイル名を書いた文字列のことです。</p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 52%">
+<h4><code>dir</code>でファイルの一覧を見る</h4>
+<p>dirコマンドは、指定したパスの中にあるファイルとフォルダー（ディレクトリ）をすべて表示します。たとえば、</p>
+<p><code>dir "/sys/demo"</code></p>
+<p>と入力すると、/sysディスクのdemoディレクトリにあるファイルが全部並びます。（ここには楽しいプログラムがたくさんあります。ぜひ試してみましょう！）</p>
+</div>
+<div class="column-right">
+<img src="/pics/p26-sysDemoScreen.png" alt="" style="aspect-ratio: 894 / 678"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 52%">
+<img src="/pics/p26-wumpusScreen.png" alt="" style="aspect-ratio: 892 / 672"/>
+</div>
+<div class="column-right">
+<h4><code>view</code>でファイルをのぞいてみる</h4>
+<p><code>view</code>コマンドは、画像を表示したり、音を鳴らしたり、プログラムファイルの中身を表示したりします。</p>
+<p><code>view "/sys/pics/Wumpus.png"</code></p>
+<p>と入力すると、ウンパスと呼ばれるモフモフの紫のモンスターが出てきます。こちらも試してみましょう。</p>
+<p><code>view "/sys/sounds/swoosh.wav"</code></p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 43%">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p><code>/sys</code>ディスクの中にある、夕焼けを描くプログラムを読み込んで実行するには、どうすればいいでしょう？<b>ヒント：</b><code>dir</code>を使って探してみましょう！</p>
+</div>
+</div>
+<div class="column-right">
+<table class="book-table">
+<thead><tr><th colspan="999">いちばん大事なフォルダー</th></tr></thead><tbody>
+<tr>
+<td><code>/sys/demo</code></td>
+<td>最初から入っているゲームやデモ</td>
+</tr>
+<tr>
+<td><code>/sys/pics</code></td>
+<td>スプライトなどに使える画像</td>
+</tr>
+<tr>
+<td><code>/sys/sounds</code></td>
+<td>鳴らして遊べるサウンドファイル</td>
+</tr>
+<tr>
+<td><code>/usr</code></td>
+<td>自分の作品を保存する場所</td>
+</tr>
+</tbody></table>
+<div id="page27" class="page-marker"></div>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 45%">
+<h2><i>Mini-Golf</i>ゲーム</h2>
+<p>この楽しいゴルフゲームで遊んでみましょう！どのくらい強く打つかを、X（横）方向とY（縦）方向の速さで指定します。まずは5と25で試してみてください。ボールをカップに入れるのに、何打かかりましたか？</p>
+</div>
+<div class="column-right">
+<img src="/pics/p26-golfBot.png" alt="" style="aspect-ratio: 760 / 489"/>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p26-listing1.png" alt="" style="aspect-ratio: 1942 / 1856"/>
+<div class="small-gap"></div>
+</div>
+</body></html>

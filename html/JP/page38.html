@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section-centered">
+<h2>関数でコードを整理しよう</h2>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>この本でずっと使ってきたコマンドは、正しくは<b>関数</b>と呼ばれます。そして、関数名のあとに指定する値は、その関数の<b>パラメーター</b>と呼ばれます。</p>
+</div>
+<div class="column-right">
+<p>たとえば<code>print</code>は、パラメーターを1つ取る関数です（表示する文字列ですね）。<code>clear</code>はパラメーターがまったくいらない関数です。<code>gfx.line</code>は少なくとも4つのパラメーター（x0、y0、x1、y1）が必要で、さらに1つか2つ追加できる関数です。</p>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p38-blueBar.png" alt="" style="aspect-ratio: 1676 / 40"/>
+<div class="small-gap"></div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 55%">
+<p>自分だけの関数を定義することもできるんです！そのためには<code>function</code>キーワードを使い、そのあとにカッコの中へパラメーター用の変数名（あれば）を書きます。右の例では、関数はパラメーターを1つ取り、それを<code>msg</code>と名づけています。試してみましょう！新しい<code>say3</code>コマンドを使うたびに、<code>function</code>と<code>end function</code>のあいだのコード（2〜5行目）が実行されます。</p>
+</div>
+<div class="column-right">
+<img src="/pics/p38-listing1.png" alt="" style="aspect-ratio: 816 / 434"/>
+</div>
+</div>
+<div class="section">
+<p>基本的に同じことを、ちがうデータでやりたいとき、関数を定義するのはとても便利な方法です。下の例では、レストランのメニューを1つ表示する<code>printMeal</code>という関数を定義しています。そして6〜9行目で、4種類の食事のためにそれを4回呼び出しています。</p>
+<img src="/pics/p38-listing2.png" alt="" style="aspect-ratio: 1694 / 540"/>
+<p>覚えておいてください。関数の中のコード（上の例でいう2〜3行目）は、関数が定義されるときには実行されません。functionの行で割り当てられた名前を使って呼び出されたときに、はじめて実行されるのです。</p>
+<div id="page39" class="page-marker"></div>
+<div class="small-gap"></div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 55%">
+<p>これはワープスピードで進むプログラムです！「ワープ」の線はそれぞれ、5つの要素を持つリストで表されています。線のx0、y0、x1、y1の座標と、色です。プログラムが始まるときと、線が画面の上や下からはみ出したときには、そのたびに線をリセットする必要があります。そこで、それを簡単にするために<code>resetLine</code>という関数を定義しましょう！</p>
+</div>
+<div class="column-right">
+<img src="/pics/p38-warpScreen.png" alt="" style="aspect-ratio: 760 / 528"/>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p38-listing3.png" alt="" style="aspect-ratio: 1858 / 1656"/>
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>ワープの線の太さを2倍にしてみましょう！<b>ヒント：</b><code>@gfx.line</code>と入力すると、その関数が取れるパラメーターをすべて見られます。それから、19行目を少し長くしてみてください。</p>
+</div>
+<div class="small-gap"></div>
+</div>
+</body></html>

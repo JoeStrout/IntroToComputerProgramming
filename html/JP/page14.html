@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section-centered">
+<h2>数と計算</h2>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>ここまでは、“hello”や“recipes”のような文字列をおもに使ってきました。でもコンピューターは、<code>42</code>や<code>-5.73</code>のような数値をあつかうこともできます。というより、コンピューターは数値をあつかうのが大の得意なのです！</p>
+</div>
+<div class="column-right">
+<p>コンピュータープログラムの中では、文字列は必ず引用符で囲んで書かなければなりません。数値には引用符を使い <i>ません</i> 。こうすることで、コンピューターは文字列と数値を見分けられるのです。</p>
+<p>（<b>文字列</b>などの言葉をもう一度確認したいときは、52〜53ページを見てください。）</p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 40%">
+<img src="/pics/p14-mathScreen.png" alt="" style="aspect-ratio: 896 / 674"/>
+</div>
+<div class="column-right">
+<p>電卓でできることは、コンピュータープログラムでも何でもできます。コンピューターでは、こうした計算を<b>算術演算子</b>、つまり <b>+</b>、<b>-</b>、<b>**、</b>/<b>、</b>^<b> を使って書きます。</p>
+<p>演算子の前後にスペースを入れても、入れなくてもかまいません。好きなほうでどうぞ。</p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<table class="book-table">
+<thead><tr>
+<th>演算子</th>
+<th>意味</th>
+</tr></thead><tbody>
+<tr>
+<td><code>+</code></td>
+<td>足し算</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>引き算</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>かけ算</td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>わり算</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>べき乗</td>
+</tr>
+</tbody></table>
+</div>
+<div class="column-right">
+<img src="/pics/p14-calculator.png" alt="" style="aspect-ratio: 594 / 522"/>
+</div>
+</div>
+<div class="section-centered">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>15,750を375でわるといくつになるか、Mini Microを使って求めてみましょう。<b>ヒント：</b>コンピューターに大きな数を入力するときは、コンマを入れてはいけません。<code>15750</code>と打ち込むだけです。</p>
+</div>
+<div id="page15" class="page-marker"></div>
+<div class="small-gap"></div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>2つの文字列を足し合わせることもできますし（13ページのおかしなお話のプログラムのように）、文字列に数をかけると、その回数だけくり返されます。</p>
+</div>
+<div class="column-right">
+<img src="/pics/p14-listing1.png" alt="このプログラムは何をするでしょう？" style="aspect-ratio: 958 / 276"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 18%">
+<img src="/pics/p14-cautionIcon.png" alt="" style="aspect-ratio: 371 / 329"/>
+</div>
+<div class="column-right">
+<p><b>注意！</b><code>input</code>関数は、いつも数値ではなく文字列を返します。でも、<code>val</code>というもう一つの関数を使えば、文字列を数値に変換できます。この2つを組み合わせると、次のようにして使う人に数を入力してもらえます。</p>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p14-valInput.png" alt="x = val(input("Give me a number:"))" style="aspect-ratio: 2012 / 152"/>
+</div>
+<div class="section-centered">
+<div class="small-gap"></div>
+<img src="/pics/p14-pacman.png" alt="" style="aspect-ratio: 4096 / 557"/>
+<div class="small-gap"></div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 30%">
+<p>自分の年齢を月・日・時間・分で計算するこのプログラムを試してみましょう！</p>
+</div>
+<div class="column-right">
+<img src="/pics/p14-listing2.png" alt="" style="aspect-ratio: 1284 / 360"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left" style="flex: 0 0 55%">
+<img src="/pics/p14-bdayParty.png" alt="" style="aspect-ratio: 699 / 348"/>
+</div>
+<div class="column-right">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>上のプログラムに、自分の年齢を秒で表示する行をもう1行つけ加えてみましょう。</p>
+</div>
+<div class="small-gap"></div>
+</div>
+</div>
+</body></html>

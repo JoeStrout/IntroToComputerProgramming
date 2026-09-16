@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computer Programming</title>
+	<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+<div class="section-centered">
+<h2>音とミュージック</h2>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>Mini Microは、サウンドファイルに保存された音を鳴らすことができます。<code>file.loadSound</code>を使って読み込み、<code>play</code>コマンドで再生しましょう。</p>
+</div>
+<div class="column-right">
+<p>組み込みのサウンドがたくさん<code>/sys/sounds</code>フォルダーに入っています。そのうちのいくつかを下に見せていますが、自分で試したときにいくつ見つかるでしょうか。</p>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<img src="/pics/p20-band.png" alt="" style="aspect-ratio: 980 / 490"/>
+</div>
+<div class="column-right">
+<img src="/pics/p20-dir-sounds.png" alt="" style="aspect-ratio: 352 / 264"/>
+</div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p><code>play</code>コマンドには、最大3つの値を渡せます。音の大きさ（1が標準）、左右のバランス（0が中央）、そして速さと高さ（ふつうは1）です。ぜひ試してみましょう！</p>
+</div>
+<div class="column-right">
+<img src="/pics/p20-snd-play.png" alt="" style="aspect-ratio: 512 / 175"/>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p20-snd-examples.png" alt="" style="aspect-ratio: 948 / 256"/>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<p>速さを変えると音の高さも変わります。これを利用すると音楽が作れるのです。ここで役に立つのが<code>noteFreq</code>という関数で、どの音符についてもその周波数を計算してくれます。音符の番号は、下のピアノの図に書かれています。</p>
+</div>
+<div class="column-right">
+<p>ある音符に合う速さを求めるには、その音符の<code>noteFreq</code>を、録音された音の音符の<code>noteFreq</code>（ふつうは60、つまり中央のド）で割ります。</p>
+<p>（下のプログラムの10行目でやっているのが、まさにこれです。）</p>
+<div id="page21" class="page-marker"></div>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p20-piano.png" alt="" style="aspect-ratio: 822 / 159"/>
+<div class="small-gap"></div>
+</div>
+<div class="section two-column">
+<div class="column-left">
+<h4>キーボードギター</h4>
+<p>下のプログラムを使うと、コンピューターでギターが弾けます！キーボードの上のほうにある1から9までの数字キーを使いましょう。1は音符60（中央のド）、2は音符62、というふうに続いて、9は音符74を鳴らします。</p>
+</div>
+<div class="column-right">
+<p>音符の番号を求めるために、まず押されたキーを0から8までの数に変換します（5行目）。ピアノの白いキーはほとんどが2音符ぶんはなれているので、これを2倍して、基準の音符である60に足します。</p>
+<p>でも、ミとファの間、シとドの間には黒いキー（音符）がありません。そこで7〜8行目でその場合を調べて、足りない音符のぶんだけ1を引いています。</p>
+</div>
+</div>
+<div class="section-centered">
+<img src="/pics/p20-listing1.png" alt="" style="aspect-ratio: 1550 / 606"/>
+</div>
+<div class="section-centered">
+<img src="/pics/p20-song.png" alt="" style="aspect-ratio: 1878 / 246"/>
+<div class="small-gap"></div>
+</div>
+<div class="section-centered">
+<div class="puzzle">
+<h4>Programming Puzzle</h4>
+<p>このプログラムを、ギターではなくピアノを鳴らすように変えてみましょう！ヒントです。<code>dir "/sys/sounds"</code>を使うと、組み込みのサウンドがぜんぶ一覧で見られますよ。</p>
+</div>
+<div class="small-gap"></div>
+</div>
+</body></html>
